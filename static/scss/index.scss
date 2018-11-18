@@ -1,0 +1,62 @@
+/* ------ Variables ------ */
+
+$primary: #37abcb;
+
+
+/* ------ Navbar ------ */
+
+.navbar-fixed {
+    nav {
+        background-color: $primary;
+
+        .nav-wrapper {
+            img {
+                margin: 11px;
+            }
+            ul {
+                li {
+                    a {
+                        font-size: 1.175rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ------ Banner ------ */
+
+#banner {
+    height: calc(99vh - 56px);
+    background-size: cover;
+    background-image: url('/images/banner.jpg');
+}
+
+
+/* ------ Campaign ------ */
+
+#campaign {
+    .campaign {
+        height: 65vh;
+        position: relative;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+
+        &:first-of-type {
+            background-image: url('/images/campaign_one.jpg');
+        }
+        &:nth-of-type(2) {
+            background-image: url('/images/campaign_two.jpg');
+        }
+        &:last-of-type {
+            background-image: url('/images/campaign_three.jpg');
+        }
+        i {
+            position: absolute;
+            bottom: 2.5%;
+        }
+    }
+}
