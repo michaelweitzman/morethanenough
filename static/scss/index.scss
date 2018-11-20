@@ -1,7 +1,7 @@
 /* ------ Variables ------ */
 
 $primary: #37abcb;
-
+$gray: #34393d;
 
 /* ------ Navbar ------ */
 
@@ -30,8 +30,9 @@ $primary: #37abcb;
 
 #banner {
     height: calc(99vh - 56px);
-    background-size: cover;
     background-image: url('/images/banner.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -44,19 +45,33 @@ $primary: #37abcb;
         text-align: center;
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
 
         &:first-of-type {
             background-image: url('/images/campaign_one.jpg');
         }
-        &:nth-of-type(2) {
+        &:nth-of-type(3) {
             background-image: url('/images/campaign_two.jpg');
         }
-        &:last-of-type {
+        &:nth-of-type(5) {
             background-image: url('/images/campaign_three.jpg');
         }
         i {
             position: absolute;
             bottom: 2.5%;
+            cursor: pointer;
         }
     }
+    .dropdown {
+        height: 65vh;
+        display: none;
+        background-color: $gray;
+    }
+}
+
+
+/* ------ Stats ------ */
+
+#stats {
+    height: calc(99vh - 56px);
 }
