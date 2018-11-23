@@ -5,15 +5,15 @@
   .navbar-fixed nav .nav-wrapper img {
     margin: 11px; }
   .navbar-fixed nav .nav-wrapper ul li a {
-    font-size: 1.175rem;
-    font-weight: 500; }
+    font-weight: 500;
+    font-size: 1.175rem; }
 
 /* ------ Banner ------ */
 #banner {
   height: calc(99vh - 56px);
-  background-image: url("/images/banner.jpg");
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url("/images/banner.jpg"); }
 
 /* ------ Campaign ------ */
 #campaign .campaign {
@@ -30,9 +30,9 @@
   #campaign .campaign:nth-of-type(5) {
     background-image: url("/images/campaign_three.jpg"); }
   #campaign .campaign i {
-    position: absolute;
     bottom: 2.5%;
-    cursor: pointer; }
+    cursor: pointer;
+    position: absolute; }
 #campaign .dropdown {
   height: 65vh;
   display: none;
@@ -40,6 +40,12 @@
 
 /* ------ Stats ------ */
 #stats {
-  height: calc(99vh - 56px); }
+  padding-top: 5rem; }
+  #stats #map {
+    margin: auto;
+    max-width: 90%;
+    height: calc(99vh - 56px); }
+    #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
+      display: none; }
 
 /*# sourceMappingURL=index.css.map */

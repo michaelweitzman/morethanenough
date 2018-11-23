@@ -2,6 +2,7 @@
 
 $primary: #37abcb;
 $gray: #34393d;
+$fullheight: calc(99vh - 56px);
 
 /* ------ Navbar ------ */
 
@@ -16,8 +17,8 @@ $gray: #34393d;
             ul {
                 li {
                     a {
-                        font-size: 1.175rem;
                         font-weight: 500;
+                        font-size: 1.175rem;
                     }
                 }
             }
@@ -29,10 +30,10 @@ $gray: #34393d;
 /* ------ Banner ------ */
 
 #banner {
-    height: calc(99vh - 56px);
-    background-image: url('/images/banner.jpg');
+    height: $fullheight;
     background-size: cover;
     background-attachment: fixed;
+    background-image: url('/images/banner.jpg');
 }
 
 
@@ -57,9 +58,9 @@ $gray: #34393d;
             background-image: url('/images/campaign_three.jpg');
         }
         i {
-            position: absolute;
             bottom: 2.5%;
             cursor: pointer;
+            position: absolute;
         }
     }
     .dropdown {
@@ -73,5 +74,15 @@ $gray: #34393d;
 /* ------ Stats ------ */
 
 #stats {
-    height: calc(99vh - 56px);
+    padding-top: 5rem;
+
+    #map {
+        margin: auto;
+        max-width: 90%;
+        height: $fullheight;
+
+        tspan, #stats_outer, #stats_zoom {
+            display: none;
+        }
+    }
 }
