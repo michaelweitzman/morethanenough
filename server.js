@@ -59,9 +59,9 @@ const Resource = mongoose.model('Resource');
 
 // ------ CSV To JSON Data ------ //
 csv().fromFile('data/report.csv')
-.then( (data) => {
-    console.log(data);
-} );
+.then( (json) => {
+    console.log(json);
+});
 
 // ------ Routing ------ //
 app.get('/', function(req, res) {
