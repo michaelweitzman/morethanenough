@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const csv = require('csvtojson');
 const app = express();
 
 // ------ Guidelines ------ //
@@ -55,6 +56,12 @@ const ResourceSchema = new mongoose.Schema({
 }, {timestamps: true});
 mongoose.model('Resource', ResourceSchema);
 const Resource = mongoose.model('Resource');
+
+// ------ CSV To JSON Data ------ //
+csv().fromFile('data/report.csv')
+.then( (data) => {
+    console.log(data);
+} );
 
 // ------ Routing ------ //
 app.get('/', function(req, res) {

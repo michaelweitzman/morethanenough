@@ -85,4 +85,20 @@ $fullheight: calc(99vh - 56px);
             display: none;
         }
     }
+    #modal {
+        .modal-content {
+            h4 {
+                color: $primary;
+            }
+            table {
+                thead {
+                    tr {
+                        th {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

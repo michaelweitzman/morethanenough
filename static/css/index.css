@@ -47,5 +47,9 @@
     height: calc(99vh - 56px); }
     #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
       display: none; }
+  #stats #modal .modal-content h4 {
+    color: #37abcb; }
+  #stats #modal .modal-content table thead tr th {
+    color: #37abcb; }
 
 /*# sourceMappingURL=index.css.map */
