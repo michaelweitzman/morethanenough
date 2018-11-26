@@ -58,14 +58,16 @@ mongoose.model('Resource', ResourceSchema);
 const Resource = mongoose.model('Resource');
 
 // ------ CSV To JSON Data ------ //
-csv().fromFile('data/report.csv')
-.then( (json) => {
-    console.log(json);
-});
+function getData(res) {
+    csv().fromFile('data/report.csv')
+    .then( (json) => {
+        res.render('index', {data: json});
+    });
+}
 
 // ------ Routing ------ //
 app.get('/', function(req, res) {
-    res.render('index');
+    getData(res);
 })
 
 // ------ Server ------ //
