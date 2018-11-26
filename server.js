@@ -57,17 +57,12 @@ const ResourceSchema = new mongoose.Schema({
 mongoose.model('Resource', ResourceSchema);
 const Resource = mongoose.model('Resource');
 
-// ------ CSV To JSON Data ------ //
-function getData(res) {
+// ------ Routing ------ //
+app.get('/', function(req, res) {
     csv().fromFile('data/report.csv')
     .then( (json) => {
         res.render('index', {data: json});
     });
-}
-
-// ------ Routing ------ //
-app.get('/', function(req, res) {
-    getData(res);
 })
 
 // ------ Server ------ //

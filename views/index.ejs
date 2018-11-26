@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Meta Information -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>More Than Enough - Home</title>
@@ -9,6 +10,10 @@
         <link rel="stylesheet" href="materialize-css/dist/css/materialize.min.css">
         <script src="jquery/dist/jquery.min.js"></script>
         <script src="materialize-css/dist/js/materialize.min.js"></script>
+        <!-- Send Stats JSON to Jquery File -->
+        <script type='text/javascript'>
+            const statsJson = <%- JSON.stringify(data) %>
+        </script>
         <!-- Project Assets -->
         <link rel="stylesheet" href="css/index.css">
         <script type="text/javascript" src="js/jquery.js"></script>

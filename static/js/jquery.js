@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    console.log(statsJson);
+
     $('.modal').modal();
 
     $('.campaign i').click(function() {
