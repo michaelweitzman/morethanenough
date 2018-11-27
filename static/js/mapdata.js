@@ -24,10 +24,10 @@ var simplemaps_statemap_mapdata={
         div: "map",
         fade_time: 0.1,
 
-        },
+    },
 
-        //State specific
-        state_specific: {
+    //State specific
+    state_specific: {
         "40001": {
           name: "Adair"
         },

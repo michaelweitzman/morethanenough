@@ -50,6 +50,9 @@
   #stats #modal .modal-content h4 {
     color: #37abcb; }
   #stats #modal .modal-content table thead tr th {
-    color: #37abcb; }
+    color: #37abcb;
+    font-size: 1.15rem; }
+  #stats #modal .modal-content table tbody tr td {
+    font-size: 1.15rem; }
 
 /*# sourceMappingURL=index.css.map */

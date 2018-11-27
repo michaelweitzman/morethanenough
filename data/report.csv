@@ -1,44 +1,4 @@
-"County Name
-","In Out of
-Home Care
-","Case Plan
-Goal
-Adoption
-","Legally
-Free for
-Adoption
-","Quad 2
-Rate
-","Age 17
-","Risk of
-Aging Out
-Rate
-","FC/TFC/
-Shelter
-Children
-","Placed
-Outside
-County
-","Outside
-County
-Rate
-","Placed in
-Shelter
-","Shelter
-Rate
-","FCS
-Families
-for Month
-","FCS
-Children
-for Month
-","Traditional
-Foster
-Homes
-","Kinship
-Foster
-Homes
-"
+"County Name","In Out of Home Care","Case Plan Goal Adoption","Legally Free for Adoption","Quad 2 Rate","Age 17","Risk of Aging Out Rate","FC/TFC/Shelter Children","Placed Outside County","Outside County Rate","Placed in Shelter","Shelter Rate","FCS Families for Month","FCS Children for Month","Traditional Foster Homes","Kinship Foster Homes",
 ALFALFA,17,5,3,17.6%,1,5.9%,3,2,66.7%,1,5.9%,0,0,6,6
 BEAVER,0,0,0,.0%,0,.0%,0,0,.0%,0,.0%,0,0,0,1
 BECKHAM,77,38,5,6.5%,1,1.3%,29,20,69.0%,1,1.3%,0,0,30,16
@@ -116,4 +76,4 @@ PAWNEE,44,8,0,.0%,0,.0%,13,10,76.9%,0,.0%,3,3,14,18
 ROGERS,69,29,2,2.9%,2,2.9%,18,10,55.6%,0,.0%,20,63,53,39
 TULSA,1443,695,103,7.1%,48,3.3%,523,260,49.7%,23,1.6%,95,337,289,292
 WASHINGTON,78,43,12,15.4%,1,1.3%,32,14,43.8%,0,.0%,1,2,30,19
-TOTALS:,8314,3787,585,7.0%,195,2.3%,2971,1718,57.8%,84,1.0%,731,2360,2058,2230
+TOTALS,8314,3787,585,7.0%,195,2.3%,2971,1718,57.8%,84,1.0%,731,2360,2058,2230

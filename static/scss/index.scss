@@ -95,6 +95,14 @@ $fullheight: calc(99vh - 56px);
                     tr {
                         th {
                             color: $primary;
+                            font-size: 1.15rem;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            font-size: 1.15rem;
                         }
                     }
                 }
