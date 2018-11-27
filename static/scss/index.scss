@@ -86,6 +86,8 @@ $fullheight: calc(99vh - 56px);
         }
     }
     #modal {
+        max-height: 65vh;
+        
         .modal-content {
             h4 {
                 color: $primary;
