@@ -37,37 +37,36 @@ $fullheight: calc(99vh - 56px);
 }
 
 
-/* ------ Campaign ------ */
+/* ------ Campaign / Dropdowns ------ */
 
-#campaign {
-    .campaign {
-        height: 65vh;
-        position: relative;
-        text-align: center;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+.campaign {
+    height: 65vh;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
-        &:first-of-type {
-            background-image: url('/images/campaign_one.jpg');
-        }
-        &:nth-of-type(3) {
-            background-image: url('/images/campaign_two.jpg');
-        }
-        &:nth-of-type(5) {
-            background-image: url('/images/campaign_three.jpg');
-        }
-        i {
-            bottom: 2.5%;
-            cursor: pointer;
-            position: absolute;
-        }
+    &.one {
+        background-image: url('/images/campaign_one.jpg');
     }
-    .dropdown {
-        height: 65vh;
-        display: none;
-        background-color: $gray;
+    &.two {
+        background-image: url('/images/campaign_two.jpg');
     }
+    &.three {
+        background-image: url('/images/campaign_three.jpg');
+    }
+    i {
+        bottom: 2.5%;
+        cursor: pointer;
+        position: absolute;
+    }
+}
+
+.dropdown {
+    height: 65vh;
+    display: none;
+    background-color: $gray;
 }
 
 
@@ -87,7 +86,7 @@ $fullheight: calc(99vh - 56px);
     }
     #modal {
         max-height: 65vh;
-        
+
         .modal-content {
             h4 {
                 color: $primary;
@@ -111,4 +110,28 @@ $fullheight: calc(99vh - 56px);
             }
         }
     }
+}
+
+
+/* ------ Grid ------ */
+
+#grid {
+
+}
+
+
+/* ------ Resources ------ */
+
+#resources {
+
+}
+
+
+/* ------ Forms ------ */
+
+#forms {
+    height: $fullheight;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('/images/forms.jpg');
 }

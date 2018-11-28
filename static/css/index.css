@@ -15,25 +15,26 @@
   background-attachment: fixed;
   background-image: url("/images/banner.jpg"); }
 
-/* ------ Campaign ------ */
-#campaign .campaign {
+/* ------ Campaign / Dropdowns ------ */
+.campaign {
   height: 65vh;
   position: relative;
   text-align: center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
-  #campaign .campaign:first-of-type {
+  .campaign.one {
     background-image: url("/images/campaign_one.jpg"); }
-  #campaign .campaign:nth-of-type(3) {
+  .campaign.two {
     background-image: url("/images/campaign_two.jpg"); }
-  #campaign .campaign:nth-of-type(5) {
+  .campaign.three {
     background-image: url("/images/campaign_three.jpg"); }
-  #campaign .campaign i {
+  .campaign i {
     bottom: 2.5%;
     cursor: pointer;
     position: absolute; }
-#campaign .dropdown {
+
+.dropdown {
   height: 65vh;
   display: none;
   background-color: #34393d; }
@@ -56,5 +57,14 @@
       font-size: 1.15rem; }
     #stats #modal .modal-content table tbody tr td {
       font-size: 1.15rem; }
+
+/* ------ Grid ------ */
+/* ------ Resources ------ */
+/* ------ Forms ------ */
+#forms {
+  height: calc(99vh - 56px);
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("/images/forms.jpg"); }
 
 /*# sourceMappingURL=index.css.map */
