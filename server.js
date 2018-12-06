@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
 // ------ Database ------ //
-mongoose.connect('mongodb://localhost/morethanenough');
+mongoose.connect('mongodb://localhost/morethanenough', {useNewUrlParser: true});
 const ResourceSchema = new mongoose.Schema({
     // 1. Resource Info //
     resourceName: {type: String},
