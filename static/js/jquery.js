@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // Initialize Stats Modal Component
+    // Initialize Modal Components
     $('.modal').modal();
 
     // Campain Section Dropdowns
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
         for (var i = 0; i < Object.keys(statsJson).length; i++) {
             if (statsJson[i]['County Name'] == z) {
-                $('#modal').html(
+                $('#statsmodal').html(
                     "<div class='modal-content'>" +
                         "<h4>Statistics for " + simplemaps_statemap_mapdata.state_specific[y].name + " County:</h4>" +
                         "<table class='striped'>" +
@@ -116,7 +116,7 @@ $(document).ready(function() {
                         "</table>" +
                     "</div>"
                 );
-                $('#modal').modal('open');
+                $('#statsmodal').modal('open');
             }
         }
     });

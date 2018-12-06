@@ -73,8 +73,6 @@ $fullheight: calc(99vh - 56px);
 /* ------ Stats ------ */
 
 #stats {
-    padding-top: 5rem;
-
     #map {
         margin: auto;
         max-width: 90%;
@@ -84,7 +82,7 @@ $fullheight: calc(99vh - 56px);
             display: none;
         }
     }
-    #modal {
+    #statsmodal {
         max-height: 65vh;
 
         .modal-content {
@@ -116,7 +114,61 @@ $fullheight: calc(99vh - 56px);
 /* ------ Grid ------ */
 
 #grid {
+    table {
+        width: auto;
+        margin: auto;
+        border-collapse: unset;
 
+        thead {
+            tr {
+                th {
+                    color: $primary;
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                    padding-top: 1rem;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 0 .4rem .4rem 0;
+
+                    h3 {
+                        margin: 0;
+                        color: $primary;
+                        font-weight: 500;
+                        font-size: 2.25rem;
+                    }
+                    h4 {
+                        margin: .75rem 0;
+                        font-size: 1.75rem;
+                    }
+                    h5 {
+                        font-size: 1.5rem;
+                    }
+                    img {
+                        width: 15vw;
+                        vertical-align: top;
+                    }
+                    &:first-of-type{
+                        padding-right: 1.5rem;
+                    }
+                }
+                th {
+                    color: $primary;
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                    padding-bottom: 4rem;
+                }
+                &:nth-of-type(3) {
+                    td {
+                        padding: 0 .4rem 0 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

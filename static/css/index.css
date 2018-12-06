@@ -40,25 +40,57 @@
   background-color: #34393d; }
 
 /* ------ Stats ------ */
-#stats {
-  padding-top: 5rem; }
-  #stats #map {
-    margin: auto;
-    max-width: 90%;
-    height: calc(99vh - 56px); }
-    #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
-      display: none; }
-  #stats #modal {
-    max-height: 65vh; }
-    #stats #modal .modal-content h4 {
-      color: #37abcb; }
-    #stats #modal .modal-content table thead tr th {
-      color: #37abcb;
-      font-size: 1.15rem; }
-    #stats #modal .modal-content table tbody tr td {
-      font-size: 1.15rem; }
+#stats #map {
+  margin: auto;
+  max-width: 90%;
+  height: calc(99vh - 56px); }
+  #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
+    display: none; }
+#stats #statsmodal {
+  max-height: 65vh; }
+  #stats #statsmodal .modal-content h4 {
+    color: #37abcb; }
+  #stats #statsmodal .modal-content table thead tr th {
+    color: #37abcb;
+    font-size: 1.15rem; }
+  #stats #statsmodal .modal-content table tbody tr td {
+    font-size: 1.15rem; }
 
 /* ------ Grid ------ */
+#grid table {
+  width: auto;
+  margin: auto;
+  border-collapse: unset; }
+  #grid table thead tr th {
+    color: #37abcb;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding-top: 1rem; }
+  #grid table tbody tr td {
+    padding: 0 .4rem .4rem 0; }
+    #grid table tbody tr td h3 {
+      margin: 0;
+      color: #37abcb;
+      font-weight: 500;
+      font-size: 2.25rem; }
+    #grid table tbody tr td h4 {
+      margin: .75rem 0;
+      font-size: 1.75rem; }
+    #grid table tbody tr td h5 {
+      font-size: 1.5rem; }
+    #grid table tbody tr td img {
+      width: 15vw;
+      vertical-align: top; }
+    #grid table tbody tr td:first-of-type {
+      padding-right: 1.5rem; }
+  #grid table tbody tr th {
+    color: #37abcb;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding-bottom: 4rem; }
+  #grid table tbody tr:nth-of-type(3) td {
+    padding: 0 .4rem 0 0; }
+
 /* ------ Resources ------ */
 /* ------ Forms ------ */
 #forms {
