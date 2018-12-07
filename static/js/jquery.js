@@ -27,7 +27,7 @@ $(document).ready(function() {
             if (statsJson[i]['County Name'] == z) {
                 $('#statsmodal').html(
                     "<div class='modal-content'>" +
-                        "<h4>Statistics for " + simplemaps_statemap_mapdata.state_specific[y].name + " County:</h4>" +
+                        "<h2>Statistics for " + simplemaps_statemap_mapdata.state_specific[y].name + " County:</h2>" +
                         "<table class='striped'>" +
                             "<thead>" +
                                 "<tr>" +

@@ -1,4 +1,8 @@
 /* ------ Variables ------ */
+/* ------ Global ------ */
+* {
+  font-family: 'Molengo', sans-serif; }
+
 /* ------ Navbar ------ */
 .navbar-fixed nav {
   background-color: #37abcb; }
@@ -6,7 +10,7 @@
     margin: 11px; }
   .navbar-fixed nav .nav-wrapper ul li a {
     font-weight: 500;
-    font-size: 1.175rem; }
+    font-size: 1.4rem; }
 
 /* ------ Banner ------ */
 #banner {
@@ -18,6 +22,7 @@
 /* ------ Campaign / Dropdowns ------ */
 .campaign {
   height: 65vh;
+  padding-top: 4rem;
   position: relative;
   text-align: center;
   background-size: cover;
@@ -29,6 +34,12 @@
     background-image: url("/images/campaign_two.jpg"); }
   .campaign.three {
     background-image: url("/images/campaign_three.jpg"); }
+  .campaign h1 {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Cabin Sketch', cursive; }
+  .campaign h2 {
+    color: white; }
   .campaign i {
     bottom: 2.5%;
     cursor: pointer;
@@ -40,6 +51,10 @@
   background-color: #34393d; }
 
 /* ------ Stats ------ */
+#stats h1 {
+  color: #37abcb;
+  font-size: 4rem;
+  font-family: 'Cabin Sketch', cursive; }
 #stats #map {
   margin: auto;
   max-width: 90%;
@@ -48,15 +63,21 @@
     display: none; }
 #stats #statsmodal {
   max-height: 65vh; }
-  #stats #statsmodal .modal-content h4 {
-    color: #37abcb; }
+  #stats #statsmodal .modal-content h2 {
+    color: #37abcb;
+    font-size: 3rem;
+    font-family: 'Cabin Sketch', cursive; }
   #stats #statsmodal .modal-content table thead tr th {
     color: #37abcb;
-    font-size: 1.15rem; }
+    font-size: 1.5rem; }
   #stats #statsmodal .modal-content table tbody tr td {
-    font-size: 1.15rem; }
+    font-size: 1.3rem; }
 
 /* ------ Grid ------ */
+#grid h1 {
+  color: #37abcb;
+  font-size: 4rem;
+  font-family: 'Cabin Sketch', cursive; }
 #grid table {
   width: auto;
   margin: auto;
