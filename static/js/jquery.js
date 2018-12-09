@@ -1,9 +1,13 @@
 $(document).ready(function() {
 
-    // Initialize Modal Components
+    // Initialize Materialize Components
+
     $('.modal').modal();
+    $('select').formSelect();
+
 
     // Campain Section Dropdowns
+
     $('.campaign i').click(function() {
         const dropdown = $(this).parent().next(),
               others = $('.dropdown:visible').not(dropdown);
@@ -11,7 +15,9 @@ $(document).ready(function() {
         others.slideToggle();
     });
 
+
     // On Click Event for Map Stats
+
     $('#map').click(function() {
         let x = '',
             y = '',
@@ -120,5 +126,52 @@ $(document).ready(function() {
             }
         }
     });
+
+
+    // Resource Multi Step Form Navigation
+
+    var currentTab = 0;
+    showTab(currentTab);
+
+    function showTab(currentTab) {
+        const allTabs = document.getElementsByClassName("tab");
+
+        allTabs[currentTab].style.display = "block";
+
+        if (currentTab === 0) {
+            document.getElementById("previous").style.display = "none";
+        } else {
+            document.getElementById("previous").style.display = "inline-block";
+        }
+
+        document.getElementById("previous").innerHTML = "Previous Section: " + ;
+        if (currentTab === (allTabs.length - 1)) {
+            document.getElementById("next").innerHTML = "Submit Form";
+        } else {
+            document.getElementById("next").innerHTML = "Next Section: " + ;
+        }
+    }
+
+    $('#previous').click(function() {
+        previousNext(-1);
+    });
+    $('#next').click(function() {
+        previousNext(1)
+    })
+
+    function previousNext(increment) {
+        const allTabs = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        // if (n == 1 && !validateForm()) return false;
+        allTabs[currentTab].style.display = "none";
+        currentTab = currentTab + increment;
+        // if you have reached the end of the form... :
+        // if (currentTab >= x.length) {
+        //...the form gets submitted:
+            // document.getElementById("regForm").submit();
+            // return false;
+        // }
+        showTab(currentTab);
+    }
 
 });

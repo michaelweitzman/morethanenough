@@ -124,6 +124,85 @@
         </div>
         <div class="dropdown three"></div>
         <div id="resources"></div>
-        <div id="forms"></div>
+        <div id="forms" class="valign-wrapper">
+            <div class="card resources">
+                <div class="card-content">
+                    <span class="card-title">Become A Resource</span>
+                    <form>
+                        <div class="row tab one">
+                            <h4>Step 1 of 5: Resource Information</h4>
+                            <div class="input-field col m6">
+                                <input type="text" name="resourceName" placeholder="Resource Name">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="resourceWebsite" placeholder="Resource Website">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="resourcePhone" placeholder="Resource Phone Number">
+                            </div>
+                            <div class="input-field col m6">
+                                <select>
+                                    <option disabled selected>Resource Type</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Church">Church</option>
+                                    <option value="Organization">Organization</option>
+                                </select>
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="resourceAddressOne" placeholder="Resource Address One">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="resourceAddressTwo" placeholder="Resource Address Two">
+                            </div>
+                            <div class="input-field col m5">
+                                <input type="text" name="resourceCity" placeholder="Resource City">
+                            </div>
+                            <div class="input-field col m3">
+                                <input type="text" name="resourceState" placeholder="Resource State">
+                            </div>
+                            <div class="input-field col m4">
+                                <input type="text" name="resourceZip" placeholder="Resource Zip">
+                            </div>
+                            <div class="input-field col m6">
+                                <select multiple>
+                                    <option disabled selected>Resource County(s) of Service</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                                <span class="helper-text">Select All That Apply.</span>
+                            </div>
+                            <div class="col m6">
+                                <span>Does this resource provide direct services to child welfare?</span>
+                                <div class="switch">
+                                    <label>
+                                        No
+                                        <input type="checkbox">
+                                        <span class="lever"></span>
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row tab two">
+                            <h4>Step 2 of 5: Resource Champion Information</h4>
+                        </div>
+                        <div class="row tab three">
+                            <h4>Step 3 of 5: Form Submitter Information</h4>
+                        </div>
+                        <div class="row tab four">
+                            <h4>Step 4 of 5: Resource Descriptions</h4>
+                        </div>
+                        <div class="row tab five">
+                            <h4>Step 5 of 5: Miscellaneous Questions</h4>
+                        </div>
+                    </form>
+                    <div class="navigation">
+                        <a id="previous" class="waves-effect waves-light btn-large previous"></a>
+                        <a id="next" class="waves-effect waves-light btn-large next"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -212,7 +212,59 @@ $fullheight: calc(99vh - 56px);
 
 #forms {
     height: $fullheight;
+    display: flex;
+    justify-content: space-around;
     background-size: cover;
     background-attachment: fixed;
     background-image: url('/images/forms.jpg');
+
+    .resources {
+        width: 80%;
+        height: 85%;
+        overflow: hidden;
+
+        .card-content {
+            height: 100%;
+            position: relative;
+
+            .card-title {
+                margin: 0;
+                color: $primary;
+                font-size: 3rem;
+                font-family: 'Cabin Sketch', cursive;
+            }
+            form {
+                .row, .tab {
+                    display: none;
+
+                    h4 {
+                        font-size: 1.5rem;
+                    }
+                    .input-field {
+                        margin: 0 0 .5rem 0;
+
+                        .helper-text {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+            .navigation {
+                right: calc(.75rem + 24px);
+                bottom: 24px;
+                position: absolute;
+
+                a {
+                    font-size: 1.35rem;
+                    display: inline-block;
+                    background-color: $primary;
+                    text-transform: capitalize;
+
+                    &.previous {
+                        background-color: $gray;
+                    }
+                }
+            }
+        }
+    }
 }

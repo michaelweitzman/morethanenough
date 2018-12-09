@@ -116,8 +116,41 @@
 /* ------ Forms ------ */
 #forms {
   height: calc(99vh - 56px);
+  display: flex;
+  justify-content: space-around;
   background-size: cover;
   background-attachment: fixed;
   background-image: url("/images/forms.jpg"); }
+  #forms .resources {
+    width: 80%;
+    height: 85%;
+    overflow: hidden; }
+    #forms .resources .card-content {
+      height: 100%;
+      position: relative; }
+      #forms .resources .card-content .card-title {
+        margin: 0;
+        color: #37abcb;
+        font-size: 3rem;
+        font-family: 'Cabin Sketch', cursive; }
+      #forms .resources .card-content form .row, #forms .resources .card-content form .tab {
+        display: none; }
+        #forms .resources .card-content form .row h4, #forms .resources .card-content form .tab h4 {
+          font-size: 1.5rem; }
+        #forms .resources .card-content form .row .input-field, #forms .resources .card-content form .tab .input-field {
+          margin: 0 0 .5rem 0; }
+          #forms .resources .card-content form .row .input-field .helper-text, #forms .resources .card-content form .tab .input-field .helper-text {
+            margin-bottom: 1rem; }
+      #forms .resources .card-content .navigation {
+        right: calc(.75rem + 24px);
+        bottom: 24px;
+        position: absolute; }
+        #forms .resources .card-content .navigation a {
+          font-size: 1.35rem;
+          display: inline-block;
+          background-color: #37abcb;
+          text-transform: capitalize; }
+          #forms .resources .card-content .navigation a.previous {
+            background-color: #34393d; }
 
 /*# sourceMappingURL=index.css.map */
