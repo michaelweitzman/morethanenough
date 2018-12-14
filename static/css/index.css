@@ -43,7 +43,8 @@
   .campaign i {
     bottom: 2.5%;
     cursor: pointer;
-    position: absolute; }
+    position: absolute;
+    margin-left: -3rem; }
 
 .dropdown {
   height: 65vh;
@@ -121,6 +122,31 @@
   background-size: cover;
   background-attachment: fixed;
   background-image: url("/images/forms.jpg"); }
+  #forms .input-field input[type=text]:focus {
+    border-bottom: 1px solid #37abcb;
+    box-shadow: 0 1px 0 0 #37abcb; }
+  #forms .switch label input[type=checkbox]:checked + .lever {
+    background-color: #37abcb; }
+  #forms .switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #37abcb; }
+  #forms .select-dropdown li.disabled > span {
+    color: #9e9e9e; }
+  #forms .dropdown-content li > span {
+    color: #37abcb; }
+    #forms .dropdown-content li > span label {
+      color: #37abcb; }
+  #forms .dropdown-content li.disabled > span label {
+    color: #9e9e9e; }
+  #forms [type="checkbox"]:checked + span:not(.lever):before {
+    border-right-color: #37abcb;
+    border-bottom-color: #37abcb; }
+  #forms [type="checkbox"]:checked:disabled + span:before {
+    border-right-color: #9e9e9e;
+    border-bottom-color: #9e9e9e; }
+  #forms .select-dropdown li.optgroup > span {
+    color: #9e9e9e; }
+  #forms .select-wrapper input.select-dropdown:focus {
+    border-bottom-color: #37abcb; }
   #forms .resources {
     width: 80%;
     height: 85%;
@@ -135,12 +161,21 @@
         font-family: 'Cabin Sketch', cursive; }
       #forms .resources .card-content form .row, #forms .resources .card-content form .tab {
         display: none; }
-        #forms .resources .card-content form .row h4, #forms .resources .card-content form .tab h4 {
+        #forms .resources .card-content form .row .tab-title, #forms .resources .card-content form .tab .tab-title {
           font-size: 1.5rem; }
         #forms .resources .card-content form .row .input-field, #forms .resources .card-content form .tab .input-field {
           margin: 0 0 .5rem 0; }
-          #forms .resources .card-content form .row .input-field .helper-text, #forms .resources .card-content form .tab .input-field .helper-text {
-            margin-bottom: 1rem; }
+          #forms .resources .card-content form .row .input-field textarea, #forms .resources .card-content form .tab .input-field textarea {
+            height: 8.5rem; }
+        #forms .resources .card-content form .row .col label, #forms .resources .card-content form .tab .col label {
+          font-size: 1rem; }
+        #forms .resources .card-content form .row .col span, #forms .resources .card-content form .tab .col span {
+          font-size: 1.15rem; }
+        #forms .resources .card-content form .row.five .col, #forms .resources .card-content form .tab.five .col {
+          margin-bottom: 3rem; }
+        #forms .resources .card-content form .row .helper-text, #forms .resources .card-content form .tab .helper-text {
+          margin-bottom: 1rem;
+          color: #9e9e9e; }
       #forms .resources .card-content .navigation {
         right: calc(.75rem + 24px);
         bottom: 24px;

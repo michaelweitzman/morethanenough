@@ -130,7 +130,7 @@
                     <span class="card-title">Become A Resource</span>
                     <form>
                         <div class="row tab one">
-                            <h4>Step 1 of 5: Resource Information</h4>
+                            <h4 class="tab-title">Step 1 of 5: Resource Information</h4>
                             <div class="input-field col m6">
                                 <input type="text" name="resourceName" placeholder="Resource Name">
                             </div>
@@ -166,9 +166,83 @@
                             <div class="input-field col m6">
                                 <select multiple>
                                     <option disabled selected>Resource County(s) of Service</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
+                                    <option>Adair</option>
+                                    <option>Alfalfa</option>
+                                    <option>Atoka</option>
+                                    <option>Beaver</option>
+                                    <option>Beckham</option>
+                                    <option>Blaine</option>
+                                    <option>Bryan</option>
+                                    <option>Caddo</option>
+                                    <option>Canadian</option>
+                                    <option>Carter</option>
+                                    <option>Cherokee</option>
+                                    <option>Choctaw</option>
+                                    <option>Cimarron</option>
+                                    <option>Cleveland</option>
+                                    <option>Coal</option>
+                                    <option>Comanche</option>
+                                    <option>Cotton</option>
+                                    <option>Craig</option>
+                                    <option>Creek</option>
+                                    <option>Custer</option>
+                                    <option>Delaware</option>
+                                    <option>Dewey</option>
+                                    <option>Ellis</option>
+                                    <option>Garfield</option>
+                                    <option>Garvin</option>
+                                    <option>Grady</option>
+                                    <option>Grant</option>
+                                    <option>Greer</option>
+                                    <option>Harmon</option>
+                                    <option>Harper</option>
+                                    <option>Haskell</option>
+                                    <option>Hughes</option>
+                                    <option>Jackson</option>
+                                    <option>Jefferson</option>
+                                    <option>Johnston</option>
+                                    <option>Kay</option>
+                                    <option>Kingfisher</option>
+                                    <option>Kiowa</option>
+                                    <option>Latimer</option>
+                                    <option>LeFlore</option>
+                                    <option>Lincoln</option>
+                                    <option>Logan</option>
+                                    <option>Love</option>
+                                    <option>Major</option>
+                                    <option>Marshall</option>
+                                    <option>Mayes</option>
+                                    <option>McClain</option>
+                                    <option>McCurtain</option>
+                                    <option>McIntosh</option>
+                                    <option>Murray</option>
+                                    <option>Muskogee</option>
+                                    <option>Noble</option>
+                                    <option>Nowata</option>
+                                    <option>Okfuskee</option>
+                                    <option>Oklahoma</option>
+                                    <option>Okmulgee</option>
+                                    <option>Osage</option>
+                                    <option>Ottawa</option>
+                                    <option>Pawnee</option>
+                                    <option>Payne</option>
+                                    <option>Pittsburg</option>
+                                    <option>Pontotoc</option>
+                                    <option>Pottawatomie</option>
+                                    <option>Pushmataha</option>
+                                    <option>Roger Mills</option>
+                                    <option>Rogers</option>
+                                    <option>Seminole</option>
+                                    <option>Sequoyah</option>
+                                    <option>Stephens</option>
+                                    <option>Texas</option>
+                                    <option>Tillman</option>
+                                    <option>Tulsa</option>
+                                    <option>Wagoner</option>
+                                    <option>Washington</option>
+                                    <option>Washita</option>
+                                    <option>Woods</option>
+                                    <option>Woodward</option>
                                 </select>
                                 <span class="helper-text">Select All That Apply.</span>
                             </div>
@@ -185,16 +259,129 @@
                             </div>
                         </div>
                         <div class="row tab two">
-                            <h4>Step 2 of 5: Resource Champion Information</h4>
+                            <h4 class="tab-title">Step 2 of 5: Form Submitter Information</h4>
+                            <div class="input-field col m6">
+                                <input type="text" name="submitterName" placeholder="Form Submitter Name (First and Last)">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="submitterRole" placeholder="Form Submitter Role">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="submitterPhone" placeholder="Form Submitter Phone">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="submitterEmail" placeholder="Form Submitter Email">
+                            </div>
+                            <div class="col m12">
+                                <span>Is the person completing this form the resource champion as well?</span>
+                                <div class="switch">
+                                    <label>
+                                        No
+                                        <input type="checkbox">
+                                        <span class="lever"></span>
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                         <div class="row tab three">
-                            <h4>Step 3 of 5: Form Submitter Information</h4>
+                            <h4 class="tab-title">Step 3 of 5: Resource Champion Information</h4>
+                            <div class="input-field col m6">
+                                <input type="text" name="championName" placeholder="Resource Champion Name (First and Last)">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="championRole" placeholder="Resource Champion Role">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="championPhone" placeholder="Resource Champion Phone">
+                            </div>
+                            <div class="input-field col m6">
+                                <input type="text" name="championEmail" placeholder="Resource Champion Email">
+                            </div>
                         </div>
                         <div class="row tab four">
-                            <h4>Step 4 of 5: Resource Descriptions</h4>
+                            <h4 class="tab-title">Step 4 of 5: Resource Descriptions</h4>
+                            <div class="input-field col m12">
+                                <textarea name="resourceDescription" rows="6" placeholder="Description of Resource"></textarea>
+                            </div>
+                            <div class="input-field col m12">
+                                <textarea name="servicesProvided" rows="6" placeholder="Description of Services Provided by Resource"></textarea>
+                            </div>
                         </div>
                         <div class="row tab five">
-                            <h4>Step 5 of 5: Miscellaneous Questions</h4>
+                            <h4 class="tab-title">Step 5 of 5: Miscellaneous Questions</h4>
+                            <div class="col m6">
+                                <span>Is this resource in need of volunteers?</span>
+                                <div class="switch">
+                                    <label>
+                                        No
+                                        <input type="checkbox">
+                                        <span class="lever"></span>
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col m6">
+                                <span>Is this resource open to being contacted?</span>
+                                <div class="switch">
+                                    <label>
+                                        No
+                                        <input type="checkbox">
+                                        <span class="lever"></span>
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col m12">
+                                <span>Please select all boxes that apply to your resource's areas of service:</span>
+                                <select multiple>
+                                    <option disabled selected>Resource Area(s) of Service</option>
+                                    <optgroup label="Tier One: Financial">
+                                        <option>Prevention</option>
+                                        <option>Foster Care</option>
+                                        <option>Restoration</option>
+                                        <option>Adoption</option>
+                                        <option>Transition</option>
+                                    </optgroup>
+                                    <optgroup label="Tier Two: Relational">
+                                        <option>Prevention</option>
+                                        <option>Foster Care</option>
+                                        <option>Restoration</option>
+                                        <option>Adoption</option>
+                                        <option>Transition</option>
+                                    </optgroup>
+                                    <optgroup label="Tier Three: Familial">
+                                        <option>Prevention</option>
+                                        <option>Foster Care</option>
+                                        <option>Restoration</option>
+                                        <option>Adoption</option>
+                                        <option>Transition</option>
+                                    </optgroup>
+                                </select>
+                                <span class="helper-text">Select All That Apply.</span>
+                            </div>
+                            <div class="col m6">
+                                <span>Does this resource agree to the More Than Enough Terms of Service?</span>
+                                <div class="switch">
+                                    <label>
+                                        No
+                                        <input type="checkbox">
+                                        <span class="lever"></span>
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col m6">
+                                <span>Is this resource open to supporting the More Than Enough campaign financially?</span>
+                                <div class="switch">
+                                    <label>
+                                        No
+                                        <input type="checkbox">
+                                        <span class="lever"></span>
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </form>
                     <div class="navigation">

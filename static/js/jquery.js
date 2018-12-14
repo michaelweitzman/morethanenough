@@ -134,21 +134,37 @@ $(document).ready(function() {
     showTab(currentTab);
 
     function showTab(currentTab) {
-        const allTabs = document.getElementsByClassName("tab");
-
-        allTabs[currentTab].style.display = "block";
+        const allTabs = document.getElementsByClassName('tab');
+        var previousText = '';
+        var nextText = '';
+        allTabs[currentTab].style.display = 'block';
 
         if (currentTab === 0) {
-            document.getElementById("previous").style.display = "none";
+            document.getElementById('previous').style.display = 'none';
         } else {
-            document.getElementById("previous").style.display = "inline-block";
+            document.getElementById('previous').style.display = 'inline-block';
         }
 
-        document.getElementById("previous").innerHTML = "Previous Section: " + ;
-        if (currentTab === (allTabs.length - 1)) {
-            document.getElementById("next").innerHTML = "Submit Form";
+        if (currentTab === 0) {
+            nextText = 'Form Submitter Information';
+        } else if (currentTab === 1) {
+            previousText = 'Resource Information';
+            nextText = 'Resource Champion Information';
+        } else if (currentTab === 2) {
+            previousText = 'Form Submitter Information';
+            nextText = 'Resource Descriptions';
+        } else if (currentTab === 3) {
+            previousText = 'Resource Champion Information';
+            nextText = 'Miscellaneous Questions';
         } else {
-            document.getElementById("next").innerHTML = "Next Section: " + ;
+            previousText = 'Resource Descriptions';
+        }
+
+        document.getElementById('previous').innerHTML = 'Previous Section: ' + previousText;
+        if (currentTab === (allTabs.length - 1)) {
+            document.getElementById('next').innerHTML = 'Submit Form';
+        } else {
+            document.getElementById('next').innerHTML = 'Next Section: ' + nextText;
         }
     }
 
@@ -160,10 +176,10 @@ $(document).ready(function() {
     })
 
     function previousNext(increment) {
-        const allTabs = document.getElementsByClassName("tab");
+        const allTabs = document.getElementsByClassName('tab');
         // Exit the function if any field in the current tab is invalid:
         // if (n == 1 && !validateForm()) return false;
-        allTabs[currentTab].style.display = "none";
+        allTabs[currentTab].style.display = 'none';
         currentTab = currentTab + increment;
         // if you have reached the end of the form... :
         // if (currentTab >= x.length) {
