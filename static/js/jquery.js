@@ -181,12 +181,10 @@ $(document).ready(function() {
         // if (n == 1 && !validateForm()) return false;
         allTabs[currentTab].style.display = 'none';
         currentTab = currentTab + increment;
-        // if you have reached the end of the form... :
-        // if (currentTab >= x.length) {
-        //...the form gets submitted:
-            // document.getElementById("regForm").submit();
-            // return false;
-        // }
+        if (currentTab === allTabs.length) {
+            document.getElementById("resource_form").submit();
+            return false;
+        }
         showTab(currentTab);
     }
 

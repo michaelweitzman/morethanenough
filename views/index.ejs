@@ -128,7 +128,7 @@
             <div class="card resources">
                 <div class="card-content">
                     <span class="card-title">Become A Resource</span>
-                    <form>
+                    <form action="/resources" method="post" id="resource_form">
                         <div class="row tab one">
                             <h4 class="tab-title">Step 1 of 5: Resource Information</h4>
                             <div class="input-field col m6">
@@ -141,7 +141,7 @@
                                 <input type="text" name="resourcePhone" placeholder="Resource Phone Number">
                             </div>
                             <div class="input-field col m6">
-                                <select>
+                                <select name="resourceType">
                                     <option disabled selected>Resource Type</option>
                                     <option value="Business">Business</option>
                                     <option value="Church">Church</option>
@@ -164,85 +164,86 @@
                                 <input type="text" name="resourceZip" placeholder="Resource Zip">
                             </div>
                             <div class="input-field col m6">
-                                <select multiple>
+                                <select multiple name="resourceCounties">
                                     <option disabled selected>Resource County(s) of Service</option>
-                                    <option>Adair</option>
-                                    <option>Alfalfa</option>
-                                    <option>Atoka</option>
-                                    <option>Beaver</option>
-                                    <option>Beckham</option>
-                                    <option>Blaine</option>
-                                    <option>Bryan</option>
-                                    <option>Caddo</option>
-                                    <option>Canadian</option>
-                                    <option>Carter</option>
-                                    <option>Cherokee</option>
-                                    <option>Choctaw</option>
-                                    <option>Cimarron</option>
-                                    <option>Cleveland</option>
-                                    <option>Coal</option>
-                                    <option>Comanche</option>
-                                    <option>Cotton</option>
-                                    <option>Craig</option>
-                                    <option>Creek</option>
-                                    <option>Custer</option>
-                                    <option>Delaware</option>
-                                    <option>Dewey</option>
-                                    <option>Ellis</option>
-                                    <option>Garfield</option>
-                                    <option>Garvin</option>
-                                    <option>Grady</option>
-                                    <option>Grant</option>
-                                    <option>Greer</option>
-                                    <option>Harmon</option>
-                                    <option>Harper</option>
-                                    <option>Haskell</option>
-                                    <option>Hughes</option>
-                                    <option>Jackson</option>
-                                    <option>Jefferson</option>
-                                    <option>Johnston</option>
-                                    <option>Kay</option>
-                                    <option>Kingfisher</option>
-                                    <option>Kiowa</option>
-                                    <option>Latimer</option>
-                                    <option>LeFlore</option>
-                                    <option>Lincoln</option>
-                                    <option>Logan</option>
-                                    <option>Love</option>
-                                    <option>Major</option>
-                                    <option>Marshall</option>
-                                    <option>Mayes</option>
-                                    <option>McClain</option>
-                                    <option>McCurtain</option>
-                                    <option>McIntosh</option>
-                                    <option>Murray</option>
-                                    <option>Muskogee</option>
-                                    <option>Noble</option>
-                                    <option>Nowata</option>
-                                    <option>Okfuskee</option>
-                                    <option>Oklahoma</option>
-                                    <option>Okmulgee</option>
-                                    <option>Osage</option>
-                                    <option>Ottawa</option>
-                                    <option>Pawnee</option>
-                                    <option>Payne</option>
-                                    <option>Pittsburg</option>
-                                    <option>Pontotoc</option>
-                                    <option>Pottawatomie</option>
-                                    <option>Pushmataha</option>
-                                    <option>Roger Mills</option>
-                                    <option>Rogers</option>
-                                    <option>Seminole</option>
-                                    <option>Sequoyah</option>
-                                    <option>Stephens</option>
-                                    <option>Texas</option>
-                                    <option>Tillman</option>
-                                    <option>Tulsa</option>
-                                    <option>Wagoner</option>
-                                    <option>Washington</option>
-                                    <option>Washita</option>
-                                    <option>Woods</option>
-                                    <option>Woodward</option>
+                                    <option value="All Counties">All Counties</option>
+                                    <option value="Adair">Adair</option>
+                                    <option value="Alfalfa">Alfalfa</option>
+                                    <option value="Atoka">Atoka</option>
+                                    <option value="Beaver">Beaver</option>
+                                    <option value="Beckham">Beckham</option>
+                                    <option value="Blaine">Blaine</option>
+                                    <option value="Bryan">Bryan</option>
+                                    <option value="Caddo">Caddo</option>
+                                    <option value="Canadian">Canadian</option>
+                                    <option value="Carter">Carter</option>
+                                    <option value="Cherokee">Cherokee</option>
+                                    <option value="Choctaw">Choctaw</option>
+                                    <option value="Cimarron">Cimarron</option>
+                                    <option value="Cleveland">Cleveland</option>
+                                    <option value="Coal">Coal</option>
+                                    <option value="Comanche">Comanche</option>
+                                    <option value="Cotton">Cotton</option>
+                                    <option value="Craig">Craig</option>
+                                    <option value="Creek">Creek</option>
+                                    <option value="Custer">Custer</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="Dewey">Dewey</option>
+                                    <option value="Ellis">Ellis</option>
+                                    <option value="Garfield">Garfield</option>
+                                    <option value="Garvin">Garvin</option>
+                                    <option value="Grady">Grady</option>
+                                    <option value="Grant">Grant</option>
+                                    <option value="Greer">Greer</option>
+                                    <option value="Harmon">Harmon</option>
+                                    <option value="Harper">Harper</option>
+                                    <option value="Haskell">Haskell</option>
+                                    <option value="Hughes">Hughes</option>
+                                    <option value="Jackson">Jackson</option>
+                                    <option value="Jefferson">Jefferson</option>
+                                    <option value="Johnston">Johnston</option>
+                                    <option value="Kay">Kay</option>
+                                    <option value="Kingfisher">Kingfisher</option>
+                                    <option value="Kiowa">Kiowa</option>
+                                    <option value="Latimer">Latimer</option>
+                                    <option value="LeFlore">LeFlore</option>
+                                    <option value="Lincoln">Lincoln</option>
+                                    <option value="Logan">Logan</option>
+                                    <option value="Love">Love</option>
+                                    <option value="Major">Major</option>
+                                    <option value="Marshall">Marshall</option>
+                                    <option value="Mayes">Mayes</option>
+                                    <option value="McClain">McClain</option>
+                                    <option value="McCurtain">McCurtain</option>
+                                    <option value="McIntosh">McIntosh</option>
+                                    <option value="Murray">Murray</option>
+                                    <option value="Muskogee">Muskogee</option>
+                                    <option value="Noble">Noble</option>
+                                    <option value="Nowata">Nowata</option>
+                                    <option value="Okfuskee">Okfuskee</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Okmulgee">Okmulgee</option>
+                                    <option value="Osage">Osage</option>
+                                    <option value="Ottawa">Ottawa</option>
+                                    <option value="Pawnee">Pawnee</option>
+                                    <option value="Payne">Payne</option>
+                                    <option value="Pittsburg">Pittsburg</option>
+                                    <option value="Pontotoc">Pontotoc</option>
+                                    <option value="Pottawatomie">Pottawatomie</option>
+                                    <option value="Pushmataha">Pushmataha</option>
+                                    <option value="Roger Mills">Roger Mills</option>
+                                    <option value="Rogers">Rogers</option>
+                                    <option value="Seminole">Seminole</option>
+                                    <option value="Sequoyah">Sequoyah</option>
+                                    <option value="Stephens">Stephens</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Tillman">Tillman</option>
+                                    <option value="Tulsa">Tulsa</option>
+                                    <option value="Wagoner">Wagoner</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="Washita">Washita</option>
+                                    <option value="Woods">Woods</option>
+                                    <option value="Woodward">Woodward</option>
                                 </select>
                                 <span class="helper-text">Select All That Apply.</span>
                             </div>
@@ -251,7 +252,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="areServicesProvided">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -277,7 +278,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="isChampion">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -315,7 +316,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="needVolunteers">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -326,7 +327,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="canContact">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -334,28 +335,28 @@
                             </div>
                             <div class="col m12">
                                 <span>Please select all boxes that apply to your resource's areas of service:</span>
-                                <select multiple>
+                                <select multiple name="gridAreas">
                                     <option disabled selected>Resource Area(s) of Service</option>
                                     <optgroup label="Tier One: Financial">
-                                        <option>Prevention</option>
-                                        <option>Foster Care</option>
-                                        <option>Restoration</option>
-                                        <option>Adoption</option>
-                                        <option>Transition</option>
+                                        <option value="One_Prevention">Prevention</option>
+                                        <option value="One_Foster Care">Foster Care</option>
+                                        <option value="One_Restoration">Restoration</option>
+                                        <option value="One_Adoption">Adoption</option>
+                                        <option value="One_Transition">Transition</option>
                                     </optgroup>
                                     <optgroup label="Tier Two: Relational">
-                                        <option>Prevention</option>
-                                        <option>Foster Care</option>
-                                        <option>Restoration</option>
-                                        <option>Adoption</option>
-                                        <option>Transition</option>
+                                        <option value="Two_Prevention">Prevention</option>
+                                        <option value="Two_Foster Care">Foster Care</option>
+                                        <option value="Two_Restoration">Restoration</option>
+                                        <option value="Two_Adoption">Adoption</option>
+                                        <option value="Two_Transition">Transition</option>
                                     </optgroup>
                                     <optgroup label="Tier Three: Familial">
-                                        <option>Prevention</option>
-                                        <option>Foster Care</option>
-                                        <option>Restoration</option>
-                                        <option>Adoption</option>
-                                        <option>Transition</option>
+                                        <option value="Three_Prevention">Prevention</option>
+                                        <option value="Three_Foster Care">Foster Care</option>
+                                        <option value="Three_Restoration">Restoration</option>
+                                        <option value="Three_Adoption">Adoption</option>
+                                        <option value="Three_Transition">Transition</option>
                                     </optgroup>
                                 </select>
                                 <span class="helper-text">Select All That Apply.</span>
@@ -365,7 +366,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="termsOfService">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -376,7 +377,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="financialSupport">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
