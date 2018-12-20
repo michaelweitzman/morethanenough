@@ -176,16 +176,25 @@
         #forms .resources .card-content form .row .helper-text, #forms .resources .card-content form .tab .helper-text {
           margin-bottom: 1rem;
           color: #9e9e9e; }
-      #forms .resources .card-content .navigation {
+      #forms .resources .card-content form .navigation {
         right: calc(.75rem + 24px);
         bottom: 24px;
         position: absolute; }
-        #forms .resources .card-content .navigation a {
+        #forms .resources .card-content form .navigation a {
           font-size: 1.35rem;
           display: inline-block;
           background-color: #37abcb;
           text-transform: capitalize; }
-          #forms .resources .card-content .navigation a.previous {
+          #forms .resources .card-content form .navigation a.previous {
             background-color: #34393d; }
+        #forms .resources .card-content form .navigation i {
+          float: right;
+          background-color: #37abcb;
+          margin-left: .25rem; }
+          #forms .resources .card-content form .navigation i #submitButton {
+            color: white;
+            font-family: 'Molengo', sans-serif;
+            font-size: 1.35rem;
+            text-transform: capitalize; }
 
 /*# sourceMappingURL=index.css.map */

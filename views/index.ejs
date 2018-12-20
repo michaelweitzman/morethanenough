@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Molengo" rel="stylesheet">
         <link rel="stylesheet" href="materialize-css/dist/css/materialize.min.css">
         <script src="jquery/dist/jquery.min.js"></script>
+        <script src="form-serializer/dist/jquery.serialize-object.min.js"></script>
         <script src="materialize-css/dist/js/materialize.min.js"></script>
         <!-- Send Stats JSON to Jquery File -->
         <script type='text/javascript'>
@@ -384,11 +385,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="navigation">
+                            <a id="previous" class="waves-effect waves-light btn-large previous"></a>
+                            <a id="next" class="waves-effect waves-light btn-large next"></a>
+                            <input id="submitButton" class ="waves-effect waves-light btn-large submitButton" type="submit" value="Submit Form"/>
+                        </div>
                     </form>
-                    <div class="navigation">
-                        <a id="previous" class="waves-effect waves-light btn-large previous"></a>
-                        <a id="next" class="waves-effect waves-light btn-large next"></a>
-                    </div>
                 </div>
             </div>
         </div>

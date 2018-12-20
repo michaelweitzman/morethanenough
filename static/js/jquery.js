@@ -141,8 +141,14 @@ $(document).ready(function() {
 
         if (currentTab === 0) {
             document.getElementById('previous').style.display = 'none';
+            document.getElementsByClassName('submitButton')[0].style.display = 'none';
+        } else if (currentTab === allTabs.length - 1) {
+            document.getElementById('next').style.display = 'none';
+            document.getElementsByClassName('submitButton')[0].style.display = 'block';
         } else {
             document.getElementById('previous').style.display = 'inline-block';
+            document.getElementById('next').style.display = 'inline-block';
+            document.getElementsByClassName('submitButton')[0].style.display = 'none';
         }
 
         if (currentTab === 0) {
@@ -161,11 +167,7 @@ $(document).ready(function() {
         }
 
         document.getElementById('previous').innerHTML = 'Previous Section: ' + previousText;
-        if (currentTab === (allTabs.length - 1)) {
-            document.getElementById('next').innerHTML = 'Submit Form';
-        } else {
-            document.getElementById('next').innerHTML = 'Next Section: ' + nextText;
-        }
+        document.getElementById('next').innerHTML = 'Next Section: ' + nextText;
     }
 
     $('#previous').click(function() {
@@ -181,11 +183,22 @@ $(document).ready(function() {
         // if (n == 1 && !validateForm()) return false;
         allTabs[currentTab].style.display = 'none';
         currentTab = currentTab + increment;
-        if (currentTab === allTabs.length) {
-            document.getElementById("resource_form").submit();
-            return false;
-        }
         showTab(currentTab);
     }
+
+
+    // Resource Form Submission to Google Sheet
+
+    var $form = $('#resource_form');
+    var url = 'https://script.google.com/macros/s/AKfycbx5pllqBQkp3e3haihdONHvG7D9Cf4JpYffjnx24Ee1FJqr3gs/exec';
+
+    $form.on('submit', function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: $form.serializeObject()
+        });
+    });
 
 });

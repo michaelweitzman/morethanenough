@@ -307,20 +307,33 @@ $fullheight: calc(99vh - 56px);
                         color: $lightgray;
                     }
                 }
-            }
-            .navigation {
-                right: calc(.75rem + 24px);
-                bottom: 24px;
-                position: absolute;
+                .navigation {
+                    right: calc(.75rem + 24px);
+                    bottom: 24px;
+                    position: absolute;
 
-                a {
-                    font-size: 1.35rem;
-                    display: inline-block;
-                    background-color: $primary;
-                    text-transform: capitalize;
+                    a {
+                        font-size: 1.35rem;
+                        display: inline-block;
+                        background-color: $primary;
+                        text-transform: capitalize;
 
-                    &.previous {
-                        background-color: $darkgray;
+                        &.previous {
+                            background-color: $darkgray;
+                        }
+                    }
+
+                    i {
+                        float: right;
+                        background-color: $primary;
+                        margin-left: .25rem;
+
+                        #submitButton {
+                            color: white;
+                            font-family: 'Molengo', sans-serif;
+                            font-size: 1.35rem;
+                            text-transform: capitalize;
+                        }
                     }
                 }
             }
