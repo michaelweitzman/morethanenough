@@ -185,20 +185,4 @@ $(document).ready(function() {
         currentTab = currentTab + increment;
         showTab(currentTab);
     }
-
-
-    // Resource Form Submission to Google Sheet
-
-    var $form = $('#resource_form');
-    var url = 'https://script.google.com/macros/s/AKfycbx5pllqBQkp3e3haihdONHvG7D9Cf4JpYffjnx24Ee1FJqr3gs/exec';
-
-    $form.on('submit', function(event) {
-        event.preventDefault();
-        $.ajax({
-            url: url,
-            method: 'POST',
-            data: $form.serializeObject()
-        });
-    });
-
 });
