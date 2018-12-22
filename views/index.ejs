@@ -132,16 +132,16 @@
                         <div class="row tab one">
                             <h4 class="tab-title">Step 1 of 5: Resource Information</h4>
                             <div class="input-field col m6">
-                                <input type="text" name="resourceName" placeholder="Resource Name">
+                                <input type="text" name="Name" placeholder="Resource Name">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="resourceWebsite" placeholder="Resource Website">
+                                <input type="text" name="Website" placeholder="Resource Website">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="resourcePhone" placeholder="Resource Phone Number">
+                                <input type="text" name="Phone" placeholder="Resource Phone Number">
                             </div>
                             <div class="input-field col m6">
-                                <select name="resourceType">
+                                <select name="Type">
                                     <option disabled selected>Resource Type</option>
                                     <option value="Business">Business</option>
                                     <option value="Church">Church</option>
@@ -149,22 +149,22 @@
                                 </select>
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="resourceAddressOne" placeholder="Resource Address One">
+                                <input type="text" name="Address One" placeholder="Resource Address One">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="resourceAddressTwo" placeholder="Resource Address Two">
+                                <input type="text" name="Address Two" placeholder="Resource Address Two">
                             </div>
                             <div class="input-field col m5">
-                                <input type="text" name="resourceCity" placeholder="Resource City">
+                                <input type="text" name="City" placeholder="Resource City">
                             </div>
                             <div class="input-field col m3">
-                                <input type="text" name="resourceState" placeholder="Resource State">
+                                <input type="text" name="State" placeholder="Resource State">
                             </div>
                             <div class="input-field col m4">
-                                <input type="text" name="resourceZip" placeholder="Resource Zip">
+                                <input type="text" name="Zip" placeholder="Resource Zip">
                             </div>
                             <div class="input-field col m6">
-                                <select multiple name="resourceCounties">
+                                <select multiple name="Counties">
                                     <option disabled selected>Resource County(s) of Service</option>
                                     <option value="All Counties">All Counties</option>
                                     <option value="Adair">Adair</option>
@@ -252,7 +252,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox" name="areServicesProvided">
+                                        <input type="checkbox" name="Are Services Provided?" id="areServicesProvided">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -262,23 +262,23 @@
                         <div class="row tab two">
                             <h4 class="tab-title">Step 2 of 5: Form Submitter Information</h4>
                             <div class="input-field col m6">
-                                <input type="text" name="submitterName" placeholder="Form Submitter Name (First and Last)">
+                                <input type="text" id="formSubmitterName" name="Form Submitter Name" placeholder="Form Submitter Name (First and Last)">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="submitterRole" placeholder="Form Submitter Role">
+                                <input type="text" id="formSubmitterRole" name="Form Submitter Role" placeholder="Form Submitter Role">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="submitterPhone" placeholder="Form Submitter Phone">
+                                <input type="text" id="formSubmitterPhone" name="Form Submitter Phone" placeholder="Form Submitter Phone">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="submitterEmail" placeholder="Form Submitter Email">
+                                <input type="text" id="formSubmitterEmail" name="Form Submitter Email" placeholder="Form Submitter Email">
                             </div>
                             <div class="col m12">
                                 <span>Is the person completing this form the resource champion as well?</span>
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox" name="isChampion">
+                                        <input type="checkbox" id="isChampion" name="Is Resource Champion?">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -288,35 +288,35 @@
                         <div class="row tab three">
                             <h4 class="tab-title">Step 3 of 5: Resource Champion Information</h4>
                             <div class="input-field col m6">
-                                <input type="text" name="championName" placeholder="Resource Champion Name (First and Last)">
+                                <input type="text" id="championName" name="Champion Name" placeholder="Resource Champion Name (First and Last)">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="championRole" placeholder="Resource Champion Role">
+                                <input type="text" id="championRole" name="Champion Role" placeholder="Resource Champion Role">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="championPhone" placeholder="Resource Champion Phone">
+                                <input type="text" id="championPhone" name="Champion Phone" placeholder="Resource Champion Phone">
                             </div>
                             <div class="input-field col m6">
-                                <input type="text" name="championEmail" placeholder="Resource Champion Email">
+                                <input type="text" id="championEmail" name="Champion Email" placeholder="Resource Champion Email">
                             </div>
                         </div>
                         <div class="row tab four">
                             <h4 class="tab-title">Step 4 of 5: Resource Descriptions</h4>
                             <div class="input-field col m12">
-                                <textarea name="resourceDescription" rows="6" placeholder="Description of Resource"></textarea>
+                                <textarea name="Description" rows="6" placeholder="Description of Resource"></textarea>
                             </div>
                             <div class="input-field col m12">
-                                <textarea name="servicesProvided" rows="6" placeholder="Description of Services Provided by Resource"></textarea>
+                                <textarea name="Services Provided" rows="6" placeholder="Description of Services Provided by Resource"></textarea>
                             </div>
                         </div>
                         <div class="row tab five">
                             <h4 class="tab-title">Step 5 of 5: Miscellaneous Questions</h4>
-                            <div class="col m6">
+                            <div class="col m6" id="needVolunteers">
                                 <span>Is this resource in need of volunteers?</span>
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox" name="needVolunteers">
+                                        <input type="checkbox" name="Wants Volunteers?">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -327,7 +327,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox" name="canContact">
+                                        <input type="checkbox" name="Open to Contact?">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -335,7 +335,7 @@
                             </div>
                             <div class="col m12">
                                 <span>Please select all boxes that apply to your resource's areas of service:</span>
-                                <select multiple name="gridAreas">
+                                <select multiple name="Grid Areas">
                                     <option disabled selected>Resource Area(s) of Service</option>
                                     <optgroup label="Tier One: Financial">
                                         <option value="One_Prevention">Prevention</option>
@@ -366,7 +366,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox" name="termsOfService">
+                                        <input type="checkbox" name="Agrees to Terms of Service?">
                                         <span class="lever"></span>
                                         Yes
                                     </label>
@@ -377,7 +377,7 @@
                                 <div class="switch">
                                     <label>
                                         No
-                                        <input type="checkbox" name="financialSupport">
+                                        <input type="checkbox" name="Wants to Support Financially?">
                                         <span class="lever"></span>
                                         Yes
                                     </label>

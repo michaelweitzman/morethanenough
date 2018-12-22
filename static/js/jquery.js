@@ -128,7 +128,7 @@ $(document).ready(function() {
     });
 
 
-    // Resource Multi Step Form Navigation
+    // Resource Multi Step Form Navigation and Actions
 
     var currentTab = 0;
     showTab(currentTab);
@@ -185,4 +185,25 @@ $(document).ready(function() {
         currentTab = currentTab + increment;
         showTab(currentTab);
     }
+
+    $('#needVolunteers').hide();
+    $('#areServicesProvided').click(function() {
+        $('#needVolunteers').toggle();
+    });
+
+    let clickCount = 0;
+    $('#isChampion').click(function() {
+        clickCount += 1;
+        if(clickCount % 2 === 1) {
+            $('#championName').val('Hello World');
+            $('#championRole').val('Hello World');
+            $('#championPhone').val('Hello World');
+            $('#championEmail').val('Hello World');
+        } else {
+            $('#championName').val('');
+            $('#championRole').val('');
+            $('#championPhone').val('');
+            $('#championEmail').val('');
+        }
+    });
 });
