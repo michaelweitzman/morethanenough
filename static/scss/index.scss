@@ -204,7 +204,7 @@ h1 {
 /* ------ Resources ------ */
 
 #resources {
-
+    background-color: $primaryColor;
 }
 
 
@@ -237,6 +237,12 @@ h1 {
             width: 22.5%;
             padding: 0 .25rem;
             display: inline-block;
+        }
+        .input-field:nth-of-type(2) {
+            width: 15%;
+        }
+        .input-field:nth-of-type(3) {
+            width: 30%;
         }
         .input-field:last-of-type {
             width: auto;
@@ -351,11 +357,26 @@ h1 {
                         color: $lightgray;
                     }
                 }
+                .tab {
+                    &.one {
+                        .input-field {
+                            &:nth-of-type(10) {
+                                ul {
+                                    height: 375px;
+                                }
+                            }
+                        }
+                    }
+                    &.five {
+                        ul {
+                            height: 300px;
+                        }
+                    }
+                }
                 .navigation {
                     right: calc(.75rem + 24px);
                     bottom: 24px;
                     position: absolute;
-
                     a {
                         font-size: 1.35rem;
                         display: inline-block;
@@ -366,7 +387,6 @@ h1 {
                             background-color: $darkgray;
                         }
                     }
-
                     i {
                         float: right;
                         background-color: $primaryColor;
