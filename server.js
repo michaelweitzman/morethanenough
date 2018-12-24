@@ -61,6 +61,21 @@ app.post('/resources', function(req, res) {
     res.redirect('/');
 });
 
+app.post('/families', function(req, res) {
+    axios.post('https://sheetdb.io/api/v1/at2hbva3g05ej', { data: {
+            'Name': req.body['Name'],
+            'Phone': req.body['Phone'],
+            'Email': req.body['Email']
+        }})
+        .then(function(res) {
+            console.log(res);
+        })
+        .catch(function(err) {
+            console.log(err);
+        })
+    res.redirect('/');
+});
+
 // ------ Additional Methods ------ //
 function multiSelectValues(list) {
     listString = '';

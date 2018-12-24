@@ -195,10 +195,10 @@ $(document).ready(function() {
     $('#isChampion').click(function() {
         clickCount += 1;
         if(clickCount % 2 === 1) {
-            $('#championName').val('Hello World');
-            $('#championRole').val('Hello World');
-            $('#championPhone').val('Hello World');
-            $('#championEmail').val('Hello World');
+            $('#championName').val($('#formSubmitterName').val());
+            $('#championRole').val($('#formSubmitterRole').val());
+            $('#championPhone').val($('#formSubmitterPhone').val());
+            $('#championEmail').val($('#formSubmitterEmail').val());
         } else {
             $('#championName').val('');
             $('#championRole').val('');

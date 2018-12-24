@@ -1,15 +1,20 @@
 /* ------ Variables ------ */
 
-$primary: #37abcb;
 $darkgray: #34393d;
 $lightgray: #9e9e9e;
+$primaryColor: #37abcb;
 $fullheight: calc(99vh - 56px);
+$primaryFont: 'Molengo', sans-serif;
+$headerFont: 'Cabin Sketch', cursive;
 
 
 /* ------ Global ------ */
 
 * {
-    font-family: 'Molengo', sans-serif;
+    font-family: $primaryFont;
+}
+h1 {
+    font-family: $headerFont
 }
 
 
@@ -17,7 +22,7 @@ $fullheight: calc(99vh - 56px);
 
 .navbar-fixed {
     nav {
-        background-color: $primary;
+        background-color: $primaryColor;
 
         .nav-wrapper {
             img {
@@ -66,13 +71,9 @@ $fullheight: calc(99vh - 56px);
     &.three {
         background-image: url('/images/campaign_three.jpg');
     }
-    h1 {
+    h1, h2 {
         color: white;
         font-size: 5rem;
-        font-family: 'Cabin Sketch', cursive;
-    }
-    h2 {
-        color: white;
     }
     i {
         bottom: 2.5%;
@@ -93,9 +94,8 @@ $fullheight: calc(99vh - 56px);
 
 #stats {
     h1 {
-        color: $primary;
+        color: $primaryColor;
         font-size: 4rem;
-        font-family: 'Cabin Sketch', cursive;
     }
     #map {
         margin: auto;
@@ -111,15 +111,14 @@ $fullheight: calc(99vh - 56px);
 
         .modal-content {
             h2 {
-                color: $primary;
+                color: $primaryColor;
                 font-size: 3rem;
-                font-family: 'Cabin Sketch', cursive;
             }
             table {
                 thead {
                     tr {
                         th {
-                            color: $primary;
+                            color: $primaryColor;
                             font-size: 1.5rem;
                         }
                     }
@@ -141,9 +140,8 @@ $fullheight: calc(99vh - 56px);
 
 #grid {
     h1 {
-        color: $primary;
+        color: $primaryColor;
         font-size: 4rem;
-        font-family: 'Cabin Sketch', cursive;
     }
     table {
         width: auto;
@@ -153,7 +151,7 @@ $fullheight: calc(99vh - 56px);
         thead {
             tr {
                 th {
-                    color: $primary;
+                    color: $primaryColor;
                     font-weight: 800;
                     font-size: 1.5rem;
                     padding-top: 1rem;
@@ -167,7 +165,7 @@ $fullheight: calc(99vh - 56px);
 
                     h3 {
                         margin: 0;
-                        color: $primary;
+                        color: $primaryColor;
                         font-weight: 500;
                         font-size: 2.25rem;
                     }
@@ -187,7 +185,7 @@ $fullheight: calc(99vh - 56px);
                     }
                 }
                 th {
-                    color: $primary;
+                    color: $primaryColor;
                     font-weight: 800;
                     font-size: 1.5rem;
                     padding-bottom: 4rem;
@@ -212,7 +210,54 @@ $fullheight: calc(99vh - 56px);
 
 /* ------ Forms ------ */
 
-#forms {
+#familyForm {
+    height: 30vh;
+    padding-top: 5vh;
+    background-color: $primaryColor;
+
+    .input-field input[type=text] {
+        color: white;
+        box-shadow: 0 1px 0 0 white;
+        border-bottom: 1px solid white;
+    }
+    .input-field input[type=text]:focus {
+        color: white;
+        box-shadow: 0 1px 0 0 white;
+        border-bottom: 1px solid white;
+    }
+
+    h1 {
+        margin: 0 0 3vh 0;
+        color: white;
+        font-size: 3rem;
+    }
+    form {
+        .input-field {
+            margin: 0;
+            width: 22.5%;
+            padding: 0 .25rem;
+            display: inline-block;
+        }
+        .input-field:last-of-type {
+            width: auto;
+            margin-bottom: -1.25rem;
+        }
+        i {
+            float: right;
+            margin-left: .25rem;
+            background-color: white;
+
+            #submitButton {
+                color: $primaryColor;
+                font-family: $primaryFont;
+                font-size: 1.35rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+#resourceForm {
     height: $fullheight;
     display: flex;
     justify-content: space-around;
@@ -221,23 +266,23 @@ $fullheight: calc(99vh - 56px);
     background-image: url('/images/forms.jpg');
 
     .input-field input[type=text]:focus {
-        border-bottom: 1px solid $primary;
-        box-shadow: 0 1px 0 0 $primary;
+        border-bottom: 1px solid $primaryColor;
+        box-shadow: 0 1px 0 0 $primaryColor;
     }
     .switch label input[type=checkbox]:checked + .lever {
-        background-color: $primary;
+        background-color: $primaryColor;
     }
     .switch label input[type=checkbox]:checked + .lever:after {
-        background-color: $primary;
+        background-color: $primaryColor;
     }
     .select-dropdown li.disabled > span {
         color: $lightgray;
     }
     .dropdown-content li > span {
-        color: $primary;
+        color: $primaryColor;
 
         label {
-            color: $primary;
+            color: $primaryColor;
         }
     }
     .dropdown-content li.disabled > span {
@@ -246,8 +291,8 @@ $fullheight: calc(99vh - 56px);
         }
     }
     [type="checkbox"]:checked+span:not(.lever):before {
-        border-right-color: $primary;
-        border-bottom-color: $primary;
+        border-right-color: $primaryColor;
+        border-bottom-color: $primaryColor;
     }
     [type="checkbox"]:checked:disabled+span:before {
         border-right-color: $lightgray;
@@ -257,7 +302,7 @@ $fullheight: calc(99vh - 56px);
         color: $lightgray;
     }
     .select-wrapper input.select-dropdown:focus {
-        border-bottom-color: $primary;
+        border-bottom-color: $primaryColor;
     }
 
     .resources {
@@ -271,9 +316,8 @@ $fullheight: calc(99vh - 56px);
 
             .card-title {
                 margin: 0;
-                color: $primary;
+                color: $primaryColor;
                 font-size: 3rem;
-                font-family: 'Cabin Sketch', cursive;
             }
             form {
                 .row, .tab {
@@ -315,7 +359,7 @@ $fullheight: calc(99vh - 56px);
                     a {
                         font-size: 1.35rem;
                         display: inline-block;
-                        background-color: $primary;
+                        background-color: $primaryColor;
                         text-transform: capitalize;
 
                         &.previous {
@@ -325,12 +369,12 @@ $fullheight: calc(99vh - 56px);
 
                     i {
                         float: right;
-                        background-color: $primary;
+                        background-color: $primaryColor;
                         margin-left: .25rem;
 
                         #submitButton {
                             color: white;
-                            font-family: 'Molengo', sans-serif;
+                            font-family: $primaryFont;
                             font-size: 1.35rem;
                             text-transform: capitalize;
                         }

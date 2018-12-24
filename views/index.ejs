@@ -124,7 +124,24 @@
         </div>
         <div class="dropdown three"></div>
         <div id="resources"></div>
-        <div id="forms" class="valign-wrapper">
+        <div id="familyForm" class="center-align">
+            <h1>Commit Your Family</h1>
+            <form action="/families" method="post">
+                <div class="input-field">
+                    <input type="text" name="Name" placeholder="Name (First and Last)">
+                </div>
+                <div class="input-field">
+                    <input type="text" name="Phone" placeholder="Phone Number">
+                </div>
+                <div class="input-field">
+                    <input type="text" name="Email" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <input type="submit" id="submitButton" class="waves-effect waves-light btn-large" value="Submit Form">
+                </div>
+            </form>
+        </div>
+        <div id="resourceForm" class="valign-wrapper">
             <div class="card resources">
                 <div class="card-content">
                     <span class="card-title">Become A Resource</span>
@@ -387,7 +404,7 @@
                         <div class="navigation">
                             <a id="previous" class="waves-effect waves-light btn-large previous"></a>
                             <a id="next" class="waves-effect waves-light btn-large next"></a>
-                            <input id="submitButton" class ="waves-effect waves-light btn-large submitButton" type="submit" value="Submit Form"/>
+                            <input id="submitButton" class="waves-effect waves-light btn-large submitButton" type="submit" value="Submit Form"/>
                         </div>
                     </form>
                 </div>
