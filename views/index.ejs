@@ -76,11 +76,11 @@
                             <h4 class="center-align">Physical</h4>
                             <h5 class="center-align">Investing In</h5>
                         </td>
-                        <td><img src="/images/row-1-col-1.jpg"></td>
-                        <td><img src="/images/row-1-col-2.jpg"></td>
-                        <td><img src="/images/row-1-col-3.jpg"></td>
-                        <td><img src="/images/row-1-col-4.jpg"></td>
-                        <td><img src="/images/row-1-col-5.jpg"></td>
+                        <td id="row-1-col-1"><img src="/images/row-1-col-1.jpg"></td>
+                        <td id="row-1-col-2"><img src="/images/row-1-col-2.jpg"></td>
+                        <td id="row-1-col-3"><img src="/images/row-1-col-3.jpg"></td>
+                        <td id="row-1-col-4"><img src="/images/row-1-col-4.jpg"></td>
+                        <td id="row-1-col-5"><img src="/images/row-1-col-5.jpg"></td>
                     </tr>
                     <tr>
                         <td>
@@ -88,11 +88,11 @@
                             <h4 class="center-align">Relational</h4>
                             <h5 class="center-align">Walking With</h5>
                         </td>
-                        <td><img src="/images/row-2-col-1.jpg"></td>
-                        <td><img src="/images/row-2-col-2.jpg"></td>
-                        <td><img src="/images/row-2-col-3.jpg"></td>
-                        <td><img src="/images/row-2-col-4.jpg"></td>
-                        <td><img src="/images/row-2-col-5.jpg"></td>
+                        <td id="row-2-col-1"><img src="/images/row-2-col-1.jpg"></td>
+                        <td id="row-2-col-2"><img src="/images/row-2-col-2.jpg"></td>
+                        <td id="row-2-col-3"><img src="/images/row-2-col-3.jpg"></td>
+                        <td id="row-2-col-4"><img src="/images/row-2-col-4.jpg"></td>
+                        <td id="row-2-col-5"><img src="/images/row-2-col-5.jpg"></td>
                     </tr>
                     <tr>
                         <td>
@@ -100,11 +100,11 @@
                             <h4 class="center-align">Family</h4>
                             <h5 class="center-align">Having Home</h5>
                         </td>
-                        <td><img src="/images/row-3-col-1.jpg"></td>
-                        <td><img src="/images/row-3-col-2.jpg"></td>
-                        <td><img src="/images/row-3-col-3.jpg"></td>
-                        <td><img src="/images/row-3-col-4.jpg"></td>
-                        <td><img src="/images/row-3-col-5.jpg"></td>
+                        <td id="row-3-col-1"><img src="/images/row-3-col-1.jpg"></td>
+                        <td id="row-3-col-2"><img src="/images/row-3-col-2.jpg"></td>
+                        <td id="row-3-col-3"><img src="/images/row-3-col-3.jpg"></td>
+                        <td id="row-3-col-4"><img src="/images/row-3-col-4.jpg"></td>
+                        <td id="row-3-col-5"><img src="/images/row-3-col-5.jpg"></td>
                     </tr>
                     <tr>
                         <th></th>
@@ -116,8 +116,135 @@
                     </tr>
                 </tbody>
             </table>
+            <div id="gridmodal" class="modal bottom-sheet"></div>
         </div>
-        <div id="resources"></div>
+        <div id="resources" class="center-align">
+            <h1>Find Resources</h1>
+            <form action="/find" method="get">
+                <div class="input-field">
+                    <select name="Type">
+                        <option disabled selected>Resource Type</option>
+                        <option value="Business">Business</option>
+                        <option value="Church">Church</option>
+                        <option value="Organization">Organization</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <select multiple name="Counties">
+                        <option disabled selected>Resource County(s) of Service</option>
+                        <option value="All Counties">All Counties</option>
+                        <option value="Adair">Adair</option>
+                        <option value="Alfalfa">Alfalfa</option>
+                        <option value="Atoka">Atoka</option>
+                        <option value="Beaver">Beaver</option>
+                        <option value="Beckham">Beckham</option>
+                        <option value="Blaine">Blaine</option>
+                        <option value="Bryan">Bryan</option>
+                        <option value="Caddo">Caddo</option>
+                        <option value="Canadian">Canadian</option>
+                        <option value="Carter">Carter</option>
+                        <option value="Cherokee">Cherokee</option>
+                        <option value="Choctaw">Choctaw</option>
+                        <option value="Cimarron">Cimarron</option>
+                        <option value="Cleveland">Cleveland</option>
+                        <option value="Coal">Coal</option>
+                        <option value="Comanche">Comanche</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Craig">Craig</option>
+                        <option value="Creek">Creek</option>
+                        <option value="Custer">Custer</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Dewey">Dewey</option>
+                        <option value="Ellis">Ellis</option>
+                        <option value="Garfield">Garfield</option>
+                        <option value="Garvin">Garvin</option>
+                        <option value="Grady">Grady</option>
+                        <option value="Grant">Grant</option>
+                        <option value="Greer">Greer</option>
+                        <option value="Harmon">Harmon</option>
+                        <option value="Harper">Harper</option>
+                        <option value="Haskell">Haskell</option>
+                        <option value="Hughes">Hughes</option>
+                        <option value="Jackson">Jackson</option>
+                        <option value="Jefferson">Jefferson</option>
+                        <option value="Johnston">Johnston</option>
+                        <option value="Kay">Kay</option>
+                        <option value="Kingfisher">Kingfisher</option>
+                        <option value="Kiowa">Kiowa</option>
+                        <option value="Latimer">Latimer</option>
+                        <option value="LeFlore">LeFlore</option>
+                        <option value="Lincoln">Lincoln</option>
+                        <option value="Logan">Logan</option>
+                        <option value="Love">Love</option>
+                        <option value="Major">Major</option>
+                        <option value="Marshall">Marshall</option>
+                        <option value="Mayes">Mayes</option>
+                        <option value="McClain">McClain</option>
+                        <option value="McCurtain">McCurtain</option>
+                        <option value="McIntosh">McIntosh</option>
+                        <option value="Murray">Murray</option>
+                        <option value="Muskogee">Muskogee</option>
+                        <option value="Noble">Noble</option>
+                        <option value="Nowata">Nowata</option>
+                        <option value="Okfuskee">Okfuskee</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Okmulgee">Okmulgee</option>
+                        <option value="Osage">Osage</option>
+                        <option value="Ottawa">Ottawa</option>
+                        <option value="Pawnee">Pawnee</option>
+                        <option value="Payne">Payne</option>
+                        <option value="Pittsburg">Pittsburg</option>
+                        <option value="Pontotoc">Pontotoc</option>
+                        <option value="Pottawatomie">Pottawatomie</option>
+                        <option value="Pushmataha">Pushmataha</option>
+                        <option value="Roger Mills">Roger Mills</option>
+                        <option value="Rogers">Rogers</option>
+                        <option value="Seminole">Seminole</option>
+                        <option value="Sequoyah">Sequoyah</option>
+                        <option value="Stephens">Stephens</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Tillman">Tillman</option>
+                        <option value="Tulsa">Tulsa</option>
+                        <option value="Wagoner">Wagoner</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Washita">Washita</option>
+                        <option value="Woods">Woods</option>
+                        <option value="Woodward">Woodward</option>
+                    </select>
+                    <span class="helper-text white-text">Select All That Apply.</span>
+                </div>
+                <div class="input-field">
+                    <select multiple name="Grid Areas">
+                        <option disabled selected>Resource Area(s) of Service</option>
+                        <optgroup label="Tier One: Financial">
+                            <option value="One_Prevention">Prevention</option>
+                            <option value="One_Foster Care">Foster Care</option>
+                            <option value="One_Restoration">Restoration</option>
+                            <option value="One_Adoption">Adoption</option>
+                            <option value="One_Transition">Transition</option>
+                        </optgroup>
+                        <optgroup label="Tier Two: Relational">
+                            <option value="Two_Prevention">Prevention</option>
+                            <option value="Two_Foster Care">Foster Care</option>
+                            <option value="Two_Restoration">Restoration</option>
+                            <option value="Two_Adoption">Adoption</option>
+                            <option value="Two_Transition">Transition</option>
+                        </optgroup>
+                        <optgroup label="Tier Three: Familial">
+                            <option value="Three_Prevention">Prevention</option>
+                            <option value="Three_Foster Care">Foster Care</option>
+                            <option value="Three_Restoration">Restoration</option>
+                            <option value="Three_Adoption">Adoption</option>
+                            <option value="Three_Transition">Transition</option>
+                        </optgroup>
+                    </select>
+                    <span class="helper-text white-text">Select All That Apply.</span>
+                </div>
+                <div class="input-field">
+                    <input type="submit" id="submitButton" class="waves-effect waves-light btn-large" value="Find Resources">
+                </div>
+            </form>
+        </div>
         <div class="campaign three">
             <h1>Meet Our Sponsors!</h1>
             <h2>Thank You So Much.</h2>

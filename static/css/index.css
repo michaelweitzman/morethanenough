@@ -64,8 +64,9 @@ h1 {
 #stats #statsmodal {
   max-height: 65vh; }
   #stats #statsmodal .modal-content h2 {
+    font-size: 3rem;
     color: #37abcb;
-    font-size: 3rem; }
+    font-family: "Cabin Sketch", cursive; }
   #stats #statsmodal .modal-content table thead tr th {
     color: #37abcb;
     font-size: 1.5rem; }
@@ -109,10 +110,66 @@ h1 {
     padding-bottom: 4rem; }
   #grid table tbody tr:nth-of-type(3) td {
     padding: 0 .4rem 0 0; }
+#grid #gridmodal {
+  max-height: 65vh; }
+  #grid #gridmodal .modal-content h2 {
+    font-size: 3rem;
+    color: #37abcb;
+    font-family: "Cabin Sketch", cursive; }
+  #grid #gridmodal .modal-content p {
+    font-size: 1.3rem; }
+    #grid #gridmodal .modal-content p strong {
+      font-weight: bold; }
 
 /* ------ Resources ------ */
 #resources {
+  height: 30vh;
+  padding-top: 5vh;
   background-color: #37abcb; }
+  #resources .input-field input[type=text] {
+    color: white;
+    box-shadow: 0 1px 0 0 white;
+    border-bottom: 1px solid white; }
+  #resources .input-field input[type=text]:focus {
+    color: white;
+    box-shadow: 0 1px 0 0 white;
+    border-bottom: 1px solid white; }
+  #resources .select-dropdown li.disabled > span {
+    color: #9e9e9e; }
+  #resources .dropdown-content li > span {
+    color: #37abcb; }
+    #resources .dropdown-content li > span label {
+      color: #37abcb; }
+  #resources .dropdown-content li.disabled > span label {
+    color: #9e9e9e; }
+  #resources .select-dropdown li.optgroup > span {
+    color: #9e9e9e; }
+  #resources .select-wrapper input.select-dropdown:focus {
+    border-bottom-color: #37abcb; }
+  #resources h1 {
+    margin: 0 0 3vh 0;
+    color: white;
+    font-size: 3rem; }
+  #resources form ::placeholder {
+    color: white; }
+  #resources form .input-field {
+    margin: 0;
+    width: 22.5%;
+    padding: 0 .25rem;
+    vertical-align: top;
+    display: inline-block; }
+  #resources form .input-field:last-of-type {
+    width: auto;
+    margin-top: -1rem; }
+  #resources form i {
+    float: right;
+    margin-left: .25rem;
+    background-color: white; }
+    #resources form i #submitButton {
+      color: #37abcb;
+      font-family: "Molengo", sans-serif;
+      font-size: 1.35rem;
+      text-transform: capitalize; }
 
 /* ------ Forms ------ */
 #familyForm {
@@ -131,6 +188,8 @@ h1 {
     margin: 0 0 3vh 0;
     color: white;
     font-size: 3rem; }
+  #familyForm form ::placeholder {
+    color: white; }
   #familyForm form .input-field {
     margin: 0;
     width: 22.5%;
@@ -142,7 +201,7 @@ h1 {
     width: 30%; }
   #familyForm form .input-field:last-of-type {
     width: auto;
-    margin-bottom: -1.25rem; }
+    margin-bottom: -.75rem; }
   #familyForm form i {
     float: right;
     margin-left: .25rem;
@@ -194,8 +253,11 @@ h1 {
       position: relative; }
       #resourceForm .resources .card-content .card-title {
         margin: 0;
+        font-size: 3rem;
         color: #37abcb;
-        font-size: 3rem; }
+        font-family: "Cabin Sketch", cursive; }
+      #resourceForm .resources .card-content form ::placeholder {
+        color: black; }
       #resourceForm .resources .card-content form .row, #resourceForm .resources .card-content form .tab {
         display: none; }
         #resourceForm .resources .card-content form .row .tab-title, #resourceForm .resources .card-content form .tab .tab-title {
@@ -205,12 +267,12 @@ h1 {
           #resourceForm .resources .card-content form .row .input-field textarea, #resourceForm .resources .card-content form .tab .input-field textarea {
             height: 8.5rem; }
         #resourceForm .resources .card-content form .row .col label, #resourceForm .resources .card-content form .tab .col label {
+          color: black;
           font-size: 1rem; }
-        #resourceForm .resources .card-content form .row .col span, #resourceForm .resources .card-content form .tab .col span {
-          font-size: 1.15rem; }
         #resourceForm .resources .card-content form .row.five .col, #resourceForm .resources .card-content form .tab.five .col {
           margin-bottom: 3rem; }
         #resourceForm .resources .card-content form .row .helper-text, #resourceForm .resources .card-content form .tab .helper-text {
+          font-size: .75rem;
           margin-bottom: 1rem;
           color: #9e9e9e; }
       #resourceForm .resources .card-content form .tab.one .input-field:nth-of-type(10) ul {

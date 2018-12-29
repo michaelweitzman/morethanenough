@@ -111,8 +111,9 @@ h1 {
 
         .modal-content {
             h2 {
-                color: $primaryColor;
                 font-size: 3rem;
+                color: $primaryColor;
+                font-family: $headerFont;
             }
             table {
                 thead {
@@ -198,13 +199,99 @@ h1 {
             }
         }
     }
+    #gridmodal {
+        max-height: 65vh;
+
+        .modal-content {
+            h2 {
+                font-size: 3rem;
+                color: $primaryColor;
+                font-family: $headerFont;
+            }
+            p {
+                font-size: 1.3rem;
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }
 
 
 /* ------ Resources ------ */
 
 #resources {
+    height: 30vh;
+    padding-top: 5vh;
     background-color: $primaryColor;
+
+    .input-field input[type=text] {
+        color: white;
+        box-shadow: 0 1px 0 0 white;
+        border-bottom: 1px solid white;
+    }
+    .input-field input[type=text]:focus {
+        color: white;
+        box-shadow: 0 1px 0 0 white;
+        border-bottom: 1px solid white;
+    }
+    .select-dropdown li.disabled > span {
+        color: $lightgray;
+    }
+    .dropdown-content li > span {
+        color: $primaryColor;
+
+        label {
+            color: $primaryColor;
+        }
+    }
+    .dropdown-content li.disabled > span {
+        label {
+            color: $lightgray;
+        }
+    }
+    .select-dropdown li.optgroup>span {
+        color: $lightgray;
+    }
+    .select-wrapper input.select-dropdown:focus {
+        border-bottom-color: $primaryColor;
+    }
+
+    h1 {
+        margin: 0 0 3vh 0;
+        color: white;
+        font-size: 3rem;
+    }
+    form {
+        ::placeholder {
+            color: white;
+        }
+        .input-field {
+            margin: 0;
+            width: 22.5%;
+            padding: 0 .25rem;
+            vertical-align: top;
+            display: inline-block;
+        }
+        .input-field:last-of-type {
+            width: auto;
+            margin-top: -1rem;
+        }
+        i {
+            float: right;
+            margin-left: .25rem;
+            background-color: white;
+
+            #submitButton {
+                color: $primaryColor;
+                font-family: $primaryFont;
+                font-size: 1.35rem;
+                text-transform: capitalize;
+            }
+        }
+    }
 }
 
 
@@ -232,6 +319,9 @@ h1 {
         font-size: 3rem;
     }
     form {
+        ::placeholder {
+            color: white;
+        }
         .input-field {
             margin: 0;
             width: 22.5%;
@@ -246,7 +336,7 @@ h1 {
         }
         .input-field:last-of-type {
             width: auto;
-            margin-bottom: -1.25rem;
+            margin-bottom: -.75rem;
         }
         i {
             float: right;
@@ -322,10 +412,14 @@ h1 {
 
             .card-title {
                 margin: 0;
-                color: $primaryColor;
                 font-size: 3rem;
+                color: $primaryColor;
+                font-family: $headerFont;
             }
             form {
+                ::placeholder {
+                    color: black;
+                }
                 .row, .tab {
                     display: none;
 
@@ -341,10 +435,8 @@ h1 {
                     }
                     .col {
                         label {
+                            color: black;
                             font-size: 1rem;
-                        }
-                        span {
-                            font-size: 1.15rem;
                         }
                     }
                     &.five {
@@ -353,6 +445,7 @@ h1 {
                         }
                     }
                     .helper-text {
+                        font-size: .75rem;
                         margin-bottom: 1rem;
                         color: $lightgray;
                     }

@@ -58,7 +58,7 @@ app.post('/resources', function(req, res) {
         .catch(function(err) {
             console.log(err);
         });
-    res.redirect('/');
+    res.redirect('/resourceForm');
 });
 
 app.post('/families', function(req, res) {
@@ -73,7 +73,7 @@ app.post('/families', function(req, res) {
         .catch(function(err) {
             console.log(err);
         })
-    res.redirect('/');
+    res.redirect('/familyForm');
 });
 
 // ------ Additional Methods ------ //
