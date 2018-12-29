@@ -199,6 +199,23 @@ h1 {
             }
         }
     }
+    .flip {
+        width: 15vw;
+        height: 15vw;
+        margin: 0 auto;
+    }
+    .flip img {
+        width: 15vw;
+        height: auto;
+    }
+    .flip .back {
+        text-align: center;
+        background-color: $primaryColor;
+
+        h3 {
+            color: white;
+        }
+    }
     #gridmodal {
         max-height: 65vh;
 

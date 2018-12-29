@@ -110,6 +110,18 @@ h1 {
     padding-bottom: 4rem; }
   #grid table tbody tr:nth-of-type(3) td {
     padding: 0 .4rem 0 0; }
+#grid .flip {
+  width: 15vw;
+  height: 15vw;
+  margin: 0 auto; }
+#grid .flip img {
+  width: 15vw;
+  height: auto; }
+#grid .flip .back {
+  text-align: center;
+  background-color: #37abcb; }
+  #grid .flip .back h3 {
+    color: white; }
 #grid #gridmodal {
   max-height: 65vh; }
   #grid #gridmodal .modal-content h2 {

@@ -128,7 +128,13 @@ $(document).ready(function() {
     });
 
 
-    // Grid Descriptions Modal
+    // Grid Description Modals and Flip Action
+
+    $(function() {
+        $(".flip").flip({
+            trigger: 'hover'
+        });
+    });
 
     $('#row-1-col-1').click(function() {
         $('#gridmodal').html(
