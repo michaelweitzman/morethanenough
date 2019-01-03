@@ -2,7 +2,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const csv = require('csvtojson');
 const app = express();
 
 // ------ Guidelines ------ //
@@ -16,10 +15,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // ------ Routing ------ //
 app.get('/', function(req, res) {
-    csv().fromFile('data/report.csv')
-    .then( (json) => {
-        res.render('index', {data: json});
-    });
+    axios.all([
+        axios.get('https://sheetdb.io/api/v1/erhwv1m74gyik'),
+        axios.get('https://sheetdb.io/api/v1/ff4l51grygoqp')
+    ])
+    .then(axios.spread( (resources, stats) => {
+        res.render('index', {
+            resourcesData: resources.data,
+            statsData: stats.data
+        });
+    }));
 });
 
 app.post('/resources', function(req, res) {
@@ -58,7 +63,7 @@ app.post('/resources', function(req, res) {
         .catch(function(err) {
             console.log(err);
         });
-    res.redirect('/resourceForm');
+    res.redirect('/#resourceForm');
 });
 
 app.post('/families', function(req, res) {
@@ -73,7 +78,7 @@ app.post('/families', function(req, res) {
         .catch(function(err) {
             console.log(err);
         })
-    res.redirect('/familyForm');
+    res.redirect('#/familyForm');
 });
 
 // ------ Additional Methods ------ //

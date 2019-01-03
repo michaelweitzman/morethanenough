@@ -177,7 +177,7 @@ h1 {
     float: right;
     margin-left: .25rem;
     background-color: white; }
-    #resources form i #submitButton {
+    #resources form i #findResourcesSubmitButton {
       color: #37abcb;
       font-family: "Molengo", sans-serif;
       font-size: 1.35rem;

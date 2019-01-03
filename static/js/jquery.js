@@ -327,7 +327,23 @@ $(document).ready(function() {
     });
 
 
-    // Resource Multi Step Form Navigation and Actions
+    // Find Resources Result
+
+    $('#findResourcesSubmitButton').click(function() {
+        event.preventDefault();
+        let resources = [];
+        for (var i = 0; i < resourcesJson.length; i++) {
+            if (resourcesJson[i]['Type'] === document.getElementById('findType').value) {
+                resources.push(resourcesJson[i]);
+            }
+        }
+        for (var i = 0; i < resources.length; i++) {
+            console.log(resources[i]);
+        }
+    });
+
+
+    // Resource Multi Step Form Navigation, Validation, and Actions
 
     var currentTab = 0;
     showTab(currentTab);

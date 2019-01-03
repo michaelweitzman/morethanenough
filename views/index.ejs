@@ -15,7 +15,8 @@
         <script src="flip/dist/jquery.flip.min.js"></script>
         <!-- Send Stats JSON to Jquery File -->
         <script type='text/javascript'>
-            const statsJson = <%- JSON.stringify(data) %>
+            const resourcesJson = <%- JSON.stringify(resourcesData) %>
+            const statsJson = <%- JSON.stringify(statsData) %>
         </script>
         <!-- Project Assets -->
         <link rel="stylesheet" href="css/index.css">
@@ -256,9 +257,9 @@
         </div>
         <div id="resources" class="center-align">
             <h1>Find Resources</h1>
-            <form action="/find" method="get">
+            <form>
                 <div class="input-field">
-                    <select name="Type">
+                    <select id="findType" name="Type">
                         <option disabled selected>Resource Type</option>
                         <option value="Business">Business</option>
                         <option value="Church">Church</option>
@@ -266,7 +267,7 @@
                     </select>
                 </div>
                 <div class="input-field">
-                    <select multiple name="Counties">
+                    <select multiple id="findCounties" name="Counties">
                         <option disabled selected>Resource County(s) of Service</option>
                         <option value="All Counties">All Counties</option>
                         <option value="Adair">Adair</option>
@@ -350,7 +351,7 @@
                     <span class="helper-text white-text">Select All That Apply.</span>
                 </div>
                 <div class="input-field">
-                    <select multiple name="Grid Areas">
+                    <select multiple id="findGridAreas" name="Grid Areas">
                         <option disabled selected>Resource Area(s) of Service</option>
                         <optgroup label="Tier One: Financial">
                             <option value="One_Prevention">Prevention</option>
@@ -377,7 +378,7 @@
                     <span class="helper-text white-text">Select All That Apply.</span>
                 </div>
                 <div class="input-field">
-                    <input type="submit" id="submitButton" class="waves-effect waves-light btn-large" value="Find Resources">
+                    <input type="submit" id="findResourcesSubmitButton" class="waves-effect waves-light btn-large" value="Find Resources">
                 </div>
             </form>
         </div>
