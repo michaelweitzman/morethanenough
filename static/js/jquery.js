@@ -331,15 +331,66 @@ $(document).ready(function() {
 
     $('#findResourcesSubmitButton').click(function() {
         event.preventDefault();
-        let resources = [];
-        for (var i = 0; i < resourcesJson.length; i++) {
-            if (resourcesJson[i]['Type'] === document.getElementById('findType').value) {
-                resources.push(resourcesJson[i]);
+        let form = $('#findResources').serializeArray();
+        let selectedCounties = [];
+        let selectedGridAreas = [];
+        let typeResources = [];
+        let countyResources = [];
+        let gridResources = [];
+        let filteredResources = [];
+        let finalResources = [];
+        for (var i = 0; i < form.length; i++) {
+            if (form[i]['name'] === 'Counties') {
+                selectedCounties.push(form[i]['value']);
+            } else if (form[i]['name'] === 'Grid Areas') {
+                selectedGridAreas.push(form[i]['value']);
             }
         }
-        for (var i = 0; i < resources.length; i++) {
-            console.log(resources[i]);
+        for (var i = 0; i < resourcesJson.length; i++) {
+            if (document.getElementById('findType').value !== 'Resource Type') {
+                if (resourcesJson[i]['Type'] === document.getElementById('findType').value) {
+                    typeResources.push(resourcesJson[i]);
+                }
+            } else {
+                typeResources.push(resourcesJson[i]);
+            }
+            if (selectedCounties.length === 0 || selectedCounties.includes('All Counties')) {
+                countyResources.push(resourcesJson[i]);
+            } else {
+                for (var a = 0; a < selectedCounties.length; a++) {
+                    if (resourcesJson[i]['Counties'].includes(selectedCounties[a])) {
+                        countyResources.push(resourcesJson[i]);
+                        break;
+                    }
+                }
+            }
+            if (selectedGridAreas.length === 0) {
+                gridResources.push(resourcesJson[i]);
+            } else {
+                for (var b = 0; b < selectedGridAreas.length; b++) {
+                    if (resourcesJson[i]['Grid Areas'].includes(selectedGridAreas[b])) {
+                        gridResources.push(resourcesJson[i]);
+                        break;
+                    }
+                }
+            }
         }
+        filteredResources = (typeResources.concat(countyResources)).concat(gridResources);
+        for (var i = 0; i < filteredResources.length; i++) {
+            let count = 0;
+            for (var a = 0; a < filteredResources.length; a++) {
+                if (filteredResources[i] === filteredResources[a]) {
+                    count += 1;
+                }
+            }
+            if (count === 3) {
+                finalResources.push(filteredResources[i]);
+            }
+        }
+        finalResources = finalResources.filter(function(resource, index) {
+            return finalResources.indexOf(resource) === index;
+        });
+        console.log(finalResources);
     });
 
 

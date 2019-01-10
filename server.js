@@ -84,7 +84,7 @@ app.post('/families', function(req, res) {
 // ------ Additional Methods ------ //
 function multiSelectValues(list) {
     listString = '';
-    if(list.length > 1) {
+    if(Array.isArray(list)) {
         for(var i = 0; i < list.length; i++) {
             if(i === list.length - 1) {
                 listString += ' ' + list[i];
@@ -93,7 +93,7 @@ function multiSelectValues(list) {
             }
         }
     } else {
-        listString = list[0];
+        listString = list;
     }
     return listString;
 }
