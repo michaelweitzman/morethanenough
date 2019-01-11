@@ -128,13 +128,39 @@ $(document).ready(function() {
     });
 
 
-    // Grid Description Modals and Flip Action
+    // Grid Resource Counts, Description Modals and Flip Action
 
     $(function() {
         $(".flip").flip({
             trigger: 'hover'
         });
     });
+
+    function countResources(string) {
+        count = 0;
+        for (var i = 0; i < resourcesJson.length; i++) {
+            if (resourcesJson[i]['Grid Areas'].includes(string)) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    $('#row-1-col-1 .flip .back h3').text(countResources('One_Prevention') + ' Resources');
+    $('#row-1-col-2 .flip .back h3').text(countResources('One_Foster Care') + ' Resources');
+    $('#row-1-col-3 .flip .back h3').text(countResources('One_Restoration') + ' Resources');
+    $('#row-1-col-4 .flip .back h3').text(countResources('One_Adoption') + ' Resources');
+    $('#row-1-col-5 .flip .back h3').text(countResources('One_Transition') + ' Resources');
+    $('#row-2-col-1 .flip .back h3').text(countResources('Two_Prevention') + ' Resources');
+    $('#row-2-col-2 .flip .back h3').text(countResources('Two_Foster') + ' Resources');
+    $('#row-2-col-3 .flip .back h3').text(countResources('Two_Restoration') + ' Resources');
+    $('#row-2-col-4 .flip .back h3').text(countResources('Two_Adoption') + ' Resources');
+    $('#row-2-col-5 .flip .back h3').text(countResources('Two_Transition') + ' Resources');
+    $('#row-3-col-1 .flip .back h3').text(countResources('Three_Prevention') + ' Resources');
+    $('#row-3-col-2 .flip .back h3').text(countResources('Three_Foster') + ' Resources');
+    $('#row-3-col-3 .flip .back h3').text(countResources('Three_Restoration') + ' Resources');
+    $('#row-3-col-4 .flip .back h3').text(countResources('Three_Adoption') + ' Resources');
+    $('#row-3-col-5 .flip .back h3').text(countResources('Three_Transition') + ' Resources');
 
     $('#row-1-col-1').click(function() {
         $('#gridmodal').html(
@@ -331,6 +357,7 @@ $(document).ready(function() {
 
     $('#findResourcesSubmitButton').click(function() {
         event.preventDefault();
+        $('#resourcesmodal').html('');
         let form = $('#findResources').serializeArray();
         let selectedCounties = [];
         let selectedGridAreas = [];
@@ -358,7 +385,7 @@ $(document).ready(function() {
                 countyResources.push(resourcesJson[i]);
             } else {
                 for (var a = 0; a < selectedCounties.length; a++) {
-                    if (resourcesJson[i]['Counties'].includes(selectedCounties[a])) {
+                    if (resourcesJson[i]['Counties'].includes('All Counties') || resourcesJson[i]['Counties'].includes(selectedCounties[a])) {
                         countyResources.push(resourcesJson[i]);
                         break;
                     }
@@ -390,7 +417,34 @@ $(document).ready(function() {
         finalResources = finalResources.filter(function(resource, index) {
             return finalResources.indexOf(resource) === index;
         });
-        console.log(finalResources);
+        $('#resourcesmodal').html(
+            "<div class='modal-content'>" +
+                "<h2>Selected Resources:</h2>" +
+                "<table class='striped'>" +
+                    "<thead>" +
+                        "<tr>" +
+                            "<th>Name</th>" +
+                            "<th>Website</th>" +
+                            "<th>Description</th>" +
+                            "<th>Contact</th>" +
+                        "</tr>" +
+                    "</thead>" +
+                    "<tbody>" +
+                    "</tbody>" +
+                "</table>" +
+            "</div>"
+        );
+        for (var i = 0; i < finalResources.length; i++) {
+            $(
+                "<tr>" +
+                    "<td>" + finalResources[i]['Name'] + "</td>" +
+                    "<td>" + finalResources[i]['Website'] + "</td>" +
+                    "<td>" + finalResources[i]['Description'] + "</td>" +
+                    "<td></td>" +
+                "</tr>"
+            ).appendTo('#resourcesmodal tbody');
+        }
+        $('#resourcesmodal').modal('open');
     });
 
 

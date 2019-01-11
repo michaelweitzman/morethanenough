@@ -41,6 +41,23 @@
             </nav>
         </div>
         <div id="banner"></div>
+        <div id="familyForm" class="center-align">
+            <h1>Commit Your Family</h1>
+            <form action="/families" method="post">
+                <div class="input-field">
+                    <input type="text" name="Name" placeholder="Name (First and Last)">
+                </div>
+                <div class="input-field">
+                    <input type="text" name="Phone" placeholder="Phone Number">
+                </div>
+                <div class="input-field">
+                    <input type="text" name="Email" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <input type="submit" id="submitButton" class="waves-effect waves-light btn-large" value="Submit Form">
+                </div>
+            </form>
+        </div>
         <div class="campaign one">
             <h1>Why We Are Fighting</h1>
             <h2>for More Than Enough</h2>
@@ -381,6 +398,7 @@
                     <input type="submit" id="findResourcesSubmitButton" class="waves-effect waves-light btn-large" value="Find Resources">
                 </div>
             </form>
+            <div id="resourcesmodal" class="modal bottom-sheet"></div>
         </div>
         <div class="campaign three">
             <h1>Meet Our Sponsors!</h1>
@@ -388,23 +406,6 @@
             <i class="white-text large material-icons">keyboard_arrow_down</i>
         </div>
         <div class="dropdown three"></div>
-        <div id="familyForm" class="center-align">
-            <h1>Commit Your Family</h1>
-            <form action="/families" method="post">
-                <div class="input-field">
-                    <input type="text" name="Name" placeholder="Name (First and Last)">
-                </div>
-                <div class="input-field">
-                    <input type="text" name="Phone" placeholder="Phone Number">
-                </div>
-                <div class="input-field">
-                    <input type="text" name="Email" placeholder="Email">
-                </div>
-                <div class="input-field">
-                    <input type="submit" id="submitButton" class="waves-effect waves-light btn-large" value="Submit Form">
-                </div>
-            </form>
-        </div>
         <div id="resourceForm" class="valign-wrapper">
             <div class="card resources">
                 <div class="card-content">

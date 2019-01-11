@@ -19,7 +19,6 @@ h1 {
 #banner {
   height: calc(99vh - 56px);
   background-size: cover;
-  background-attachment: fixed;
   background-image: url("/images/banner.jpg"); }
 
 /* ------ Campaign / Dropdowns ------ */
@@ -182,6 +181,18 @@ h1 {
       font-family: "Molengo", sans-serif;
       font-size: 1.35rem;
       text-transform: capitalize; }
+  #resources #resourcesmodal {
+    max-height: 65vh; }
+    #resources #resourcesmodal .modal-content h2 {
+      font-size: 3rem;
+      text-align: left;
+      color: #37abcb;
+      font-family: "Cabin Sketch", cursive; }
+    #resources #resourcesmodal .modal-content table thead tr th {
+      color: #37abcb;
+      font-size: 1.5rem; }
+    #resources #resourcesmodal .modal-content table tbody tr td {
+      font-size: 1.3rem; }
 
 /* ------ Forms ------ */
 #familyForm {

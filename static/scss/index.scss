@@ -46,7 +46,6 @@ h1 {
 #banner {
     height: $fullheight;
     background-size: cover;
-    background-attachment: fixed;
     background-image: url('/images/banner.jpg');
 }
 
@@ -306,6 +305,35 @@ h1 {
                 font-family: $primaryFont;
                 font-size: 1.35rem;
                 text-transform: capitalize;
+            }
+        }
+    }
+    #resourcesmodal {
+        max-height: 65vh;
+
+        .modal-content {
+            h2 {
+                font-size: 3rem;
+                text-align: left;
+                color: $primaryColor;
+                font-family: $headerFont;
+            }
+            table {
+                thead {
+                    tr {
+                        th {
+                            color: $primaryColor;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
             }
         }
     }
