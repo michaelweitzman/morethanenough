@@ -71,7 +71,7 @@ h1 {
 
 /* ------ Dropdown Sections ------ */
 
-.dropdown-header {
+.dropdown-section-header {
     height: 35vw;
     min-height: 230px;
     position: relative;
@@ -113,7 +113,7 @@ h1 {
     }
 }
 
-.dropdown-content {
+.dropdown-section-content {
     height: 65vh;
     display: none;
     background-color: $darkgray;

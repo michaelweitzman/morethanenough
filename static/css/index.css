@@ -33,7 +33,7 @@ h1 {
   background-image: url("/images/banner.jpg"); }
 
 /* ------ Dropdown Sections ------ */
-.dropdown-header {
+.dropdown-section-header {
   height: 35vw;
   min-height: 230px;
   position: relative;
@@ -42,34 +42,34 @@ h1 {
   background-position: center;
   background-attachment: fixed; }
   @media (max-width: 1280px) {
-    .dropdown-header {
+    .dropdown-section-header {
       padding-top: 3vw; } }
   @media (max-width: 768px) {
-    .dropdown-header {
+    .dropdown-section-header {
       padding-top: 1vw; } }
   @media (max-width: 670px) {
-    .dropdown-header {
+    .dropdown-section-header {
       padding-top: 7vw; } }
-  .dropdown-header.one {
+  .dropdown-section-header.one {
     background-image: url("/images/campaign_one.jpg"); }
-  .dropdown-header.two {
+  .dropdown-section-header.two {
     background-image: url("/images/campaign_two.jpg"); }
-  .dropdown-header.three {
+  .dropdown-section-header.three {
     background-image: url("/images/campaign_three.jpg"); }
-  .dropdown-header h1, .dropdown-header h2 {
+  .dropdown-section-header h1, .dropdown-section-header h2 {
     color: white;
     font-size: 6vw; }
     @media (max-width: 670px) {
-      .dropdown-header h1, .dropdown-header h2 {
+      .dropdown-section-header h1, .dropdown-section-header h2 {
         margin-top: 0;
         font-size: 40px; } }
-  .dropdown-header i {
+  .dropdown-section-header i {
     bottom: 2.5%;
     cursor: pointer;
     position: absolute;
     margin-left: -3rem; }
 
-.dropdown-content {
+.dropdown-section-content {
   height: 65vh;
   display: none;
   background-color: #34393d; }
