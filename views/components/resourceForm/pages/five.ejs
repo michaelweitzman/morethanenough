@@ -1,0 +1,54 @@
+<div class="row tab five">
+    <h4 class="tab-title">Step 5 of 5: Miscellaneous Questions</h4>
+    <div class="col m6" id="needVolunteers">
+        <span>Is this resource in need of volunteers?</span>
+        <div class="switch">
+            <label>
+                No
+                <input type="checkbox" name="Wants Volunteers?">
+                <span class="lever"></span>
+                Yes
+            </label>
+        </div>
+    </div>
+    <div class="col m6">
+        <span>Is this resource open to being contacted?</span>
+        <div class="switch">
+            <label>
+                No
+                <input type="checkbox" name="Open to Contact?">
+                <span class="lever"></span>
+                Yes
+            </label>
+        </div>
+    </div>
+    <div class="col m12">
+        <span>Please select all boxes that apply to your resource's areas of service:</span>
+        <select multiple name="Grid Areas">
+            <%- include('../../../partials/resourceGridAreas') %>
+        </select>
+        <span class="helper-text">Select All That Apply.</span>
+    </div>
+    <div class="col m6">
+        <span>Does this resource agree to the More Than Enough Terms of Service?</span>
+        <div class="switch">
+            <label>
+                No
+                <input type="checkbox" name="Agrees to Terms of Service?">
+                <span class="lever"></span>
+                Yes
+            </label>
+        </div>
+    </div>
+    <div class="col m6">
+        <span>Is this resource open to supporting the More Than Enough campaign financially?</span>
+        <div class="switch">
+            <label>
+                No
+                <input type="checkbox" name="Wants to Support Financially?">
+                <span class="lever"></span>
+                Yes
+            </label>
+        </div>
+    </div>
+</div>

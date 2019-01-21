@@ -1,0 +1,17 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <img src="/images/logo.png">
+            <a class="sidenav-trigger right" data-target="mobile-menu">
+                <i class="white-text large material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <%- include('../partials/navigationItems') %>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-menu">
+    <%- include('../partials/navigationItems') %>
+</ul>

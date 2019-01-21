@@ -1,0 +1,26 @@
+<div id="resources" class="center-align">
+    <h1>Find Resources</h1>
+    <form id="findResources">
+        <div class="input-field">
+            <select id="findType" name="Type">
+                <%- include('../partials/resourceTypes') %>
+            </select>
+        </div>
+        <div class="input-field">
+            <select multiple id="findCounties" name="Counties">
+                <%- include('../partials/resourceCounties') %>
+            </select>
+            <span class="helper-text white-text">Select All That Apply.</span>
+        </div>
+        <div class="input-field">
+            <select multiple id="findGridAreas" name="Grid Areas">
+                <%- include('../partials/resourceGridAreas') %>
+            </select>
+            <span class="helper-text white-text">Select All That Apply.</span>
+        </div>
+        <div class="input-field">
+            <input type="submit" id="findResourcesSubmitButton" class="waves-effect waves-light btn-large" value="Find Resources">
+        </div>
+    </form>
+    <div id="resourcesmodal" class="modal bottom-sheet"></div>
+</div>

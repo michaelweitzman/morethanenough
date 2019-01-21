@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     // Initialize Materialize Components
 
+    $('.sidenav').sidenav();
     $('.modal').modal();
     $('select').formSelect();
 
