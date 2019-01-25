@@ -9,9 +9,9 @@ $(document).ready(function() {
 
     // Campain Section Dropdowns
 
-    $('.campaign i').click(function() {
+    $('.dropdown-section-header i').click(function() {
         const dropdown = $(this).parent().next(),
-              others = $('.dropdown:visible').not(dropdown);
+              others = $('.dropdown-section-content:visible').not(dropdown);
         dropdown.slideToggle();
         others.slideToggle();
     });
