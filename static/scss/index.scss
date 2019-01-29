@@ -69,6 +69,47 @@ h1 {
 }
 
 
+/* ------ Family Form ------ */
+
+#family-form {
+    margin: 0;
+    height: auto;
+    padding: 5vh 5vh 3vh 5vh;
+    background-color: $primaryColor;
+
+    .input-field input[type=text] {
+        color: white;
+        font-size: 14px;
+        box-shadow: 0 1px 0 0 white;
+        border-bottom: 1px solid white;
+    }
+    .input-field input[type=text]:focus {
+        color: white;
+        font-size: 14px;
+        box-shadow: 0 1px 0 0 white;
+        border-bottom: 1px solid white;
+    }
+
+    h1 {
+        margin: 0 0 2vh 0;
+        color: white;
+        font-size: 3rem;
+    }
+    form {
+        ::placeholder {
+            color: white;
+        }
+        button {
+            font-size: 17px;
+            color: $primaryColor;
+            background-color: white;
+            font-family: $primaryFont;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
 /* ------ Dropdown Sections ------ */
 
 .dropdown-section-header {
@@ -372,62 +413,6 @@ h1 {
 
 
 /* ------ Forms ------ */
-
-#familyForm {
-    height: 30vh;
-    padding-top: 5vh;
-    background-color: $primaryColor;
-
-    .input-field input[type=text] {
-        color: white;
-        box-shadow: 0 1px 0 0 white;
-        border-bottom: 1px solid white;
-    }
-    .input-field input[type=text]:focus {
-        color: white;
-        box-shadow: 0 1px 0 0 white;
-        border-bottom: 1px solid white;
-    }
-
-    h1 {
-        margin: 0 0 3vh 0;
-        color: white;
-        font-size: 3rem;
-    }
-    form {
-        ::placeholder {
-            color: white;
-        }
-        .input-field {
-            margin: 0;
-            width: 22.5%;
-            padding: 0 .25rem;
-            display: inline-block;
-        }
-        .input-field:nth-of-type(2) {
-            width: 15%;
-        }
-        .input-field:nth-of-type(3) {
-            width: 30%;
-        }
-        .input-field:last-of-type {
-            width: auto;
-            margin-bottom: -.75rem;
-        }
-        i {
-            float: right;
-            margin-left: .25rem;
-            background-color: white;
-
-            #submitButton {
-                color: $primaryColor;
-                font-family: $primaryFont;
-                font-size: 1.35rem;
-                text-transform: capitalize;
-            }
-        }
-    }
-}
 
 #resourceForm {
     height: $fullheight;

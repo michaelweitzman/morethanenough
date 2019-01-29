@@ -32,6 +32,35 @@ h1 {
   background-size: cover;
   background-image: url("/images/banner.jpg"); }
 
+/* ------ Family Form ------ */
+#family-form {
+  margin: 0;
+  height: auto;
+  padding: 5vh 5vh 3vh 5vh;
+  background-color: #37abcb; }
+  #family-form .input-field input[type=text] {
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 1px 0 0 white;
+    border-bottom: 1px solid white; }
+  #family-form .input-field input[type=text]:focus {
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 1px 0 0 white;
+    border-bottom: 1px solid white; }
+  #family-form h1 {
+    margin: 0 0 2vh 0;
+    color: white;
+    font-size: 3rem; }
+  #family-form form ::placeholder {
+    color: white; }
+  #family-form form button {
+    font-size: 17px;
+    color: #37abcb;
+    background-color: white;
+    font-family: "Molengo", sans-serif;
+    text-transform: capitalize; }
+
 /* ------ Dropdown Sections ------ */
 .dropdown-section-header {
   height: 35vw;
@@ -219,46 +248,6 @@ h1 {
       font-size: 1.3rem; }
 
 /* ------ Forms ------ */
-#familyForm {
-  height: 30vh;
-  padding-top: 5vh;
-  background-color: #37abcb; }
-  #familyForm .input-field input[type=text] {
-    color: white;
-    box-shadow: 0 1px 0 0 white;
-    border-bottom: 1px solid white; }
-  #familyForm .input-field input[type=text]:focus {
-    color: white;
-    box-shadow: 0 1px 0 0 white;
-    border-bottom: 1px solid white; }
-  #familyForm h1 {
-    margin: 0 0 3vh 0;
-    color: white;
-    font-size: 3rem; }
-  #familyForm form ::placeholder {
-    color: white; }
-  #familyForm form .input-field {
-    margin: 0;
-    width: 22.5%;
-    padding: 0 .25rem;
-    display: inline-block; }
-  #familyForm form .input-field:nth-of-type(2) {
-    width: 15%; }
-  #familyForm form .input-field:nth-of-type(3) {
-    width: 30%; }
-  #familyForm form .input-field:last-of-type {
-    width: auto;
-    margin-bottom: -.75rem; }
-  #familyForm form i {
-    float: right;
-    margin-left: .25rem;
-    background-color: white; }
-    #familyForm form i #submitButton {
-      color: #37abcb;
-      font-family: "Molengo", sans-serif;
-      font-size: 1.35rem;
-      text-transform: capitalize; }
-
 #resourceForm {
   height: calc(100vh - 56px);
   display: flex;
