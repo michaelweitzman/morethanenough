@@ -4,7 +4,11 @@
   font-family: "Molengo", sans-serif; }
 
 h1 {
+  font-size: 4rem;
   font-family: "Cabin Sketch", cursive; }
+  @media (max-width: 670px) {
+    h1 {
+      font-size: 40px; } }
 
 /* ------ Navigation ------ */
 .navbar-fixed nav {
@@ -36,7 +40,7 @@ h1 {
 #family-form {
   margin: 0;
   height: auto;
-  padding: 5vh 5vh 3vh 5vh;
+  padding: 3vh 5vh 3vh 5vh;
   background-color: #37abcb; }
   #family-form .input-field input[type=text] {
     color: white;
@@ -50,8 +54,7 @@ h1 {
     border-bottom: 1px solid white; }
   #family-form h1 {
     margin: 0 0 2vh 0;
-    color: white;
-    font-size: 3rem; }
+    color: white; }
   #family-form form ::placeholder {
     color: white; }
   #family-form form button {
@@ -64,21 +67,13 @@ h1 {
 /* ------ Dropdown Sections ------ */
 .dropdown-section-header {
   height: 35vw;
-  min-height: 230px;
+  padding-top: 5vw;
+  min-height: 325px;
   position: relative;
   text-align: center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
-  @media (max-width: 1280px) {
-    .dropdown-section-header {
-      padding-top: 3vw; } }
-  @media (max-width: 768px) {
-    .dropdown-section-header {
-      padding-top: 1vw; } }
-  @media (max-width: 670px) {
-    .dropdown-section-header {
-      padding-top: 7vw; } }
   .dropdown-section-header.one {
     background-image: url("/images/campaign_one.jpg"); }
   .dropdown-section-header.two {
@@ -86,11 +81,9 @@ h1 {
   .dropdown-section-header.three {
     background-image: url("/images/campaign_three.jpg"); }
   .dropdown-section-header h1, .dropdown-section-header h2 {
-    color: white;
-    font-size: 6vw; }
+    color: white; }
     @media (max-width: 670px) {
       .dropdown-section-header h1, .dropdown-section-header h2 {
-        margin-top: 0;
         font-size: 40px; } }
   .dropdown-section-header i {
     bottom: 2.5%;
@@ -105,7 +98,6 @@ h1 {
 
 /* ------ Stats ------ */
 #stats h1 {
-  font-size: 4rem;
   color: #37abcb; }
 #stats #map {
   margin: auto;
@@ -127,8 +119,7 @@ h1 {
 
 /* ------ Grid ------ */
 #grid h1 {
-  color: #37abcb;
-  font-size: 4rem; }
+  color: #37abcb; }
 #grid table {
   width: auto;
   margin: auto;
@@ -212,8 +203,7 @@ h1 {
     border-bottom-color: #37abcb; }
   #resources h1 {
     margin: 0 0 3vh 0;
-    color: white;
-    font-size: 3rem; }
+    color: white; }
   #resources form ::placeholder {
     color: white; }
   #resources form .input-field {

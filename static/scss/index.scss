@@ -14,7 +14,11 @@ $headerFont: 'Cabin Sketch', cursive;
     font-family: $primaryFont;
 }
 h1 {
-    font-family: $headerFont
+    font-size: 4rem;
+    font-family: $headerFont;
+    @media (max-width: 670px) {
+        font-size: 40px;
+    }
 }
 
 
@@ -74,7 +78,7 @@ h1 {
 #family-form {
     margin: 0;
     height: auto;
-    padding: 5vh 5vh 3vh 5vh;
+    padding: 3vh 5vh 3vh 5vh;
     background-color: $primaryColor;
 
     .input-field input[type=text] {
@@ -93,7 +97,6 @@ h1 {
     h1 {
         margin: 0 0 2vh 0;
         color: white;
-        font-size: 3rem;
     }
     form {
         ::placeholder {
@@ -114,21 +117,14 @@ h1 {
 
 .dropdown-section-header {
     height: 35vw;
-    min-height: 230px;
+    padding-top: 5vw;
+    min-height: 325px;
     position: relative;
     text-align: center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    @media (max-width: 1280px) {
-        padding-top: 3vw;
-    }
-    @media (max-width: 768px) {
-        padding-top: 1vw;
-    }
-    @media (max-width: 670px) {
-        padding-top: 7vw;
-    }
+
     &.one {
         background-image: url('/images/campaign_one.jpg');
     }
@@ -138,11 +134,10 @@ h1 {
     &.three {
         background-image: url('/images/campaign_three.jpg');
     }
+    
     h1, h2 {
         color: white;
-        font-size: 6vw;
         @media (max-width: 670px) {
-            margin-top: 0;
             font-size: 40px;
         }
     }
@@ -165,7 +160,6 @@ h1 {
 
 #stats {
     h1 {
-        font-size: 4rem;
         color: $primaryColor;
     }
     #map {
@@ -213,7 +207,6 @@ h1 {
 #grid {
     h1 {
         color: $primaryColor;
-        font-size: 4rem;
     }
     table {
         width: auto;
@@ -350,7 +343,6 @@ h1 {
     h1 {
         margin: 0 0 3vh 0;
         color: white;
-        font-size: 3rem;
     }
     form {
         ::placeholder {
