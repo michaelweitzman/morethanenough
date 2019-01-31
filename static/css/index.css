@@ -180,8 +180,9 @@ h2 {
 
 /* ------ Resources ------ */
 #resources {
-  height: 30vh;
-  padding-top: 5vh;
+  margin: 0;
+  height: auto;
+  padding: 3vh 5vh 3vh 5vh;
   background-color: #37abcb; }
   #resources .input-field input[type=text] {
     color: white;
@@ -217,15 +218,12 @@ h2 {
   #resources form .input-field:last-of-type {
     width: auto;
     margin-top: -1rem; }
-  #resources form i {
-    float: right;
-    margin-left: .25rem;
-    background-color: white; }
-    #resources form i #findResourcesSubmitButton {
-      color: #37abcb;
-      font-family: "Molengo", sans-serif;
-      font-size: 1.35rem;
-      text-transform: capitalize; }
+  #resources form #findResourcesSubmitButton {
+    font-size: 1.35rem;
+    color: #37abcb;
+    background-color: white;
+    font-family: "Molengo", sans-serif;
+    text-transform: capitalize; }
   #resources #resourcesmodal {
     max-height: 65vh; }
     #resources #resourcesmodal .modal-content h2 {

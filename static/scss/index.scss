@@ -306,8 +306,9 @@ h2 {
 /* ------ Resources ------ */
 
 #resources {
-    height: 30vh;
-    padding-top: 5vh;
+    margin: 0;
+    height: auto;
+    padding: 3vh 5vh 3vh 5vh;
     background-color: $primaryColor;
 
     .input-field input[type=text] {
@@ -361,17 +362,12 @@ h2 {
             width: auto;
             margin-top: -1rem;
         }
-        i {
-            float: right;
-            margin-left: .25rem;
+        #findResourcesSubmitButton {
+            font-size: 1.35rem;
+            color: $primaryColor;
             background-color: white;
-
-            #findResourcesSubmitButton {
-                color: $primaryColor;
-                font-family: $primaryFont;
-                font-size: 1.35rem;
-                text-transform: capitalize;
-            }
+            font-family: $primaryFont;
+            text-transform: capitalize;
         }
     }
     #resourcesmodal {
