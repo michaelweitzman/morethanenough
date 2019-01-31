@@ -10,6 +10,9 @@ h1 {
     h1 {
       font-size: 40px; } }
 
+h2 {
+  font-size: 4rem; }
+
 /* ------ Navigation ------ */
 .navbar-fixed nav {
   background-color: #37abcb; }
@@ -68,7 +71,7 @@ h1 {
 .dropdown-section-header {
   height: 35vw;
   padding-top: 5vw;
-  min-height: 325px;
+  min-height: 300px;
   position: relative;
   text-align: center;
   background-size: cover;
@@ -100,15 +103,14 @@ h1 {
 #stats h1 {
   color: #37abcb; }
 #stats #map {
-  margin: auto;
   max-width: 90%;
-  height: calc(100vh - 56px); }
+  height: 100%;
+  margin: 0 auto 3vh auto; }
   #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
     display: none; }
 #stats #statsmodal {
   max-height: 65vh; }
   #stats #statsmodal .modal-content h2 {
-    font-size: 3rem;
     color: #37abcb;
     font-family: "Cabin Sketch", cursive; }
   #stats #statsmodal .modal-content table thead tr th {

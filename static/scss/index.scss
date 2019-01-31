@@ -20,6 +20,9 @@ h1 {
         font-size: 40px;
     }
 }
+h2 {
+    font-size: 4rem;
+}
 
 
 /* ------ Navigation ------ */
@@ -118,7 +121,7 @@ h1 {
 .dropdown-section-header {
     height: 35vw;
     padding-top: 5vw;
-    min-height: 325px;
+    min-height: 300px;
     position: relative;
     text-align: center;
     background-size: cover;
@@ -163,9 +166,9 @@ h1 {
         color: $primaryColor;
     }
     #map {
-        margin: auto;
         max-width: 90%;
-        height: $fullheight;
+        height: 100%;
+        margin: 0 auto 3vh auto;
 
         tspan, #stats_outer, #stats_zoom {
             display: none;
@@ -176,7 +179,6 @@ h1 {
 
         .modal-content {
             h2 {
-                font-size: 3rem;
                 color: $primaryColor;
                 font-family: $headerFont;
             }
