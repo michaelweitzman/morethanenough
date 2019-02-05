@@ -8,7 +8,7 @@ h1 {
   font-family: "Cabin Sketch", cursive; }
   @media (max-width: 670px) {
     h1 {
-      font-size: 40px; } }
+      font-size: 38px; } }
 
 h2 {
   font-size: 4rem; }
@@ -35,9 +35,29 @@ h2 {
 
 /* ------ Banner ------ */
 #banner {
+  position: relative;
   height: calc(100vh - 56px);
   background-size: cover;
   background-image: url("/images/banner.jpg"); }
+  #banner div {
+    top: 25vh;
+    width: 100vw;
+    position: absolute; }
+    #banner div h1 {
+      margin: 0 auto;
+      color: white;
+      text-align: center; }
+      @media (max-width: 670px) {
+        #banner div h1 {
+          text-transform: uppercase; } }
+    #banner div a {
+      font-size: 20px;
+      margin-bottom: 2vh;
+      color: #37abcb;
+      background-color: white;
+      text-transform: capitalize; }
+      #banner div a:first-of-type {
+        margin-right: 1%; }
 
 /* ------ Family Form ------ */
 #family-form {
@@ -47,21 +67,24 @@ h2 {
   background-color: #37abcb; }
   #family-form .input-field input[type=text] {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     box-shadow: 0 1px 0 0 white;
     border-bottom: 1px solid white; }
   #family-form .input-field input[type=text]:focus {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     box-shadow: 0 1px 0 0 white;
     border-bottom: 1px solid white; }
   #family-form h1 {
     margin: 0 0 2vh 0;
     color: white; }
+  #family-form p {
+    color: white;
+    font-size: 18px; }
   #family-form form ::placeholder {
     color: white; }
   #family-form form button {
-    font-size: 17px;
+    font-size: 20px;
     color: #37abcb;
     background-color: white;
     font-family: "Molengo", sans-serif;

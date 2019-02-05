@@ -17,7 +17,7 @@ h1 {
     font-size: 4rem;
     font-family: $headerFont;
     @media (max-width: 670px) {
-        font-size: 40px;
+        font-size: 38px;
     }
 }
 h2 {
@@ -70,9 +70,37 @@ h2 {
 /* ------ Banner ------ */
 
 #banner {
+    position: relative;
     height: $fullheight;
     background-size: cover;
     background-image: url('/images/banner.jpg');
+
+    div {
+        top: 25vh;
+        width: 100vw;
+        position: absolute;
+
+        h1 {
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+
+            @media(max-width: 670px) {
+                text-transform: uppercase;
+            }
+        }
+        a {
+            font-size: 20px;
+            margin-bottom: 2vh;
+            color: $primaryColor;
+            background-color: white;
+            text-transform: capitalize;
+    
+            &:first-of-type {
+                margin-right: 1%;
+            }
+        }
+    }
 }
 
 
@@ -86,13 +114,13 @@ h2 {
 
     .input-field input[type=text] {
         color: white;
-        font-size: 14px;
+        font-size: 16px;
         box-shadow: 0 1px 0 0 white;
         border-bottom: 1px solid white;
     }
     .input-field input[type=text]:focus {
         color: white;
-        font-size: 14px;
+        font-size: 16px;
         box-shadow: 0 1px 0 0 white;
         border-bottom: 1px solid white;
     }
@@ -101,12 +129,16 @@ h2 {
         margin: 0 0 2vh 0;
         color: white;
     }
+    p {
+        color: white;
+        font-size: 18px;
+    }
     form {
         ::placeholder {
             color: white;
         }
         button {
-            font-size: 17px;
+            font-size: 20px;
             color: $primaryColor;
             background-color: white;
             font-family: $primaryFont;
