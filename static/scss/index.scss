@@ -73,10 +73,14 @@ h2 {
     position: relative;
     height: $fullheight;
     background-size: cover;
+    background-position: center;
     background-image: url('/images/banner.jpg');
+    @media(max-width: 670px) {
+        background-position: right;
+    }
 
     div {
-        top: 25vh;
+        top: 29vh;
         width: 100vw;
         position: absolute;
 
@@ -84,7 +88,6 @@ h2 {
             margin: 0 auto;
             color: white;
             text-align: center;
-
             @media(max-width: 670px) {
                 text-transform: uppercase;
             }
@@ -185,9 +188,44 @@ h2 {
 }
 
 .dropdown-section-content {
-    height: 65vh;
     display: none;
+    padding: 2.5% 5% 5% 5%;
     background-color: $darkgray;
+
+    &.two {
+        padding-top: 0;
+    }
+
+    div {
+        color: white;
+        font-size: 17px;
+        white-space: pre-line;
+        text-align: center;
+
+        .row {
+            margin: 0;
+        }
+        strong {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        li {
+            background-color: $primaryColor;
+
+            a {
+                font-size: 20px !important;
+                color: white !important;
+            }
+        }
+        .tabs .tab a:focus, .tabs .tab a:focus.active {
+            background-color: rgba(255, 2555, 255, 0.25) !important;
+            border-color: white !important;
+            outline: none !important;
+        }
+        .indicator {
+            background-color: white !important;
+        }
+    }
 }
 
 

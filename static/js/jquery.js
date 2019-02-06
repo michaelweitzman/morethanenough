@@ -1,10 +1,14 @@
 $(document).ready(function() {
 
-    // Initialize Materialize Components
+    // Initialize Library Components
 
     $('.sidenav').sidenav();
     $('.modal').modal();
     $('select').formSelect();
+    $('.tabs').tabs();
+    $('.selector').animatedHeadline({
+        animationType: 'slide'
+    });
 
 
     // Campain Section Dropdowns
@@ -455,7 +459,7 @@ $(document).ready(function() {
     showTab(currentTab);
 
     function showTab(currentTab) {
-        const allTabs = document.getElementsByClassName('tab');
+        const allTabs = document.getElementsByClassName('step');
         var previousText = '';
         var nextText = '';
         allTabs[currentTab].style.display = 'block';
@@ -499,7 +503,7 @@ $(document).ready(function() {
     })
 
     function previousNext(increment) {
-        const allTabs = document.getElementsByClassName('tab');
+        const allTabs = document.getElementsByClassName('step');
         // Exit the function if any field in the current tab is invalid:
         // if (n == 1 && !validateForm()) return false;
         allTabs[currentTab].style.display = 'none';

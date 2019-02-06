@@ -38,9 +38,13 @@ h2 {
   position: relative;
   height: calc(100vh - 56px);
   background-size: cover;
+  background-position: center;
   background-image: url("/images/banner.jpg"); }
+  @media (max-width: 670px) {
+    #banner {
+      background-position: right; } }
   #banner div {
-    top: 25vh;
+    top: 29vh;
     width: 100vw;
     position: absolute; }
     #banner div h1 {
@@ -118,9 +122,32 @@ h2 {
     margin-left: -3rem; }
 
 .dropdown-section-content {
-  height: 65vh;
   display: none;
+  padding: 2.5% 5% 5% 5%;
   background-color: #34393d; }
+  .dropdown-section-content.two {
+    padding-top: 0; }
+  .dropdown-section-content div {
+    color: white;
+    font-size: 17px;
+    white-space: pre-line;
+    text-align: center; }
+    .dropdown-section-content div .row {
+      margin: 0; }
+    .dropdown-section-content div strong {
+      font-size: 20px;
+      font-weight: bold; }
+    .dropdown-section-content div li {
+      background-color: #37abcb; }
+      .dropdown-section-content div li a {
+        font-size: 20px !important;
+        color: white !important; }
+    .dropdown-section-content div .tabs .tab a:focus, .dropdown-section-content div .tabs .tab a:focus.active {
+      background-color: rgba(255, 255, 255, 0.25) !important;
+      border-color: white !important;
+      outline: none !important; }
+    .dropdown-section-content div .indicator {
+      background-color: white !important; }
 
 /* ------ Stats ------ */
 #stats h1 {
