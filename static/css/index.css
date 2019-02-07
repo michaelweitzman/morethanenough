@@ -57,11 +57,12 @@ h2 {
     #banner div a {
       font-size: 20px;
       margin-bottom: 2vh;
-      color: #37abcb;
-      background-color: white;
+      color: white;
+      background-color: #37abcb;
       text-transform: capitalize; }
-      #banner div a:first-of-type {
-        margin-right: 1%; }
+      @media (min-width: 670px) {
+        #banner div a:first-of-type {
+          margin-right: 2%; } }
 
 /* ------ Family Form ------ */
 #family-form {
@@ -93,6 +94,9 @@ h2 {
     background-color: white;
     font-family: "Molengo", sans-serif;
     text-transform: capitalize; }
+    @media (min-width: 670px) {
+      #family-form form button {
+        width: 40%; } }
 
 /* ------ Dropdown Sections ------ */
 .dropdown-section-header {
@@ -142,6 +146,9 @@ h2 {
       .dropdown-section-content div li a {
         font-size: 20px !important;
         color: white !important; }
+        @media (max-width: 670px) {
+          .dropdown-section-content div li a {
+            font-size: 16px !important; } }
     .dropdown-section-content div .tabs .tab a:focus, .dropdown-section-content div .tabs .tab a:focus.active {
       background-color: rgba(255, 255, 255, 0.25) !important;
       border-color: white !important;

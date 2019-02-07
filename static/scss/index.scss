@@ -95,12 +95,14 @@ h2 {
         a {
             font-size: 20px;
             margin-bottom: 2vh;
-            color: $primaryColor;
-            background-color: white;
+            color: white;
+            background-color: $primaryColor;
             text-transform: capitalize;
     
-            &:first-of-type {
-                margin-right: 1%;
+            @media(min-width: 670px) {
+                &:first-of-type {
+                    margin-right: 2%;
+                }
             }
         }
     }
@@ -146,6 +148,9 @@ h2 {
             background-color: white;
             font-family: $primaryFont;
             text-transform: capitalize;
+            @media(min-width: 670px) {
+                width: 40%;
+            }
         }
     }
 }
@@ -215,6 +220,9 @@ h2 {
             a {
                 font-size: 20px !important;
                 color: white !important;
+                @media (max-width: 670px) {
+                    font-size: 16px !important;
+                }
             }
         }
         .tabs .tab a:focus, .tabs .tab a:focus.active {

@@ -17,7 +17,6 @@
     "express": "^4.16.4",
     "flip": "github:nnattawat/flip",
     "jquery": "^3.3.1",
-    "jquery-animated-headlines": "^1.0.0",
     "jquery-mask-plugin": "^1.14.15",
     "materialize-css": "^1.0.0",
     "node-sass": "^4.11.0"

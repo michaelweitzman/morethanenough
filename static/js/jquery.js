@@ -6,9 +6,6 @@ $(document).ready(function() {
     $('.modal').modal();
     $('select').formSelect();
     $('.tabs').tabs();
-    $('.selector').animatedHeadline({
-        animationType: 'slide'
-    });
 
 
     // Campain Section Dropdowns
