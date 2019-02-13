@@ -223,6 +223,7 @@ h2 {
   text-align: center;
   background-color: #37abcb; }
   #grid .flip .back h3 {
+    margin: auto;
     color: white; }
 #grid #gridmodal {
   max-height: 65vh; }
