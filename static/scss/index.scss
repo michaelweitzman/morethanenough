@@ -354,11 +354,29 @@ h2 {
     }
     .flip .back {
         text-align: center;
+        position: relative;
         background-color: $primaryColor;
 
         h3 {
             margin: auto;
-            color: white;            
+            color: white;
+            cursor: pointer;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        h6 {
+            bottom: 0;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.4rem;
+            position: absolute;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     #gridmodal {

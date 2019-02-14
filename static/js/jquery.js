@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // Initialize Library Components
+    // Initialize Materialize Library Components
 
     $('.sidenav').sidenav();
     $('.modal').modal();
@@ -164,7 +164,53 @@ $(document).ready(function() {
     $('#row-3-col-4 .flip .back h3').text(countResources('Three_Adoption') + ' Resources');
     $('#row-3-col-5 .flip .back h3').text(countResources('Three_Transition') + ' Resources');
 
-    $('#row-1-col-1').click(function() {
+    $('#row-1-col-1 .flip .back h3').click(function() {
+        findResources(event, 'One_Prevention');
+    });
+    $('#row-1-col-2 .flip .back h3').click(function() {
+        findResources(event, 'One_Foster Care');
+    });
+    $('#row-1-col-3 .flip .back h3').click(function() {
+        findResources(event, 'One_Restoration');
+    });
+    $('#row-1-col-4 .flip .back h3').click(function() {
+        findResources(event, 'One_Adoption');
+    });
+    $('#row-1-col-5 .flip .back h3').click(function() {
+        findResources(event, 'One_Transition');
+    });
+    $('#row-2-col-1 .flip .back h3').click(function() {
+        findResources(event, 'Two_Prevention');
+    });
+    $('#row-2-col-2 .flip .back h3').click(function() {
+        findResources(event, 'Two_Foster');
+    });
+    $('#row-2-col-3 .flip .back h3').click(function() {
+        findResources(event, 'Two_Restoration');
+    });
+    $('#row-2-col-4 .flip .back h3').click(function() {
+        findResources(event, 'Two_Adoption');
+    });
+    $('#row-2-col-5 .flip .back h3').click(function() {
+        findResources(event, 'Two_Transition');
+    });
+    $('#row-3-col-1 .flip .back h3').click(function() {
+        findResources(event, 'Three_Prevention');
+    });
+    $('#row-3-col-2 .flip .back h3').click(function() {
+        findResources(event, 'Three_Foster');
+    });
+    $('#row-3-col-3 .flip .back h3').click(function() {
+        findResources(event, 'Three_Restoration');
+    });
+    $('#row-3-col-4 .flip .back h3').click(function() {
+        findResources(event, 'Three_Adoption');
+    });
+    $('#row-3-col-5 .flip .back h3').click(function() {
+        findResources(event, 'Three_Transition');
+    });
+
+    $('#row-1-col-1 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier One, Prevention</h2>" +
@@ -177,7 +223,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-1-col-2').click(function() {
+    $('#row-1-col-2 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier One, Foster Care</h2>" +
@@ -190,7 +236,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-1-col-3').click(function() {
+    $('#row-1-col-3 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier One, Restoration</h2>" +
@@ -198,7 +244,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-1-col-4').click(function() {
+    $('#row-1-col-4 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier One, Adoption</h2>" +
@@ -210,7 +256,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-1-col-5').click(function() {
+    $('#row-1-col-5 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier One, Transition</h2>" +
@@ -222,7 +268,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-2-col-1').click(function() {
+    $('#row-2-col-1 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Two, Prevention</h2>" +
@@ -234,7 +280,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-2-col-2').click(function() {
+    $('#row-2-col-2 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Two, Foster Care</h2>" +
@@ -253,7 +299,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-2-col-3').click(function() {
+    $('#row-2-col-3 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Two, Restoration</h2>" +
@@ -261,7 +307,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-2-col-4').click(function() {
+    $('#row-2-col-4 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Two, Adoption</h2>" +
@@ -278,7 +324,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-2-col-5').click(function() {
+    $('#row-2-col-5 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Two, Transition</h2>" +
@@ -296,7 +342,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-3-col-1').click(function() {
+    $('#row-3-col-1 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Three, Prevention</h2>" +
@@ -312,7 +358,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-3-col-2').click(function() {
+    $('#row-3-col-2 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Three, Foster Care</h2>" +
@@ -323,7 +369,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-3-col-3').click(function() {
+    $('#row-3-col-3 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Three, Restoration</h2>" +
@@ -331,7 +377,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-3-col-4').click(function() {
+    $('#row-3-col-4 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Three, Adoption</h2>" +
@@ -342,7 +388,7 @@ $(document).ready(function() {
         );
         $('#gridmodal').modal('open');
     });
-    $('#row-3-col-5').click(function() {
+    $('#row-3-col-5 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
                 "<h2>Tier Three, Transition</h2>" +
@@ -357,12 +403,14 @@ $(document).ready(function() {
 
     // Find Resources Result
 
-    $('#findResourcesSubmitButton').click(function() {
+    $('#findResourcesSubmitButton').click(findResources);
+
+    function findResources(event, gridArea) {
         event.preventDefault();
         $('#resourcesmodal').html('');
         let form = $('#findResources').serializeArray();
         let selectedCounties = [];
-        let selectedGridAreas = [];
+        let selectedGridAreas = gridArea ? [gridArea] : [];
         let typeResources = [];
         let countyResources = [];
         let gridResources = [];
@@ -447,7 +495,7 @@ $(document).ready(function() {
             ).appendTo('#resourcesmodal tbody');
         }
         $('#resourcesmodal').modal('open');
-    });
+    }
 
 
     // Resource Multi Step Form Navigation, Validation, and Actions

@@ -221,10 +221,23 @@ h2 {
   height: auto; }
 #grid .flip .back {
   text-align: center;
+  position: relative;
   background-color: #37abcb; }
   #grid .flip .back h3 {
     margin: auto;
-    color: white; }
+    color: white;
+    cursor: pointer; }
+    #grid .flip .back h3:hover {
+      text-decoration: underline; }
+  #grid .flip .back h6 {
+    bottom: 0;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: absolute; }
+    #grid .flip .back h6:hover {
+      text-decoration: underline; }
 #grid #gridmodal {
   max-height: 65vh; }
   #grid #gridmodal .modal-content h2 {
