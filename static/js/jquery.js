@@ -495,6 +495,7 @@ $(document).ready(function() {
             ).appendTo('#resourcesmodal tbody');
         }
         $('#resourcesmodal').modal('open');
+        $('#findResources').trigger('reset');
     }
 
 
