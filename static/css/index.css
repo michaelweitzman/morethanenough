@@ -13,6 +13,9 @@ h1 {
 h2 {
   font-size: 4rem; }
 
+.select-wrapper input.select-dropdown {
+  width: calc(100% - 30px); }
+
 /* ------ Navigation ------ */
 .navbar-fixed nav {
   background-color: #37abcb; }
@@ -255,6 +258,11 @@ h2 {
   height: auto;
   padding: 3vh 5vh 3vh 5vh;
   background-color: #37abcb; }
+  #resources .select-wrapper .caret {
+    fill: #ffffff; }
+  #resources [type="checkbox"]:checked + span:not(.lever):before {
+    border-bottom-color: #37abcb;
+    border-right-color: #37abcb; }
   #resources .input-field input[type=text] {
     color: white;
     box-shadow: 0 1px 0 0 white;

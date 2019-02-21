@@ -23,6 +23,9 @@ h1 {
 h2 {
     font-size: 4rem;
 }
+.select-wrapper input.select-dropdown {
+    width: calc(100% - 30px);
+}
 
 
 /* ------ Navigation ------ */
@@ -408,6 +411,13 @@ h2 {
     padding: 3vh 5vh 3vh 5vh;
     background-color: $primaryColor;
 
+    .select-wrapper .caret {
+        fill: #ffffff;
+    }
+    [type="checkbox"]:checked+span:not(.lever):before {
+        border-bottom-color: $primaryColor;
+        border-right-color: $primaryColor;
+    }
     .input-field input[type=text] {
         color: white;
         box-shadow: 0 1px 0 0 white;
