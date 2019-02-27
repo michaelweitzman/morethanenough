@@ -86,6 +86,27 @@ h2 {
   #family-form h1 {
     margin: 0 0 2vh 0;
     color: white; }
+  #family-form h6 {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 2px; }
+    #family-form h6.error {
+      color: #e53935;
+      background-color: #ffcdd2;
+      border-left: 1px solid #e53935;
+      border-right: 1px solid #e53935;
+      border-bottom: 1px solid #e53935; }
+      #family-form h6.error:first-of-type {
+        border-top: 1px solid #e53935; }
+    #family-form h6.success {
+      font-size: 1.5rem;
+      color: #2e7d32;
+      background-color: #b9f6ca;
+      border-left: 1px solid #2e7d32;
+      border-right: 1px solid #2e7d32;
+      border-bottom: 1px solid #2e7d32; }
+      #family-form h6.success:first-of-type {
+        border-top: 1px solid #2e7d32; }
   #family-form p {
     color: white;
     font-size: 18px; }

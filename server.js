@@ -1,7 +1,9 @@
 // ------ Imports ------ //
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 const axios = require('axios');
+const joi = require('joi');
 const app = express();
 
 // ------ Guidelines ------ //
@@ -12,8 +14,45 @@ app.use([
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
-    extended: true
+    extended: true 
 }));
+app.use(session({
+    secret: 'secretword',
+    resave: false,
+    saveUninitialized: false
+}));
+
+
+// ------ View Models ------ //
+const churchSchema = joi.object().keys({
+    Name: joi.string().required(),
+    Email: joi.string().email().required(),
+    Phone: joi.string().min(14).max(14).required(),
+    Church: joi.string().required()
+});
+
+validate = (data, schema) => {
+    const result = (joi.validate(data, schema, {abortEarly: false}));
+    if (result.error) {
+        const errors = result.error.details;
+        let messages = [];
+        for (const error of errors) {
+            messages.push({
+                [error.context.label]: error.message
+            });
+        }
+        return messages;
+    }
+}
+
+validateChurch = (data) => {
+    const result = validate(data, churchSchema);
+    if (result) {
+        return result;
+    } else {
+        return 'valid';
+    }
+}
 
 // ------ Routing ------ //
 app.get('/', function (req, res) {
@@ -22,6 +61,14 @@ app.get('/', function (req, res) {
         axios.get('https://sheetdb.io/api/v1/9gz8lpzh87ibs')
     ])
     .then(axios.spread((resources, stats) => {
+        if (req.session.errors) {
+            res.locals.errors = req.session.errors;
+        }
+        if (req.session.success) {
+            console.log(req.session.success);
+            res.locals.success = req.session.success;
+        }
+        req.session.destroy();
         res.render('index', {
             resourcesData: resources.data,
             statsData: stats.data
@@ -69,7 +116,7 @@ app.post('/resources', function (req, res) {
 });
 
 app.post('/families', function (req, res) {
-    if (validateFamily(req.body) === 'Form successfully submitted!') {
+    if (validateChurch(req.body).length <= 1) {
         axios.post('https://sheetdb.io/api/v1/9g94xd73wjuli', {
             data: {
                 'Name': req.body['Name'],
@@ -77,32 +124,18 @@ app.post('/families', function (req, res) {
                 'Email': req.body['Email']
             }
         })
-        .then(function (res) {})
+        .then(function (response) {})
         .catch(function (err) {
             console.log(err.response.data);
         });
+        req.session.success = 'Successfully committed your church to the campaign!';
+    } else {
+        req.session.errors = validateChurch(req.body);
     }
-    res.redirect('/#familyForm');
+    res.redirect('/#family-form');
 });
 
 // ------ Server Logic ------ //
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-function validateFamily(formData) {
-    let message = 'Form successfully submitted!';
-    if (formData['Name'] && formData['Phone'] && formData['Email']) {
-        if (formData['Phone'].length !== 14) {
-            message = 'Please provide complete phone number.';
-        }
-        if (! emailRegex.test(formData['Email'])) {
-            message = 'Please provide a properly formatted email.';
-        }
-    } else {
-        message = 'Please complete all fields.';
-    }
-    return message;
-}
-
 function multiSelectValues(list) {
     listString = '';
     if (Array.isArray(list)) {

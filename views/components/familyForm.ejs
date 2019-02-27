@@ -3,6 +3,16 @@
     <p>Are you ready to show Oklahoma the power of the Body of Christ working together? Will you commit
     your church to be the solution to the child welfare crisis in Oklahoma seeing that there is more than
     enough support for children and families in crisis in your community?</p>
+    <% if (locals.errors) { %>
+        <% for (let i = 0; i < errors.length - 1; i++) { %>
+            <% for (let key in errors[i]) { %>
+                <h6 class="error"><%= errors[i][key] %></h6>
+            <% } %>
+        <% } %>
+    <% } %>
+    <% if (locals.success) { %>
+        <h6 class="success"><%= locals.success %></h5>
+    <% } %>
     <form action="/families" method="post">
         <div class="input-field col m6 s12">
             <input type="text" name="Name" placeholder="Your Full Name">
@@ -14,7 +24,7 @@
             <input type="text" name="Phone" placeholder="Your Best Contact Phone" data-mask="(000) 000-0000" maxlength="14">
         </div>
         <div class="input-field col m6 s12">
-            <input type="text" name="Email" placeholder="Your Church Name">
+            <input type="text" name="Church" placeholder="Your Church Name">
         </div>
         <div class="input-field col s12">
             <button class="btn-large waves-effect waves-light" type="submit" name="action">Submit the Form</button>
