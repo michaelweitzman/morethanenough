@@ -104,13 +104,14 @@ app.get('/', function (req, res) {
             res.locals.errors = req.session.errors;
         }
         if (req.session.success) {
-            console.log(req.session.success);
             res.locals.success = req.session.success;
         }
         req.session.destroy();
         res.render('index', {
             resourcesData: resources.data,
-            statsData: stats.data
+            statsData: stats.data,
+            success: res.locals.success ? res.locals.success : null,
+            errors: res.locals.errors ? res.locals.errors : null
         });
     }));
 });
@@ -148,12 +149,13 @@ app.post('/resources', function (req, res) {
                 'Wants to Support Financially?': (req.body['Wants to Support Financially?'] === undefined ? 'No' : 'Yes'),
             }
         })
-        .then(function (res) {})
+        .then(function (response) {})
         .catch(function (err) {
             console.log(err);
         });
+        req.session.success = 'You successfully committed your ' + req.body['Type'] + 'to the campaign!';
     } else {
-        console.log(validateResource(req.body));
+        req.session.errors = validateResource(req.body);
     }
     res.redirect('/#resourceForm');
 });
@@ -171,7 +173,7 @@ app.post('/families', function (req, res) {
         .catch(function (err) {
             console.log(err.response.data);
         });
-        req.session.success = 'Successfully committed your church to the campaign!';
+        req.session.success = 'You successfully committed your church to the campaign!';
     } else {
         req.session.errors = validateChurch(req.body);
     }

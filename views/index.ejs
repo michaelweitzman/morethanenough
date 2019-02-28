@@ -21,6 +21,8 @@
         <script type='text/javascript'>
             const resourcesJson = <%- JSON.stringify(resourcesData) %>
             const statsJson = <%- JSON.stringify(statsData) %>
+            const errors = <%- JSON.stringify(errors) %>
+            const success = <%- JSON.stringify(success) %>
         </script>
 
         <!-- Project Assets -->
@@ -41,8 +43,37 @@
         <%- include('components/resources'); %>
         <%- include('components/dropdownSection/dropdownSection', {number: 'three'}); %>
         <%- include('components/resourceForm/resourceForm'); %>
+        <% if (success || errors) { %>
+            <% if (success) { %>
+                <div id="message-modal" class="modal success">
+                    <div class="modal-content">
+                        <h4>Congratulations:</h4>
+                        <p><%= success %></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Awesome</a>
+                    </div>
+                </div>
+            <% } %>
+            <% if (errors) { %>
+                <div id="message-modal" class="modal errors">
+                    <div class="modal-content">
+                        <h4>There Were Form Errors:</h4>
+                        <ul>
+                            <% for (let i = 0; i < errors.length - 1; i++) { %>
+                                <% for (let key in errors[i]) { %>
+                                    <li><%= errors[i][key] %></li>
+                                <% } %>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">I Understand</a>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
     </body>
-
     <!-- Additional Project Assets and Dependencies -->
     <script src="jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 </html>

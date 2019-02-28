@@ -550,8 +550,6 @@ $(document).ready(function() {
 
     function previousNext(increment) {
         const allTabs = document.getElementsByClassName('step');
-        // Exit the function if any field in the current tab is invalid:
-        // if (n == 1 && !validateForm()) return false;
         allTabs[currentTab].style.display = 'none';
         currentTab = currentTab + increment;
         showTab(currentTab);
@@ -577,4 +575,10 @@ $(document).ready(function() {
             $('#championEmail').val('');
         }
     });
+
+
+    // Success and Errors Modal
+    if (success || errors) {
+        $('#message-modal').modal('open');
+    }
 });
