@@ -31,6 +31,36 @@ const churchSchema = joi.object().keys({
     Church: joi.string().required()
 });
 
+const resourceSchema = joi.object().keys({
+    Name: joi.string().required(),
+    Website: joi.string().required(),
+    Phone: joi.string().min(14).max(14).required(),
+    // Type: ,
+    'Address One': joi.string().required(),
+    'Address Two': joi.string(),
+    City: joi.string().required(),
+    State: joi.string().required(),
+    Zip: joi.string().required(),
+    // Counties: ,
+    // 'Are Services Provided?': ,
+    'Form Submitter Name': joi.string().required(),
+    'Form Submitter Role': joi.string().required(),
+    'Form Submitter Phone': joi.string().min(14).max(14).required(),
+    'Form Submitter Email': joi.string().email().required(),
+    // 'Is Resource Champion?'; ,
+    'Champion Name': joi.string().required(),
+    'Champion Role': joi.string().required(),
+    'Champion Phone': joi.string().min(14).max(14).required(),
+    'Champion Email': joi.string().email().required(),
+    'Description': joi.string().required(),
+    'Services Provided': joi.string().required(),
+    // 'Wants Volunteers?': ,
+    // 'Open to Contact?',
+    // 'Grid Areas': ,
+    // 'Agrees to Terms of Service?': ,
+    // 'Wants to Support Financially?':
+});
+
 validate = (data, schema) => {
     const result = (joi.validate(data, schema, {abortEarly: false}));
     if (result.error) {
@@ -47,6 +77,15 @@ validate = (data, schema) => {
 
 validateChurch = (data) => {
     const result = validate(data, churchSchema);
+    if (result) {
+        return result;
+    } else {
+        return 'valid';
+    }
+}
+
+validateResource = (data) => {
+    const result = validate(data, resourceSchema);
     if (result) {
         return result;
     } else {
@@ -77,7 +116,8 @@ app.get('/', function (req, res) {
 });
 
 app.post('/resources', function (req, res) {
-    axios.post('https://sheetdb.io/api/v1/fq10flbp4rpuu', {
+    if (validateResource(req.body).length <= 1) {
+        axios.post('https://sheetdb.io/api/v1/fq10flbp4rpuu', {
             data: {
                 'Name': req.body['Name'],
                 'Website': req.body['Website'],
@@ -112,6 +152,9 @@ app.post('/resources', function (req, res) {
         .catch(function (err) {
             console.log(err);
         });
+    } else {
+        console.log(validateResource(req.body));
+    }
     res.redirect('/#resourceForm');
 });
 
