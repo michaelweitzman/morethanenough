@@ -426,4 +426,21 @@ h2 {
             font-size: 1.35rem;
             text-transform: capitalize; }
 
+#message-modal.success {
+  border: 3px solid green; }
+  #message-modal.success h4 {
+    color: green; }
+  #message-modal.success a {
+    font-size: 1.3rem;
+    color: green;
+    text-decoration: underline; }
+#message-modal.errors {
+  border: 3px solid red; }
+  #message-modal.errors h4 {
+    color: red; }
+  #message-modal.errors a {
+    font-size: 1.3rem;
+    color: red;
+    text-decoration: underline; }
+
 /*# sourceMappingURL=index.css.map */

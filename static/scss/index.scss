@@ -689,3 +689,33 @@ h2 {
         }
     }
 }
+
+
+// ------ Messages Modal ------ //
+
+#message-modal {
+    &.success {
+        border: 3px solid green;
+
+        h4 {
+            color: green;
+        }
+        a {
+            font-size: 1.3rem;
+            color: green;
+            text-decoration: underline;
+        }
+    }
+    &.errors {
+        border: 3px solid red;
+
+        h4 {
+            color: red;
+        }
+        a {
+            font-size: 1.3rem;
+            color: red;
+            text-decoration: underline;
+        }
+    }
+}
