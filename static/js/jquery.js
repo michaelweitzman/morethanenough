@@ -8,6 +8,49 @@ $(document).ready(function() {
     $('.tabs').tabs();
 
 
+    // Navigation Actions
+
+    $('#learnMore').click(function() {
+        $('.dropdown-section-header.two i').click();
+        $('html,body').animate({
+            scrollTop: $('.dropdown-section-content.two').offset().top - 50
+        });
+    });
+
+
+    // Church / Family Form
+
+    $('#commitChurch').click(function() {
+        $('#family-form form select').val('Church');
+        $('#family-form form select').formSelect();
+        $('#hidden-field').removeClass('hide');
+        $('html,body').animate({
+            scrollTop: $('#family-form').offset().top
+        });
+    });
+
+    $('#commitFamily').click(function() {
+        $('#family-form form select').val('Family');
+        $('#family-form form select').formSelect();
+        if (! $('#hidden-field').hasClass('hide')) {
+            $('#hidden-field').addClass('hide');
+        }
+        $('html,body').animate({
+            scrollTop: $('#family-form').offset().top
+        });
+    });
+
+    $('#family-form form select').change(function() {
+        console.log('there was a change');
+        if (event.target.value === 'Church') {
+            $('#hidden-field').removeClass('hide');
+        }
+        if (event.target.value !== 'Church' && ! $('#hidden-field').hasClass('hide')) {
+            $('#hidden-field').addClass('hide');
+        }
+    });
+
+
     // Campain Section Dropdowns
 
     $('.dropdown-section-header i').click(function() {
