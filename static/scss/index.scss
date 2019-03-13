@@ -37,7 +37,7 @@ h2 {
 .navbar-fixed {
     nav {
         background-color: $primaryColor;
-
+    
         .nav-wrapper {
             img {
                 padding-left: 15px;
@@ -45,7 +45,7 @@ h2 {
             }
             .sidenav-trigger {
                 cursor: pointer;
-
+    
                 i {
                     font-size: 44px;
                 }
@@ -66,11 +66,9 @@ h2 {
 .sidenav {
     background-color: $primaryColor;
 
-    li {
-        a {
-            color: white;
-            font-size: 20px;
-        }
+    li > a.btn {
+        font-size: 20px;
+        color: $primaryColor;
     }
 }
 
@@ -82,12 +80,12 @@ h2 {
     height: $fullheight;
     background-size: cover;
     background-position: center;
-    background-image: url('/images/banner.jpg');
+    // background-image: url('/images/banner.jpg');
     @media(max-width: 670px) {
         background-position: right;
     }
 
-    div {
+    #inside-banner {
         top: 29vh;
         width: 100vw;
         position: absolute;
@@ -117,6 +115,79 @@ h2 {
 }
 
 
+/* ------ Banner Video ------ */
+
+#vimeo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+#vimeo-container iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ------ Current Stats ------ */
+
+#currentStats {
+    margin: 0;
+    color: white;
+    background-color: $primaryColor;
+
+    h1 {
+        margin: 20px 0 0 0;
+    }
+    h5 {
+        margin: 0 0 20px 0;
+    }
+}
+
+
+/* ------ Sponsors ------ */
+
+#sponsors {
+    width: 100%;
+    padding: 3vh 3vw;
+
+    h1 {
+        margin-top: 0;
+        color: $primaryColor;
+    }
+    .slick-prev:before, .slick-next:before {
+        opacity: 1;
+        color: $primaryColor;
+    }
+    .slick-dots {
+        margin-bottom: -10px;
+    }
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: $primaryColor;
+    }
+    .slick-dots li button:before {
+        font-size: 12px;
+        color: $primaryColor;
+    }
+    img {
+        height: 100px;
+        max-width: 200px;
+        margin: auto;
+    }
+}
+
+
 /* ------ Family Form ------ */
 
 #family-form {
@@ -124,35 +195,6 @@ h2 {
     height: auto;
     padding: 3vh 5vh 3vh 5vh;
     background-color: $primaryColor;
-
-    .select-wrapper .caret {
-        fill: #ffffff;
-    }
-    [type="checkbox"]:checked+span:not(.lever):before {
-        border-bottom-color: $primaryColor;
-        border-right-color: $primaryColor;
-    }
-    .select-dropdown li.disabled > span {
-        color: $lightgray;
-    }
-    .dropdown-content li > span {
-        color: $primaryColor;
-
-        label {
-            color: $primaryColor;
-        }
-    }
-    .dropdown-content li.disabled > span {
-        label {
-            color: $lightgray;
-        }
-    }
-    .select-dropdown li.optgroup>span {
-        color: $lightgray;
-    }
-    .select-wrapper input.select-dropdown:focus {
-        border-bottom-color: $primaryColor;
-    }
 
     .input-field input[type=text] {
         color: white;
@@ -210,7 +252,7 @@ h2 {
             color: white;
         }
         button {
-            font-size: 20px;
+            font-size: 24px;
             color: $primaryColor;
             background-color: white;
             font-family: $primaryFont;
@@ -307,13 +349,16 @@ h2 {
 /* ------ Stats ------ */
 
 #stats {
+    padding: 5vh 0 3vh 0;
+
     h1 {
+        margin-top: 0;
         color: $primaryColor;
     }
     #map {
         max-width: 90%;
         height: 100%;
-        margin: 0 auto 3vh auto;
+        margin: 0 auto 0 auto;
 
         tspan, #stats_outer, #stats_zoom {
             display: none;
@@ -352,7 +397,10 @@ h2 {
 /* ------ Grid ------ */
 
 #grid {
+    padding-top: 5vh;
+
     h1 {
+        margin-top: 0;
         color: $primaryColor;
     }
     table {

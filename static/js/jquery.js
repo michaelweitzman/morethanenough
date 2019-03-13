@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // Initialize Materialize Library Components
+    // ------ Materialize ------ //
 
     $('.sidenav').sidenav();
     $('.modal').modal();
@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('.tabs').tabs();
 
 
-    // Navigation Actions
+    // ------ Navigation ------ //
 
     $('#learnMore').click(function() {
         $('.dropdown-section-header.two i').click();
@@ -18,40 +18,84 @@ $(document).ready(function() {
     });
 
 
-    // Church / Family Form
+    // ------ Banner ------ //
 
     $('#commitChurch').click(function() {
-        $('#family-form form select').val('Church');
-        $('#family-form form select').formSelect();
-        $('#hidden-field').removeClass('hide');
         $('html,body').animate({
             scrollTop: $('#family-form').offset().top
         });
     });
 
     $('#commitFamily').click(function() {
-        $('#family-form form select').val('Family');
-        $('#family-form form select').formSelect();
-        if (! $('#hidden-field').hasClass('hide')) {
-            $('#hidden-field').addClass('hide');
-        }
         $('html,body').animate({
             scrollTop: $('#family-form').offset().top
         });
     });
 
-    $('#family-form form select').change(function() {
-        console.log('there was a change');
-        if (event.target.value === 'Church') {
-            $('#hidden-field').removeClass('hide');
-        }
-        if (event.target.value !== 'Church' && ! $('#hidden-field').hasClass('hide')) {
-            $('#hidden-field').addClass('hide');
+
+    // ------ Current Stats ------ //
+
+    $(document).bind('scroll', function(ev) {
+        var scrollOffset = $(document).scrollTop();
+        var containerOffset = $('#currentStats').offset().top - window.innerHeight;
+        if (scrollOffset > containerOffset) {
+            $('#currentStats h1').numerator({
+                easing: 'linear',
+                duration: 3500,
+                toValue: 256
+            });
+            $(document).unbind('scroll');
         }
     });
 
 
-    // Campain Section Dropdowns
+    // ------ Sponsors ------ //
+
+    $('.sponsors').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    dots: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    dots: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+    // ------ Dropdown Sections ------ //
 
     $('.dropdown-section-header i').click(function() {
         const dropdown = $(this).parent().next(),
@@ -61,7 +105,7 @@ $(document).ready(function() {
     });
 
 
-    // On Click Event for Map Stats
+    // ------ Own Your County's Stats ------ //
 
     $('#map').click(function() {
         let x = '',
@@ -173,8 +217,7 @@ $(document).ready(function() {
     });
 
 
-    // Grid Resource Counts, Description Modals and Flip Action
-
+    // ------ Places You Can Help ------ //
     $(function() {
         $(".flip").flip({
             trigger: 'hover'
@@ -444,7 +487,7 @@ $(document).ready(function() {
     });
 
 
-    // Find Resources Result
+    // ------ Find Partners ------ //
 
     $('#findResourcesSubmitButton').click(findResources);
 
@@ -467,7 +510,7 @@ $(document).ready(function() {
             }
         }
         for (var i = 0; i < resourcesJson.length; i++) {
-            if (document.getElementById('findType').value !== 'Resource Type') {
+            if (document.getElementById('findType').value !== 'Partner Type') {
                 if (resourcesJson[i]['Type'] === document.getElementById('findType').value) {
                     typeResources.push(resourcesJson[i]);
                 }
@@ -542,7 +585,7 @@ $(document).ready(function() {
     }
 
 
-    // Resource Multi Step Form Navigation, Validation, and Actions
+    // ------ Become A Partner ------ //
 
     var currentTab = 0;
     showTab(currentTab);
@@ -568,16 +611,16 @@ $(document).ready(function() {
         if (currentTab === 0) {
             nextText = 'Form Submitter Information';
         } else if (currentTab === 1) {
-            previousText = 'Resource Information';
-            nextText = 'Resource Champion Information';
+            previousText = 'Partner Information';
+            nextText = 'Partner Champion Information';
         } else if (currentTab === 2) {
             previousText = 'Form Submitter Information';
-            nextText = 'Resource Descriptions';
+            nextText = 'Partner Descriptions';
         } else if (currentTab === 3) {
-            previousText = 'Resource Champion Information';
+            previousText = 'Partner Champion Information';
             nextText = 'Miscellaneous Questions';
         } else {
-            previousText = 'Resource Descriptions';
+            previousText = 'Partner Descriptions';
         }
 
         document.getElementById('previous').innerHTML = 'Previous Section: ' + previousText;
@@ -620,7 +663,7 @@ $(document).ready(function() {
     });
 
 
-    // Success and Errors Modal
+    // ------ Message Handling ------ //
     if (success || errors) {
         $('#message-modal').modal('open');
     }

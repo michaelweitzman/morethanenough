@@ -11,12 +11,14 @@
         <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Molengo" rel="stylesheet">
         <link rel="stylesheet" href="materialize-css/dist/css/materialize.min.css">
-        <link rel="stylesheet" href="jquery-animated-headlines/dist/css/jquery.animatedheadline.css">
+        <link rel="stylesheet" href="slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="slick-carousel/slick/slick-theme.css">
         <script src="jquery/dist/jquery.min.js"></script>
         <script src="materialize-css/dist/js/materialize.min.js"></script>
-        <script src="jquery-animated-headlines/dist/js/jquery.animatedheadline.min.js"></script>
         <script src="flip/dist/jquery.flip.min.js"></script>
-
+        <script src="slick-carousel/slick/slick.min.js"></script>
+        <script src="jquery-numerator/jquery-numerator.js"></script>
+        
         <!-- Send Stats JSON to Jquery File -->
         <script type='text/javascript'>
             const resourcesJson = <%- JSON.stringify(resourcesData) %>
@@ -27,14 +29,17 @@
 
         <!-- Project Assets -->
         <link rel="stylesheet" href="css/index.css">
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/mapdata.js"></script>
-        <script type="text/javascript" src="js/statemap.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/mapdata.js"></script>
+        <script src="js/statemap.js"></script>
     </head>
 
     <body>
         <%- include('components/navigation'); %>
         <%- include('components/banner'); %>
+        <%- include('components/video'); %>
+        <%- include('components/currentStats'); %>
+        <%- include('components/sponsors'); %>
         <%- include('components/familyForm'); %>
         <%- include('components/dropdownSection/dropdownSection', {number: 'one'}); %>
         <%- include('components/stats'); %>
@@ -44,6 +49,7 @@
         <!-- <%- include('components/dropdownSection/dropdownSection', {number: 'three'}); %> -->
         <%- include('components/resourceForm/resourceForm'); %>
         <%- include('components/messages'); %>
+
     </body>
     <!-- Additional Project Assets and Dependencies -->
     <script src="jquery-mask-plugin/dist/jquery.mask.min.js"></script>
