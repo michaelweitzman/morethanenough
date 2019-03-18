@@ -37,9 +37,9 @@ $(document).ready(function() {
 
     $(document).bind('scroll', function(ev) {
         var scrollOffset = $(document).scrollTop();
-        var containerOffset = $('#currentStats').offset().top - window.innerHeight;
+        var containerOffset = $('#current-stats').offset().top - window.innerHeight;
         if (scrollOffset > containerOffset) {
-            $('#currentStats h1').numerator({
+            $('#current-stats h1').numerator({
                 easing: 'linear',
                 duration: 3500,
                 toValue: 256
@@ -123,6 +123,7 @@ $(document).ready(function() {
                 $('#statsmodal').html(
                     "<div class='modal-content'>" +
                         "<h2>Statistics for " + simplemaps_statemap_mapdata.state_specific[y].name + " County:</h2>" +
+                        "<a class='btn'>Understand the Stats</a>" +
                         "<table class='striped'>" +
                             "<thead>" +
                                 "<tr>" +

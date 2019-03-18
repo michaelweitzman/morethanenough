@@ -40,27 +40,19 @@ h2 {
 /* ------ Banner ------ */
 #banner {
   position: relative;
-  height: calc(100vh - 56px);
-  background-size: cover;
-  background-position: center; }
-  @media (max-width: 670px) {
-    #banner {
-      background-position: right; } }
+  height: calc(100vh - 56px); }
   #banner #inside-banner {
     top: 29vh;
     width: 100vw;
     position: absolute; }
     #banner #inside-banner h1 {
-      margin: 0 auto;
-      color: white;
-      text-align: center; }
+      margin: 0 auto; }
       @media (max-width: 670px) {
         #banner #inside-banner h1 {
           text-transform: uppercase; } }
     #banner #inside-banner a {
       font-size: 20px;
       margin-bottom: 2vh;
-      color: white;
       background-color: #37abcb;
       text-transform: capitalize; }
       @media (min-width: 670px) {
@@ -77,26 +69,78 @@ h2 {
   z-index: -1;
   pointer-events: none;
   overflow: hidden; }
-
-#vimeo-container iframe {
-  width: 100vw;
-  height: 56.25vw;
-  min-height: 100vh;
-  min-width: 177.77vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  #vimeo-container iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 /* ------ Current Stats ------ */
-#currentStats {
+#current-stats {
   margin: 0;
-  color: white;
   background-color: #37abcb; }
-  #currentStats h1 {
+  #current-stats h1 {
     margin: 20px 0 0 0; }
-  #currentStats h5 {
+  #current-stats h5 {
     margin: 0 0 20px 0; }
+
+/* ------ Dropdown Sections ------ */
+.dropdown-section-header {
+  height: 35vw;
+  padding-top: 5vw;
+  min-height: 300px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .dropdown-section-header.one {
+    background-image: url("/images/campaign_one.jpg"); }
+  .dropdown-section-header.two {
+    background-image: url("/images/campaign_two.jpg"); }
+  .dropdown-section-header.three {
+    background-image: url("/images/campaign_three.jpg"); }
+  @media (max-width: 670px) {
+    .dropdown-section-header h1, .dropdown-section-header h2 {
+      font-size: 40px; } }
+  .dropdown-section-header i {
+    bottom: 2.5%;
+    cursor: pointer;
+    position: absolute;
+    margin-left: -3rem; }
+
+.dropdown-section-content {
+  display: none;
+  padding: 2.5% 5% 5% 5%;
+  background-color: #34393d; }
+  .dropdown-section-content.one div {
+    font-size: 17px;
+    white-space: pre-line; }
+    .dropdown-section-content.one div .row {
+      margin: 0; }
+    .dropdown-section-content.one div strong {
+      font-size: 20px;
+      font-weight: bold; }
+  .dropdown-section-content.two {
+    padding-top: 5%; }
+    .dropdown-section-content.two .row {
+      margin: 0; }
+      .dropdown-section-content.two .row .collapsible {
+        margin: 0; }
+        .dropdown-section-content.two .row .collapsible .collapsible-header {
+          border: none;
+          color: white;
+          font-size: 24px;
+          background-color: #37abcb; }
+        .dropdown-section-content.two .row .collapsible .collapsible-body {
+          border: none;
+          background-color: white; }
+          .dropdown-section-content.two .row .collapsible .collapsible-body span {
+            font-size: 17px;
+            color: #37abcb; }
 
 /* ------ Sponsors ------ */
 #sponsors {
@@ -121,6 +165,32 @@ h2 {
     max-width: 200px;
     margin: auto; }
 
+/* ------ Stats ------ */
+#stats {
+  padding: 5vh 0 3vh 0; }
+  #stats h1 {
+    margin-top: 0;
+    color: #37abcb; }
+  #stats #map {
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto 0 auto; }
+    #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
+      display: none; }
+  #stats #statsmodal {
+    max-height: 65vh; }
+    #stats #statsmodal .modal-content h2 {
+      margin-bottom: 0;
+      color: #37abcb;
+      font-family: "Cabin Sketch", cursive; }
+    #stats #statsmodal .modal-content a {
+      background-color: #37abcb; }
+    #stats #statsmodal .modal-content table thead tr th {
+      font-size: 1.5rem;
+      color: #37abcb; }
+    #stats #statsmodal .modal-content table tbody tr td {
+      font-size: 1.3rem; }
+
 /* ------ Family Form ------ */
 #family-form {
   margin: 0;
@@ -138,8 +208,7 @@ h2 {
     box-shadow: 0 1px 0 0 white;
     border-bottom: 1px solid white; }
   #family-form h1 {
-    margin: 0 0 2vh 0;
-    color: white; }
+    margin: 0 0 2vh 0; }
   #family-form h6 {
     font-size: 1.3rem;
     margin: 0;
@@ -162,101 +231,17 @@ h2 {
       #family-form h6.success:first-of-type {
         border-top: 1px solid #2e7d32; }
   #family-form p {
-    color: white;
     font-size: 18px; }
   #family-form form ::placeholder {
     color: white; }
   #family-form form button {
     font-size: 24px;
     color: #37abcb;
-    background-color: white;
     font-family: "Molengo", sans-serif;
     text-transform: capitalize; }
     @media (min-width: 670px) {
       #family-form form button {
         width: 40%; } }
-
-/* ------ Dropdown Sections ------ */
-.dropdown-section-header {
-  height: 35vw;
-  padding-top: 5vw;
-  min-height: 300px;
-  position: relative;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; }
-  .dropdown-section-header.one {
-    background-image: url("/images/campaign_one.jpg"); }
-  .dropdown-section-header.two {
-    background-image: url("/images/campaign_two.jpg"); }
-  .dropdown-section-header.three {
-    background-image: url("/images/campaign_three.jpg"); }
-  .dropdown-section-header h1, .dropdown-section-header h2 {
-    color: white; }
-    @media (max-width: 670px) {
-      .dropdown-section-header h1, .dropdown-section-header h2 {
-        font-size: 40px; } }
-  .dropdown-section-header i {
-    bottom: 2.5%;
-    cursor: pointer;
-    position: absolute;
-    margin-left: -3rem; }
-
-.dropdown-section-content {
-  display: none;
-  padding: 2.5% 5% 5% 5%;
-  background-color: #34393d; }
-  .dropdown-section-content.one div {
-    color: white;
-    font-size: 17px;
-    white-space: pre-line;
-    text-align: center; }
-    .dropdown-section-content.one div .row {
-      margin: 0; }
-    .dropdown-section-content.one div strong {
-      font-size: 20px;
-      font-weight: bold; }
-  .dropdown-section-content.two {
-    padding-top: 5%; }
-    .dropdown-section-content.two .row {
-      margin: 0; }
-      .dropdown-section-content.two .row .collapsible {
-        margin: 0; }
-        .dropdown-section-content.two .row .collapsible .collapsible-header {
-          border: none;
-          color: white;
-          font-size: 24px;
-          background-color: #37abcb; }
-        .dropdown-section-content.two .row .collapsible .collapsible-body {
-          border: none;
-          background-color: white; }
-          .dropdown-section-content.two .row .collapsible .collapsible-body span {
-            font-size: 17px;
-            color: #37abcb; }
-
-/* ------ Stats ------ */
-#stats {
-  padding: 5vh 0 3vh 0; }
-  #stats h1 {
-    margin-top: 0;
-    color: #37abcb; }
-  #stats #map {
-    max-width: 90%;
-    height: 100%;
-    margin: 0 auto 0 auto; }
-    #stats #map tspan, #stats #map #stats_outer, #stats #map #stats_zoom {
-      display: none; }
-  #stats #statsmodal {
-    max-height: 65vh; }
-    #stats #statsmodal .modal-content h2 {
-      color: #37abcb;
-      font-family: "Cabin Sketch", cursive; }
-    #stats #statsmodal .modal-content table thead tr th {
-      font-size: 1.5rem;
-      color: #37abcb; }
-    #stats #statsmodal .modal-content table tbody tr td {
-      font-size: 1.3rem; }
 
 /* ------ Grid ------ */
 #grid {
@@ -305,19 +290,16 @@ h2 {
     width: 15vw;
     height: auto; }
   #grid .flip .back {
-    text-align: center;
     position: relative;
     background-color: #37abcb; }
     #grid .flip .back h3 {
       margin: auto;
-      color: white;
       cursor: pointer; }
       #grid .flip .back h3:hover {
         text-decoration: underline; }
     #grid .flip .back h6 {
       bottom: 0;
       right: 10px;
-      color: white;
       cursor: pointer;
       font-size: 1.4rem;
       position: absolute; }
@@ -366,8 +348,7 @@ h2 {
   #resources .select-wrapper input.select-dropdown:focus {
     border-bottom-color: #37abcb; }
   #resources h1 {
-    margin: 0 0 3vh 0;
-    color: white; }
+    margin: 0 0 3vh 0; }
   #resources form ::placeholder {
     color: white; }
   #resources form .input-field {
@@ -382,7 +363,6 @@ h2 {
   #resources form #findResourcesSubmitButton {
     font-size: 1.35rem;
     color: #37abcb;
-    background-color: white;
     font-family: "Molengo", sans-serif;
     text-transform: capitalize; }
   #resources #resourcesmodal {
@@ -482,7 +462,6 @@ h2 {
           background-color: #37abcb;
           margin-left: .25rem; }
           #resourceForm .resources .card-content form .navigation i #submitButton {
-            color: white;
             font-family: "Molengo", sans-serif;
             font-size: 1.35rem;
             text-transform: capitalize; }
