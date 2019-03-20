@@ -104,6 +104,16 @@ h2 {
             }
         }
     }
+    #bottom-banner {
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+
+        i {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
 }
 
 
@@ -111,7 +121,7 @@ h2 {
 
 #vimeo-container {
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 0;
     width: 100%;
     height: 100%;

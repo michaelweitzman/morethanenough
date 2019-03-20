@@ -32,6 +32,12 @@ $(document).ready(function() {
         });
     });
 
+    $('#bottom-banner i').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#current-stats').offset().top - 56
+        }, 700);
+    });
+
 
     // ------ Current Stats ------ //
 
