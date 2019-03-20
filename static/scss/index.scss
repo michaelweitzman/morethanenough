@@ -37,7 +37,7 @@ h2 {
 .navbar-fixed {
     nav {
         background-color: $primaryColor;
-    
+
         .nav-wrapper {
             img {
                 padding-left: 15px;
@@ -45,7 +45,7 @@ h2 {
             }
             .sidenav-trigger {
                 cursor: pointer;
-    
+
                 i {
                     font-size: 44px;
                 }
@@ -86,7 +86,7 @@ h2 {
 
         h1 {
             margin: 0 auto;
-            
+
             @media(max-width: 670px) {
                 text-transform: uppercase;
             }
@@ -96,7 +96,7 @@ h2 {
             margin-bottom: 2vh;
             background-color: $primaryColor;
             text-transform: capitalize;
-    
+
             @media(min-width: 670px) {
                 &:first-of-type {
                     margin-right: 2%;
@@ -121,7 +121,7 @@ h2 {
 
 #vimeo-container {
     position: fixed;
-    top: 60px;
+    top: 56px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -177,7 +177,7 @@ h2 {
     &.three {
         background-image: url('/images/campaign_three.jpg');
     }
-    
+
     h1, h2 {
         @media (max-width: 670px) {
             font-size: 40px;
@@ -200,7 +200,7 @@ h2 {
         div {
             font-size: 17px;
             white-space: pre-line;
-    
+
             .row {
                 margin: 0;
             }
@@ -371,7 +371,7 @@ h2 {
         font-size: 1.3rem;
         margin: 0;
         padding: 2px;
-        
+
         &.error {
             color: $dangerColor;
             background-color: $dangerBackground;
@@ -497,7 +497,7 @@ h2 {
         h3 {
             margin: auto;
             cursor: pointer;
-            
+
             &:hover {
                 text-decoration: underline;
             }
