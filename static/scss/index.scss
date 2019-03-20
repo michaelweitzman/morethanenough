@@ -215,6 +215,15 @@ h2 {
                     color: white;
                     font-size: 24px;
                     background-color: $primaryColor;
+
+                    h5 {
+                        margin: 5px 0;
+                    }
+
+                    i {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                    }
                 }
                 .collapsible-body {
                     border: none;
@@ -223,6 +232,14 @@ h2 {
                     span {
                         font-size: 17px;
                         color: $primaryColor;
+                    }
+                }
+            }
+
+            li {
+                &.active {
+                    i {
+                        transform: rotate(180deg);
                     }
                 }
             }

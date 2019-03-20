@@ -135,12 +135,19 @@ h2 {
           color: white;
           font-size: 24px;
           background-color: #37abcb; }
+          .dropdown-section-content.two .row .collapsible .collapsible-header h5 {
+            margin: 5px 0; }
+          .dropdown-section-content.two .row .collapsible .collapsible-header i {
+            font-size: 2.5rem;
+            font-weight: bold; }
         .dropdown-section-content.two .row .collapsible .collapsible-body {
           border: none;
           background-color: white; }
           .dropdown-section-content.two .row .collapsible .collapsible-body span {
             font-size: 17px;
             color: #37abcb; }
+      .dropdown-section-content.two .row li.active i {
+        transform: rotate(180deg); }
 
 /* ------ Sponsors ------ */
 #sponsors {
