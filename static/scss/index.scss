@@ -345,7 +345,7 @@ h2 {
 
 /* ------ Family Form ------ */
 
-#family-form {
+#church-form, #family-form {
     margin: 0;
     height: auto;
     padding: 3vh 5vh 3vh 5vh;
@@ -362,6 +362,21 @@ h2 {
         font-size: 16px;
         box-shadow: 0 1px 0 0 white;
         border-bottom: 1px solid white;
+    }
+    .select-dropdown li.disabled > span {
+        color: $lightgray;
+    }
+    .dropdown-content li > span {
+        color: $primaryColor;
+
+        label {
+            color: $primaryColor;
+        }
+    }
+    .dropdown-content li.disabled > span {
+        label {
+            color: $lightgray;
+        }
     }
 
     h1 {
@@ -630,6 +645,16 @@ h2 {
                     tr {
                         td {
                             font-size: 1.3rem;
+
+                            a {
+                                color: $primaryColor;
+                                cursor: pointer;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
                         }
                     }
                 }
@@ -639,7 +664,7 @@ h2 {
 }
 
 
-/* ------ Forms ------ */
+/* ------ Resource Partner Form ------ */
 
 #resourceForm {
     height: $fullheight;
@@ -774,6 +799,8 @@ h2 {
                         margin-left: .25rem;
 
                         #submitButton {
+                            color: white;
+                            cursor: pointer;
                             font-family: $primaryFont;
                             font-size: 1.35rem;
                             text-transform: capitalize;
@@ -782,6 +809,32 @@ h2 {
                 }
             }
         }
+    }
+}
+
+
+// ------ Contact Modal ------ //
+
+#contact-form {
+    .input-field {
+        margin: 0;
+    }
+    .input-field input[type=text]:focus {
+        border-bottom: 1px solid $primaryColor;
+        box-shadow: 0 1px 0 0 $primaryColor;
+    }
+    .modal-content {
+        margin: 0;
+    }
+    textarea {
+        height: 8.5rem;
+        margin: 1rem 0;
+    }
+    h4 {
+        color: $primaryColor;
+    }
+    #contact-button {
+        background-color: $primaryColor;
     }
 }
 

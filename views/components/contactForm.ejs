@@ -1,0 +1,23 @@
+<div id="contact-form" class="modal">
+    <div class="modal-content row">
+        <h4></h4>
+        <form action="/contact" method="post">
+            <input type="hidden" name="receiver">
+            <div class="input-field col s7">
+                <input type="text" name="Name" placeholder="Your Name">
+            </div>
+            <div class="input-field col s5">
+                <input type="text" name="Phone" placeholder="Your Best Contact Phone" data-mask="(000) 000-0000" maxlength="14">
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="Email" placeholder="Your Email">
+            </div>
+            <div class="input-field col s12">
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            </div>
+            <div class="input-field col s12">
+                <button id="contact-button" class="btn-large waves-effect waves-light white-text right" type="submit" name="action"></button>
+            </div>
+        </form>
+    </div>
+</div>

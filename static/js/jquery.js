@@ -11,25 +11,25 @@ $(document).ready(function() {
     // ------ Navigation ------ //
 
     $('#learnMore').click(function() {
-        $('.dropdown-section-header.two i').click();
+        $('.dropdown-section-header.one i').click();
         $('html,body').animate({
-            scrollTop: $('.dropdown-section-content.two').offset().top - 50
+            scrollTop: $('.dropdown-section-content.one').offset().top
         });
     });
 
 
     // ------ Banner ------ //
 
-    $('#commitChurch').click(function() {
+    $('#commit-church-button').click(function() {
         $('html,body').animate({
-            scrollTop: $('#family-form').offset().top
-        });
+            scrollTop: $('#church-form').offset().top
+        }, 1000);
     });
 
-    $('#commitFamily').click(function() {
+    $('#commit-family-button').click(function() {
         $('html,body').animate({
-            scrollTop: $('#family-form').offset().top
-        });
+            scrollTop: $('#family-form').offset().top - 56
+        }, 1000);
     });
 
     $('#bottom-banner i').click(function() {
@@ -129,7 +129,7 @@ $(document).ready(function() {
                 $('#statsmodal').html(
                     "<div class='modal-content'>" +
                         "<h2>Statistics for " + simplemaps_statemap_mapdata.state_specific[y].name + " County:</h2>" +
-                        "<a class='btn'>Understand the Stats</a>" +
+                        "<a class='btn' href='' target='_blank'>Understand the Stats</a>" +
                         "<table class='striped'>" +
                             "<thead>" +
                                 "<tr>" +
@@ -583,13 +583,28 @@ $(document).ready(function() {
                     "<td>" + finalResources[i]['Name'] + "</td>" +
                     "<td>" + finalResources[i]['Website'] + "</td>" +
                     "<td>" + finalResources[i]['Description'] + "</td>" +
-                    "<td></td>" +
+                    "<td>" + contactLink(finalResources[i]) + "</td>" +
                 "</tr>"
             ).appendTo('#resourcesmodal tbody');
         }
         $('#resourcesmodal').modal('open');
         $('#findResources').trigger('reset');
     }
+
+    function contactLink(resource) {
+        if (resource['Open to Contact?'] === 'Yes') {
+            return "<a class='contactLink' data-name='"+ resource['Name'] + "' data-email='" + resource['Champion Email'] + "'>Contact</a>";
+        } else {
+            return '';
+        }
+    }
+
+    $('body').on('click', 'a.contactLink', function() {
+        $('#contact-form').modal('open');
+        $('#contact-form h4').text('Contact ' + this.dataset.name);
+        $('#contact-form form input[name="receiver"]').val(this.dataset.email);
+        $('#contact-button').text('Contact ' + this.dataset.name);
+    });
 
 
     // ------ Become A Partner ------ //
@@ -657,12 +672,14 @@ $(document).ready(function() {
     $('#isChampion').click(function() {
         clickCount += 1;
         if(clickCount % 2 === 1) {
-            $('#championName').val($('#formSubmitterName').val());
+            $('#championFirstName').val($('#formSubmitterFirstName').val());
+            $('#championLastName').val($('#formSubmitterLastName').val());
             $('#championRole').val($('#formSubmitterRole').val());
             $('#championPhone').val($('#formSubmitterPhone').val());
             $('#championEmail').val($('#formSubmitterEmail').val());
         } else {
-            $('#championName').val('');
+            $('#championFirstName').val('');
+            $('#championLastName').val('');
             $('#championRole').val('');
             $('#championPhone').val('');
             $('#championEmail').val('');

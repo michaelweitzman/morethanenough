@@ -1,7 +1,7 @@
-<div id="family-form" class="row center-align white-text">
-    <h1>Commit My Family</h1>
+<div id="church-form" class="row center-align white-text">
+    <h1>Pledge My Church</h1>
     <p>Are you ready to show Oklahoma the power of the Body of Christ working together? Will you commit your church to be the solution to the child welfare crisis in Oklahoma seeing that there is more than enough support for children and families in crisis in your community?</p>
-    <form action="/families" method="post">
+    <form action="/churches" method="post">
         <div class="input-field col m4 s12">
             <input type="text" name="First Name" placeholder="Your First Name">
         </div>
@@ -17,8 +17,16 @@
         <div class="input-field col m7 s12">
             <input type="text" name="Email" placeholder="Your Email">
         </div>
+        <div class="input-field col m6 s12">
+            <select name="Counties">
+                <%- include('../partials/resourceCounty') %>
+            </select>
+        </div>
+        <div class="input-field col m6 s12">
+            <input type="text" name="Pledge" placeholder="Amount of Families Being Pledged">
+        </div>
         <div class="input-field col s12">
-            <button id="familySubmitButton" class="btn-large waves-effect waves-light white" type="submit" name="action">Commit My Family</button>
+            <button id="churchSubmitButton" class="btn-large waves-effect waves-light white" type="submit" name="action">Pledge My Church</button>
         </div>
     </form>
 </div>
