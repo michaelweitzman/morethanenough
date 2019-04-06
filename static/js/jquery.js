@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     $('#commit-church-button').click(function() {
         $('html,body').animate({
-            scrollTop: $('#church-form').offset().top
+            scrollTop: $('#church-form').offset().top - 56
         }, 1000);
     });
 
@@ -243,17 +243,17 @@ $(document).ready(function() {
 
     $('#row-1-col-1 .flip .back h3').text(countResources('One_Prevention') + ' Resources');
     $('#row-1-col-2 .flip .back h3').text(countResources('One_Foster Care') + ' Resources');
-    $('#row-1-col-3 .flip .back h3').text(countResources('One_Restoration') + ' Resources');
+    $('#row-1-col-3 .flip .back h3').text(countResources('One_Reunification') + ' Resources');
     $('#row-1-col-4 .flip .back h3').text(countResources('One_Adoption') + ' Resources');
     $('#row-1-col-5 .flip .back h3').text(countResources('One_Transition') + ' Resources');
     $('#row-2-col-1 .flip .back h3').text(countResources('Two_Prevention') + ' Resources');
     $('#row-2-col-2 .flip .back h3').text(countResources('Two_Foster') + ' Resources');
-    $('#row-2-col-3 .flip .back h3').text(countResources('Two_Restoration') + ' Resources');
+    $('#row-2-col-3 .flip .back h3').text(countResources('Two_Reunification') + ' Resources');
     $('#row-2-col-4 .flip .back h3').text(countResources('Two_Adoption') + ' Resources');
     $('#row-2-col-5 .flip .back h3').text(countResources('Two_Transition') + ' Resources');
     $('#row-3-col-1 .flip .back h3').text(countResources('Three_Prevention') + ' Resources');
     $('#row-3-col-2 .flip .back h3').text(countResources('Three_Foster') + ' Resources');
-    $('#row-3-col-3 .flip .back h3').text(countResources('Three_Restoration') + ' Resources');
+    $('#row-3-col-3 .flip .back h3').text(countResources('Three_Reunification') + ' Resources');
     $('#row-3-col-4 .flip .back h3').text(countResources('Three_Adoption') + ' Resources');
     $('#row-3-col-5 .flip .back h3').text(countResources('Three_Transition') + ' Resources');
 
@@ -264,7 +264,7 @@ $(document).ready(function() {
         findResources(event, 'One_Foster Care');
     });
     $('#row-1-col-3 .flip .back h3').click(function() {
-        findResources(event, 'One_Restoration');
+        findResources(event, 'One_Reunification');
     });
     $('#row-1-col-4 .flip .back h3').click(function() {
         findResources(event, 'One_Adoption');
@@ -279,7 +279,7 @@ $(document).ready(function() {
         findResources(event, 'Two_Foster');
     });
     $('#row-2-col-3 .flip .back h3').click(function() {
-        findResources(event, 'Two_Restoration');
+        findResources(event, 'Two_Reunification');
     });
     $('#row-2-col-4 .flip .back h3').click(function() {
         findResources(event, 'Two_Adoption');
@@ -294,7 +294,7 @@ $(document).ready(function() {
         findResources(event, 'Three_Foster');
     });
     $('#row-3-col-3 .flip .back h3').click(function() {
-        findResources(event, 'Three_Restoration');
+        findResources(event, 'Three_Reunification');
     });
     $('#row-3-col-4 .flip .back h3').click(function() {
         findResources(event, 'Three_Adoption');
@@ -332,7 +332,7 @@ $(document).ready(function() {
     $('#row-1-col-3 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
-                "<h2>Tier One, Restoration</h2>" +
+                "<h2>Tier One, Reunification</h2>" +
             "</div>"
         );
         $('#gridmodal').modal('open');
@@ -395,7 +395,7 @@ $(document).ready(function() {
     $('#row-2-col-3 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
-                "<h2>Tier Two, Restoration</h2>" +
+                "<h2>Tier Two, Reunification</h2>" +
             "</div>"
         );
         $('#gridmodal').modal('open');
@@ -465,7 +465,7 @@ $(document).ready(function() {
     $('#row-3-col-3 .flip .back h6').click(function() {
         $('#gridmodal').html(
             "<div class='modal-content'>" +
-                "<h2>Tier Three, Restoration</h2>" +
+                "<h2>Tier Three, Reunification</h2>" +
             "</div>"
         );
         $('#gridmodal').modal('open');

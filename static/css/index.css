@@ -152,9 +152,14 @@ h2 {
           background-color: white; }
           .dropdown-section-content.two .row .collapsible .collapsible-body span {
             font-size: 17px;
-            color: #37abcb; }
+            color: #37abcb;
+            white-space: pre-line; }
       .dropdown-section-content.two .row li.active i {
         transform: rotate(180deg); }
+  .dropdown-section-content.three {
+    padding: 2.5% 5%; }
+    .dropdown-section-content.three div {
+      font-size: 18px; }
 
 /* ------ Sponsors ------ */
 #sponsors {
@@ -271,6 +276,15 @@ h2 {
   #grid h1 {
     margin-top: 0;
     color: #37abcb; }
+  #grid #links {
+    margin: 15px auto;
+    width: fit-content; }
+    #grid #links a {
+      font-size: 20px;
+      color: #37abcb;
+      text-decoration: underline; }
+      #grid #links a:first-of-type {
+        margin-right: 30px; }
   #grid table {
     width: auto;
     margin: auto;
@@ -497,7 +511,7 @@ h2 {
 
 #contact-form .input-field {
   margin: 0; }
-#contact-form .input-field input[type=text]:focus {
+#contact-form .input-field input[type=sstext]:focus {
   border-bottom: 1px solid #37abcb;
   box-shadow: 0 1px 0 0 #37abcb; }
 #contact-form .modal-content {
