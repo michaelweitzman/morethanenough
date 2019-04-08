@@ -11,9 +11,11 @@ $(document).ready(function() {
     // ------ Navigation ------ //
 
     $('#learnMore').click(function() {
-        $('.dropdown-section-header.one i').click();
+        if (! $('.dropdown-section-content.one:visible').length > 0) {
+            $('.dropdown-section-header.one i').click();
+        };
         $('html,body').animate({
-            scrollTop: $('.dropdown-section-content.one').offset().top
+            scrollTop: $('.dropdown-section-content.one').offset().top - 56
         });
     });
 
@@ -45,10 +47,50 @@ $(document).ready(function() {
         var scrollOffset = $(document).scrollTop();
         var containerOffset = $('#current-stats').offset().top - window.innerHeight;
         if (scrollOffset > containerOffset) {
-            $('#current-stats h1').numerator({
+            $('#churchStat').numerator({
                 easing: 'linear',
                 duration: 3500,
-                toValue: 256
+                delimiter: ',',
+                toValue: churchJson
+            });
+            $(document).unbind('scroll');
+        }
+    });
+    $(document).bind('scroll', function(ev) {
+        var scrollOffset = $(document).scrollTop();
+        var containerOffset = $('#current-stats').offset().top - window.innerHeight;
+        if (scrollOffset > containerOffset) {
+            $('#familyStat').numerator({
+                easing: 'linear',
+                duration: 3500,
+                delimiter: ',',
+                toValue: familyJson
+            });
+            $(document).unbind('scroll');
+        }
+    });
+    $(document).bind('scroll', function(ev) {
+        var scrollOffset = $(document).scrollTop();
+        var containerOffset = $('#current-stats').offset().top - window.innerHeight;
+        if (scrollOffset > containerOffset) {
+            $('#childrenStat').numerator({
+                easing: 'linear',
+                duration: 3500,
+                delimiter: ',',
+                toValue: Number(statsJson[0]['Children Served'])
+            });
+            $(document).unbind('scroll');
+        }
+    });
+    $(document).bind('scroll', function(ev) {
+        var scrollOffset = $(document).scrollTop();
+        var containerOffset = $('#current-stats').offset().top - window.innerHeight;
+        if (scrollOffset > containerOffset) {
+            $('#economicStat').numerator({
+                easing: 'linear',
+                duration: 3500,
+                delimiter: ',',
+                toValue: Number(statsJson[0]['Economic Impact']),
             });
             $(document).unbind('scroll');
         }
