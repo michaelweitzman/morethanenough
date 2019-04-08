@@ -183,11 +183,17 @@ h2 {
             font-size: 40px;
         }
     }
-    i {
-        bottom: 2.5%;
-        cursor: pointer;
+    .learn-more {
+        bottom: 0;
+        width: 100%;
         position: absolute;
-        margin-left: -3rem;
+
+        p {
+            margin: 0 0 -25px 0;
+        }
+        i {
+            cursor: pointer;
+        }
     }
 }
 
@@ -565,7 +571,7 @@ h2 {
                 font-size: 1.3rem;
 
                 strong {
-                    font-weight: bold;
+                    color: $primaryColor;
                 }
             }
         }
@@ -740,7 +746,6 @@ h2 {
     .resources {
         width: 80%;
         height: 85%;
-        overflow: hidden;
 
         .card-content {
             height: 100%;
@@ -778,6 +783,14 @@ h2 {
                     &.five {
                         .col {
                             margin-bottom: 3rem;
+                        }
+                        em {
+                            cursor: pointer;
+                            color: $primaryColor;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                     }
                     .helper-text {
@@ -831,6 +844,19 @@ h2 {
                     }
                 }
             }
+        }
+    }
+}
+
+
+// ------ Terms of Service Modal ------ //
+
+#termsofservice {
+    .modal-footer {
+        height: fit-content;
+        
+        button {
+            background-color: $primaryColor;
         }
     }
 }
