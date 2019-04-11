@@ -16,7 +16,16 @@ $(document).ready(function() {
         };
         $('html,body').animate({
             scrollTop: $('.dropdown-section-content.one').offset().top - 56
-        });
+        }, 1000);
+    });
+
+    $('.sidenav-close').click(function() {
+        if (! $('.dropdown-section-content.one:visible').length > 0) {
+            $('.dropdown-section-header.one i').click();
+        };
+        $('html,body').animate({
+            scrollTop: $('.dropdown-section-content.one').offset().top - 56
+        }, 1000);
     });
 
 
