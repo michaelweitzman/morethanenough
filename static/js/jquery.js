@@ -629,7 +629,7 @@ $(document).ready(function() {
             }
         }
         for (var i = 0; i < resourcesJson.length; i++) {
-            if (document.getElementById('findType').value !== 'Partner Type') {
+            if (document.getElementById('findType').value !== 'Resource Type') {
                 if (resourcesJson[i]['Type'] === document.getElementById('findType').value) {
                     typeResources.push(resourcesJson[i]);
                 }
@@ -690,6 +690,7 @@ $(document).ready(function() {
             "</div>"
         );
         for (var i = 0; i < finalResources.length; i++) {
+            console.log(finalResources);
             $(
                 "<tr>" +
                     "<td>" + finalResources[i]['Name'] + "</td>" +

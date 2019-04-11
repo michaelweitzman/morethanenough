@@ -878,7 +878,7 @@ h2 {
     .input-field {
         margin: 0;
     }
-    .input-field input[type=sstext]:focus {
+    .input-field input[type='text']:focus {
         border-bottom: 1px solid $primaryColor;
         box-shadow: 0 1px 0 0 $primaryColor;
     }
