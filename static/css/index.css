@@ -192,7 +192,8 @@ h2 {
   #sponsors img {
     height: 100px;
     max-width: 150px;
-    margin: auto; }
+    margin: auto;
+    display: inline-block; }
 
 /* ------ Stats ------ */
 #stats {

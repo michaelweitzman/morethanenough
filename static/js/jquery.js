@@ -108,6 +108,16 @@ $(document).ready(function() {
 
     // ------ Sponsors ------ //
 
+    for (let sponsor of sponsorsJson) {
+        $('.sponsors').append(
+            "<div class='center-align'>" +
+                "<a href='" + sponsor['Company Website'] + "' target='_blank'>" +
+                    "<img src='" + sponsor['Company Logo Link'] + "'/>" +
+                "</a>" +
+            "</div>"
+        );
+    }
+
     $('.sponsors').slick({
         arrows: false,
         autoplay: true,
@@ -116,7 +126,7 @@ $(document).ready(function() {
         pauseOnFocus: false,
         pauseOnHover: false,
         slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1200,
@@ -154,8 +164,8 @@ $(document).ready(function() {
 
     // ------ Dropdown Sections ------ //
 
-    $('.dropdown-section-header .learn-more').click(function() {
-        const dropdown = $(this).parent().next(),
+    $('.dropdown-section-header .learn-more i').click(function() {
+        const dropdown = $(this).parent().parent().next(),
               others = $('.dropdown-section-content:visible').not(dropdown);
         dropdown.slideToggle();
         others.slideToggle();
