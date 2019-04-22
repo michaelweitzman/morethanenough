@@ -110,7 +110,7 @@ app.get('/', function (req, res) {
     }));
 });
 
-app.post('/churches', function (req, res) {
+app.post('/oklahoma/churches', function (req, res) {
     if (validateChurch(req.body).length <= 1) {
         axios.post('https://sheetdb.io/api/v1/syduaraf3jz47', {
             data: {
@@ -131,10 +131,10 @@ app.post('/churches', function (req, res) {
     } else {
         req.session.errors = validateChurch(req.body);
     }
-    res.redirect('/#church-form');
+    res.redirect('/oklahoma/#church-form');
 });
 
-app.post('/families', function (req, res) {
+app.post('/oklahoma/families', function (req, res) {
     if (validateFamily(req.body).length <= 1) {
         axios.post('https://sheetdb.io/api/v1/9g94xd73wjuli', {
             data: {
@@ -153,10 +153,10 @@ app.post('/families', function (req, res) {
     } else {
         req.session.errors = validateFamily(req.body);
     }
-    res.redirect('/#family-form');
+    res.redirect('/oklahoma/#family-form');
 });
 
-app.post('/contact', function(req, res) {
+app.post('/oklahoma/contact', function(req, res) {
     const mailOptions = {
         from: 'weitzman.michaelanthony@gmail.com',
         to: 'michaelweitzman@seqtechllc.com',
@@ -170,10 +170,10 @@ app.post('/contact', function(req, res) {
             console.log('Email sent successfully!', info);
         }
     });
-    res.redirect('/');
+    res.redirect('/oklahoma');
 });
 
-app.post('/resources', function (req, res) {
+app.post('/oklahoma/resources', function (req, res) {
     axios.post('https://sheetdb.io/api/v1/fq10flbp4rpuu', {
         data: {
             'Name': req.body['Name'],
@@ -211,7 +211,7 @@ app.post('/resources', function (req, res) {
     .catch(function (err) {
         console.log(err);
     });
-    res.redirect('/#resourceForm');
+    res.redirect('/oklahoma/#resourceForm');
 });
 
 // ------ Server Logic ------ //
