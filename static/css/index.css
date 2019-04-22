@@ -116,11 +116,11 @@ h2 {
   background-position: center;
   background-attachment: fixed; }
   .dropdown-section-header.one {
-    background-image: url("/images/campaign_one.jpg"); }
+    background-image: url("../images/campaign_one.jpg"); }
   .dropdown-section-header.two {
-    background-image: url("/images/campaign_two.jpg"); }
+    background-image: url("../images/campaign_two.jpg"); }
   .dropdown-section-header.three {
-    background-image: url("/images/campaign_three.jpg"); }
+    background-image: url("../images/campaign_three.jpg"); }
   @media (max-width: 670px) {
     .dropdown-section-header h1, .dropdown-section-header h2 {
       font-size: 40px; } }
@@ -442,7 +442,7 @@ h2 {
   justify-content: space-around;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("/images/forms.jpg"); }
+  background-image: url("../images/forms.jpg"); }
   #resourceForm .input-field input[type=text]:focus {
     border-bottom: 1px solid #37abcb;
     box-shadow: 0 1px 0 0 #37abcb; }

@@ -182,13 +182,13 @@ h2 {
     background-attachment: fixed;
 
     &.one {
-        background-image: url('/images/campaign_one.jpg');
+        background-image: url('../images/campaign_one.jpg');
     }
     &.two {
-        background-image: url('/images/campaign_two.jpg');
+        background-image: url('../images/campaign_two.jpg');
     }
     &.three {
-        background-image: url('/images/campaign_three.jpg');
+        background-image: url('../images/campaign_three.jpg');
     }
 
     h1, h2 {
@@ -716,7 +716,7 @@ h2 {
     justify-content: space-around;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url('/images/forms.jpg');
+    background-image: url('../images/forms.jpg');
 
     .input-field input[type=text]:focus {
         border-bottom: 1px solid $primaryColor;

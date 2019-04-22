@@ -8,10 +8,8 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 // ------ Guidelines ------ //
-app.use([
-    express.static(__dirname + '/static'),
-    express.static(__dirname + '/node_modules')
-]);
+app.use('/static', (express.static(__dirname + '/static')));
+app.use('/node_modules', (express.static(__dirname + '/node_modules')));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
