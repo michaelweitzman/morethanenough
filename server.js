@@ -21,10 +21,12 @@ app.use(session({
     saveUninitialized: false
 }));
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'mail.111project.com',
+    port: 465,
+    secure: true,
     auth: {
-        user: 'weitzman.michaelanthony@gmail.com',
-        pass: 'Maw10296.'
+        user: 'connect@111project.com',
+        pass: '!Password12345'
     }
 });
 
@@ -158,16 +160,19 @@ app.post('/families', function (req, res) {
 
 app.post('/contact', function(req, res) {
     const mailOptions = {
-        from: 'weitzman.michaelanthony@gmail.com',
-        to: 'michaelweitzman@seqtechllc.com',
+        from: 'connect@111project.com',
+        to: req.body.receiver,
         subject: 'More Than Enough - Contact Form',
-        text: req.body['Message']
+        html:
+            "<p>Hey - someone tried to contact you through the 111 Project - More Than Enough directory! Here is their info:</p>" +
+            "<p><strong>Name: </strong>" + req.body.Name + "</p>" +
+            "<p><strong>Phone: </strong>" + req.body.Phone + "</p>" +
+            "<p><strong>Name: </strong>" + req.body.Email + "</p>" +
+            "<p><strong>Message: </strong>" + req.body.Message + "</p>"
     };
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
             console.log(error);
-        } else {
-            console.log('Email sent successfully!', info);
         }
     });
     res.redirect('/oklahoma');
