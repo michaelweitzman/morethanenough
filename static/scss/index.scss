@@ -232,6 +232,7 @@ h2 {
 
     &.two {
         padding-top: 5%;
+        text-align: center;
 
         .row {
             margin: 0;
@@ -270,6 +271,40 @@ h2 {
                 &.active {
                     i {
                         transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        a {
+            margin-top: 40px;
+            color: $primaryColor;
+            background-color: white;
+        }
+        #churchesmodal {
+            max-height: 65vh;
+    
+            .modal-content {
+                h2 {
+                    margin-bottom: 0;
+                    text-align: left;
+                    color: $primaryColor;
+                    font-family: $headerFont;
+                }
+                table {
+                    thead {
+                        tr {
+                            th {
+                                font-size: 1.5rem;
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                font-size: 1.3rem;
+                            }
+                        }
                     }
                 }
             }

@@ -90,9 +90,10 @@ app.get('/', function (req, res) {
         axios.get('https://sheetdb.io/api/v1/9gz8lpzh87ibs'),
         axios.get('https://sheetdb.io/api/v1/syduaraf3jz47/count'),
         axios.get('https://sheetdb.io/api/v1/9g94xd73wjuli/count'),
-        axios.get('https://sheetdb.io/api/v1/mjo8imb1s0rfx')
+        axios.get('https://sheetdb.io/api/v1/mjo8imb1s0rfx'),
+        axios.get('https://sheetdb.io/api/v1/syduaraf3jz47')
     ])
-    .then(axios.spread((resources, stats, churchCount, familyCount, sponsors) => {
+    .then(axios.spread((resources, stats, churchCount, familyCount, sponsors, churches) => {
         if (req.session.errors) {
             res.locals.errors = req.session.errors;
         }
@@ -106,6 +107,7 @@ app.get('/', function (req, res) {
             churchCount: churchCount.data.rows,
             familyCount: familyCount.data.rows,
             sponsorsData: sponsors.data,
+            churchesData: churches.data,
             success: res.locals.success ? res.locals.success : null,
             errors: res.locals.errors ? res.locals.errors : null
         });

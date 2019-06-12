@@ -146,7 +146,8 @@ h2 {
       font-size: 20px;
       color: #37abcb; }
   .dropdown-section-content.two {
-    padding-top: 5%; }
+    padding-top: 5%;
+    text-align: center; }
     .dropdown-section-content.two .row {
       margin: 0; }
       .dropdown-section-content.two .row .collapsible {
@@ -170,6 +171,22 @@ h2 {
             white-space: pre-line; }
       .dropdown-section-content.two .row li.active i {
         transform: rotate(180deg); }
+    .dropdown-section-content.two a {
+      margin-top: 40px;
+      color: #37abcb;
+      background-color: white; }
+    .dropdown-section-content.two #churchesmodal {
+      max-height: 65vh; }
+      .dropdown-section-content.two #churchesmodal .modal-content h2 {
+        margin-bottom: 0;
+        text-align: left;
+        color: #37abcb;
+        font-family: "Cabin Sketch", cursive; }
+      .dropdown-section-content.two #churchesmodal .modal-content table thead tr th {
+        font-size: 1.5rem;
+        color: #37abcb; }
+      .dropdown-section-content.two #churchesmodal .modal-content table tbody tr td {
+        font-size: 1.3rem; }
   .dropdown-section-content.three {
     padding: 2.5% 5%; }
     .dropdown-section-content.three div {

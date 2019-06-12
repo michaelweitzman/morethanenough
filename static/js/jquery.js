@@ -172,6 +172,45 @@ $(document).ready(function() {
     });
 
 
+    // ------ Pledged Church List ------ //
+
+    $('#church-list-trigger').click(function() {
+        $('#churchesmodal').html(
+            "<div class='modal-content'>" +
+                "<h2>List of Pledged Churches:</h2>" +
+                "<table class='striped'>" +
+                    "<thead>" +
+                        "<tr>" +
+                            "<th>Church Name</th>" +
+                            "<th>Church County</th>" +
+                        "</tr>" +
+                    "</thead>" +
+                    "<tbody>" +
+                    "</tbody>" +
+                "</table>" +
+            "</div>"
+        );
+
+        const churchList = churchesJson.sort(function(a, b){
+            var x = a.County;
+            var y = b.County;
+            if (x < y) {return -1;}
+            if (x > y) {return 1;}
+            return 0;
+        });
+
+        for (let church of churchList) {
+            $(
+                "<tr>" +
+                    "<td>" + church.Church + "</td>" +
+                    "<td>" + church.County + "</td>" +
+                "</tr>"
+            ).appendTo('#churchesmodal tbody');
+        }
+        $('#churchesmodal').modal('open');
+    });
+
+
     // ------ Own Your County's Stats ------ //
 
     $('#map').click(function() {
@@ -709,7 +748,6 @@ $(document).ready(function() {
             "</div>"
         );
         for (var i = 0; i < finalResources.length; i++) {
-            console.log(finalResources);
             $(
                 "<tr>" +
                     "<td>" + finalResources[i]['Name'] + "</td>" +
