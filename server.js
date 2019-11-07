@@ -115,6 +115,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/churches', function (req, res) {
+    console.log('hello world');
     if (validateChurch(req.body).length <= 1) {
         axios.post('https://sheetdb.io/api/v1/syduaraf3jz47', {
             data: {
@@ -135,7 +136,7 @@ app.post('/churches', function (req, res) {
     } else {
         req.session.errors = validateChurch(req.body);
     }
-    res.redirect('/oklahoma/#church-form');
+    res.redirect('/#church-form');
 });
 
 app.post('/families', function (req, res) {
@@ -157,7 +158,7 @@ app.post('/families', function (req, res) {
     } else {
         req.session.errors = validateFamily(req.body);
     }
-    res.redirect('/oklahoma/#family-form');
+    res.redirect('/#family-form');
 });
 
 app.post('/contact', function(req, res) {
@@ -177,7 +178,7 @@ app.post('/contact', function(req, res) {
             console.log(error);
         }
     });
-    res.redirect('/oklahoma');
+    res.redirect('/');
 });
 
 app.post('/resources', function (req, res) {
@@ -218,7 +219,7 @@ app.post('/resources', function (req, res) {
     .catch(function (err) {
         console.log(err);
     });
-    res.redirect('/oklahoma/#resourceForm');
+    res.redirect('/#resourceForm');
 });
 
 // ------ Server Logic ------ //
