@@ -22,7 +22,7 @@
     "jquery-mask-plugin": "^1.14.15",
     "jquery-numerator": "^0.2.1",
     "materialize-css": "^1.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "nodemailer": "^6.0.0",
     "slick-carousel": "^1.8.1"
   }
